@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Cinetype';
+  src: url('/fonts/GT-Cinetype-Regular.woff') format('woff');
+}
+
+body {
+  font-family: 'Cinetype', sans-serif;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+.secondary {
+  color: #aaa;
+}
