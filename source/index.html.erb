@@ -2,18 +2,17 @@
 title: Welcome to Middleman
 ---
 
-<div class="row">
-
-  <nav>
-    <div class="navigation">
+<nav>
+  <div class="navigation">
+    <div class="row">
       <div class="logo">
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                <g id="logo" stroke="#292929" stroke-width="4">
-                    <polyline id="path" transform="translate(32.293042, 32.000000) scale(1, -1) translate(-32.293042, -32.000000) " points="57.5860846 45.9996989 32.2930424 60 7 45.9996989 7 31.9993979 32.2930424 18.0003011 44.9395635 24.9992473 19.6465212 38.9995484 32.2930424 45.9996989 57.5860846 31.9993979 57.5860846 18.0003011 32.2930424 4 7 18.0003011"></polyline>
-                </g>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="logo" stroke="#292929" stroke-width="4">
+              <polyline id="path" transform="translate(32.293042, 32.000000) scale(1, -1) translate(-32.293042, -32.000000) " points="57.5860846 45.9996989 32.2930424 60 7 45.9996989 7 31.9993979 32.2930424 18.0003011 44.9395635 24.9992473 19.6465212 38.9995484 32.2930424 45.9996989 57.5860846 31.9993979 57.5860846 18.0003011 32.2930424 4 7 18.0003011"></polyline>
             </g>
+          </g>
         </svg>
         <!-- <%= image_tag "logo.svg" %> -->
       </div>
@@ -22,7 +21,11 @@ title: Welcome to Middleman
         <li><a href="#">Blog</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+<div class="row">
 
   <div class="intro">
     <h1>Portfolio of Sebastian Graz</h1>
@@ -36,36 +39,54 @@ title: Welcome to Middleman
       <li class="tile spacer"></li>
 
       <li class="tile" >
-        <div class="tile-content" data-bgcolor="grey">
-            <h2>Delhaize.</h2><p>2015</p>
+        <div class="tile-content" data-color="white">
+          <h2>Delhaize.</h2><p>2015</p>
+        </div>
+        <div class="tile-bg" data-bgcolor="grey">
+
         </div>
       </li>
 
-      <li class="tile">
-        <div class="tile-content" data-bgcolor="blue" data-color="white">
-            <h2>Volvo.</h2><p>2015</p>
+      <li class="tile spacer"></li>
+      <li class="tile spacer"></li>
+
+      <li class="tile expanded">
+        <div class="tile-content" data-color="white">
+          <h2>Volvo.</h2><p>2015</p>
+
+        </div>
+        <div class="tile-bg" data-bgcolor="black">
+          <img src="images/case.png" alt="">
         </div>
       </li>
 
       <li class="tile spacer"></li>
 
       <li class="tile">
-        <div class="tile-content" data-bgcolor="red" data-color="white">
-            <h2>Volvo.</h2><p>2015</p>
+        <div class="tile-content" data-color="black">
+          <h2>Husqvarna.</h2><p>2015</p>
+        </div>
+        <div class="tile-bg" data-bgcolor="red">
+
         </div>
       </li>
 
       <li class="tile">
-        <div class="tile-content" data-bgcolor="yellow" data-color="black">
-            <h2>Volvo.</h2><p>2015</p>
+        <div class="tile-content" data-color="black">
+          <h2>Heyplace.</h2><p>2015</p>
+        </div>
+        <div class="tile-bg" data-bgcolor="yellow">
+
         </div>
       </li>
 
-      <li class="tile spacer"></li>
 
       <li class="tile">
-        <div class="tile-content" data-bgcolor="lightgrey" data-color="black">
-            <h2>Volvo.</h2><p>2015</p>
+        <div class="tile-content" data-color="black">
+          <h2>The Poetry Hour.</h2><p>2015</p>
+        </div>
+        <div class="tile-bg" data-bgcolor="beige">
+
         </div>
       </li>
 
@@ -74,9 +95,16 @@ title: Welcome to Middleman
 
     </ul>
   </div>
-  <div class="blog">
 
+
+  <div class="intro blog">
+    <h1>Sometimes I write about design</h1>
+    <h1 class="secondary">3 articles</h1>
   </div>
+
+
+
+
   <div class="footer">
 
   </div>

@@ -14,6 +14,11 @@ body {
 .row {
   max-width: $max-width;
   margin: 0 auto;
+  width: 92%;
+}
+
+img {
+  width: 100%;
 }
 
 ul {
@@ -43,13 +48,14 @@ nav {
   z-index: 2;
   position: relative;
   .navigation {
-    display: flex;
-    justify-content: space-between;
-    max-width: $max-width;
     width: 100%;
     margin: 0 auto;
+    top:4rem;
     position: fixed;
-    margin-top: 3rem;
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   ul {
     display: flex;
@@ -62,10 +68,9 @@ nav {
 
 .intro {
   margin-top: 10rem;
-  position: absolute;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -75,29 +80,61 @@ nav {
   display: flex;
   flex-flow: row wrap;
 
-  .expanded {
-    z-index: 2;
-    max-width: calc(416px - 3rem);
-
-    .tile-content {
-      width: calc(416px - 3rem);
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-
   .tile-content {
-    transition: .8s $bezier all;
+    z-index: 1;
     height: calc(276px - 3rem);
     padding:1.5rem;
     width: calc(208px - 3rem);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
+  .tile-bg {
+    overflow: hidden;
+    transition: 1s $bezier all;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position : absolute;
+    img {
+      width: 416px;
+      transition: 1s $bezier all;
+      opacity: 0;
+      box-sizing: border-box;
+      transform: translateX(20%);
+    }
+  }
+
 
   .tile {
     position: relative;
     list-style: none;
     float:left;
+
+
+
+    h2 {
+      font-size:2rem;
+      margin: 0;
+    }
+    p {
+
+    }
+
+    &.expanded {
+      position: relative;
+      z-index: 2;
+
+      .tile-bg {
+        width: 416px;
+      }
+
+      img {
+        opacity: 1;
+      }
+    }
 
     &.spacer {
       height: calc(276px - 3rem);
