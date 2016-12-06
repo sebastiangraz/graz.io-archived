@@ -1,0 +1,32 @@
+nav {
+  z-index: 3;
+  position: relative;
+  .navigation {
+    width: 100%;
+    margin: 0 auto;
+    top:4rem;
+    position: fixed;
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.logo {
+  width: 2rem;
+
+  svg {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+  }
+}

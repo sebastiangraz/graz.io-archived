@@ -1,10 +1,19 @@
 @font-face {
   font-family: 'Cinetype';
+  font-weight: 100;
   src: url('/fonts/GT-Cinetype-Regular.woff') format('woff');
 }
 
 body {
   font-family: 'Cinetype', sans-serif;
+  line-height: 1.4;
+}
+
+h2 {
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering:optimizeLegibility;
+    letter-spacing: -1px;
 }
 
 a {

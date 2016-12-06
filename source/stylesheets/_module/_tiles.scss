@@ -1,0 +1,111 @@
+.tiles {
+  width: 100%;
+  max-width: 832px;
+  display: flex;
+  flex-flow: row wrap;
+  @include mq(md) {
+    width: $tileWidth * 4;
+  }
+}
+.tile-content {
+  height: calc(276px - 3rem);
+  padding:1.5rem;
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  @include mq(md) {
+    height: $tileHeight;
+    padding:1.5rem;
+    width: $tileWidth;
+  }
+}
+.tile-bg {
+  transition: .8s $bezier all;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position : absolute;
+}
+
+
+.tile {
+  width: 100%;
+  position: relative;
+  list-style: none;
+  float:left;
+
+  @include mq(md){
+    width: initial;
+  }
+
+  img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+    transform: translateX(20%);
+    @include mq(md) {
+      opacity: 0;
+    }
+  }
+  .hidden {
+    opacity: 0;
+  }
+
+  h2>span {
+    visibility: visible;
+  }
+
+  h2 {
+    visibility: hidden;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  &.promoted {
+    @include mq(md) {
+      .tile-bg {
+        width: $tileWidth * 2;
+      }
+    }
+
+  }
+
+  &.expanded {
+
+    position: relative;
+    z-index: 2;
+
+    img {
+      opacity: 1;
+    }
+
+    h2 {
+      visibility: visible;
+    }
+
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &.spacer {
+    height: $tileHeight;
+    width: $tileWidth;
+    background: transparent;
+    display: none;
+
+    @include mq(md) {
+      display: block;
+    }
+  }
+}

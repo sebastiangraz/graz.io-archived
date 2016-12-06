@@ -1,15 +1,14 @@
 @charset "utf-8";
 
 @import "var";
-@import "normalize";
-@import "typography";
-@import "mq";
 
+@import "_layout/normalize";
+@import "_layout/elements";
+@import "_layout/typography";
+@import "_layout/mq";
 
-body {
-  margin: 0;
-  box-sizing: border-box;
-}
+@import "_module/nav";
+@import "_module/tiles";
 
 .row {
   max-width: $max-width;
@@ -17,139 +16,24 @@ body {
   width: 92%;
 }
 
-img {
-  width: 100%;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-
-  li {
-
-  }
-}
-
-.logo {
-  width: 2rem;
-
-  svg {
-    width: 100%;
-    object-fit: contain;
-    height: 100%;
-  }
-}
-
-img {
-  display: block;
-}
-
-nav {
-  z-index: 2;
-  position: relative;
-  .navigation {
-    width: 100%;
-    margin: 0 auto;
-    top:4rem;
-    position: fixed;
-    .row {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-  ul {
-    display: flex;
-    li {
-      list-style: none;
-      margin-left: 2rem;
-    }
-  }
-}
 
 .intro {
-  margin-top: 10rem;
-
+  display:flex;
+  flex-direction: column;
+  position: relative;
+  width: $tileWidth * 2;
+  margin-top: 10.75rem;
+  margin-bottom: 2rem;
   h1 {
+    margin: 0.25rem 0;
     font-size: 1.25rem;
   }
+  @include mq(md) {
+    position: absolute;
+    margin-bottom: 0rem;
+  };
 }
 
-.tiles {
-  margin: 0 auto;
-  width: 960px;
-  display: flex;
-  flex-flow: row wrap;
-
-  .tile-content {
-    z-index: 1;
-    height: calc(276px - 3rem);
-    padding:1.5rem;
-    width: calc(208px - 3rem);
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  .tile-bg {
-    overflow: hidden;
-    transition: 1s $bezier all;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position : absolute;
-    img {
-      width: 416px;
-      transition: 1s $bezier all;
-      opacity: 0;
-      box-sizing: border-box;
-      transform: translateX(20%);
-    }
-  }
-
-
-  .tile {
-    position: relative;
-    list-style: none;
-    float:left;
-
-
-
-    h2 {
-      font-size:2rem;
-      margin: 0;
-    }
-    p {
-
-    }
-
-    &.expanded {
-      position: relative;
-      z-index: 2;
-
-      .tile-bg {
-        width: 416px;
-      }
-
-      img {
-        opacity: 1;
-      }
-    }
-
-    &.spacer {
-      height: calc(276px - 3rem);
-      padding:1.5rem;
-      width: calc(208px - 3rem);
-      background: transparent;
-      display: none;
-
-      @include mq(lg) {
-        display: block;
-      }
-    }
-
-    @include mq(lg) {
-      display: block;
-    }
-  }
-}
+//  SinicalDev : @import '0-plugins/plugins-dir';@import '1-modules/modules-dir';@import '2-layouts/layouts-dir';
+//  Turbo SinicalDev : and then layouts-dir looks like
+//  Turbo SinicalDev : @import 'index/index';@import 'projects/projects';
