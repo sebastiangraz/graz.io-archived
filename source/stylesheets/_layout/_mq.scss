@@ -2,7 +2,7 @@
   @if $point == lg {
     @media (min-width: 64rem) { @content ; }
   } @else if $point == md {
-    @media (min-width: 56rem) { @content ; }
+    @media (min-width: 48rem) { @content ; }
   } @else if $point == sm {
     @media (min-width: 30rem)  { @content ; }
   }

@@ -24,9 +24,9 @@
   width: $tileWidth * 2;
   margin-top: 10.75rem;
   margin-bottom: 2rem;
-  h1 {
+  
+  h2 {
     margin: 0.25rem 0;
-    font-size: 1.25rem;
   }
   @include mq(md) {
     position: absolute;
