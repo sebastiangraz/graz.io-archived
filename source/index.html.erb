@@ -17,17 +17,20 @@ title: Welcome to Middleman
 
           <% blog('case').articles.each do |article| %>
 
-          <li class="tile">
+          <li class="tile" data-lspacer="<%= article.data.lspacer %>">
             <div class="tile-content" data-color="<%= article.data.color %>">
+              <h2><%= article.data.hovertext %></h2>
               <%= link_to article.title, article.path, :relative => true %>
             </div>
             <div class="tile-bg" data-bgcolor=" <%= article.data.bgcolor %> ">
-              <img src="<%= article.data.image %>" alt="">
+              <img src="<%= article.data.image %>" alt="<%= article.title %>">
             </div>
           </li>
           <% end %>
         </ul>
+
       </div>
+
 
       <li class="tile">
         <div class="tile-content" data-color="#76280C">
