@@ -23,6 +23,14 @@ configure :development do
   activate :livereload
 end
 
+
+activate :blog do |blog|
+  blog.name = 'case'
+  blog.prefix = 'case'
+  blog.layout = 'case-layout'
+  blog.permalink = ':title.html'
+end
+
 ###
 # Helpers
 ###
@@ -38,7 +46,7 @@ end
 configure :build do
   # Minify CSS on build
   # activate :minify_css
-
+  activate :directory_indexes
   # Minify Javascript on build
   # activate :minify_javascript
 end

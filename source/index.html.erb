@@ -2,74 +2,32 @@
 title: Welcome to Middleman
 ---
 
-<nav>
-  <div class="navigation">
-    <div class="row">
-      <div class="logo">
-        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-        <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-            <g id="logo" stroke="#292929" stroke-width="4">
-              <polyline id="path" transform="translate(32.293042, 32.000000) scale(1, -1) translate(-32.293042, -32.000000) " points="57.5860846 45.9996989 32.2930424 60 7 45.9996989 7 31.9993979 32.2930424 18.0003011 44.9395635 24.9992473 19.6465212 38.9995484 32.2930424 45.9996989 57.5860846 31.9993979 57.5860846 18.0003011 32.2930424 4 7 18.0003011"></polyline>
-            </g>
-          </g>
-        </svg>
-        <!-- <%= image_tag "logo.svg" %> -->
-      </div>
-      <ul class="menu-items">
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<%= partial "partials/nav" %>
 
 
 <div class="row">
 
   <div class="intro">
     <h2>Portfolio of Sebastian Graz.</h1>
-    <h2 class="secondary">Interface designer.</h1>
-  </div>
+      <h2 class="secondary">Interface designer.</h1>
+      </div>
 
-  <div class="portfolio">
-    <ul class="tiles">
+      <div class="portfolio">
+        <ul class="tiles">
 
+          <% blog('case').articles.each do |article| %>
 
-      <li class="tile spacer"></li>
-      <li class="tile spacer"></li>
-      <li class="tile">
-        <div class="tile-content" data-color="#3FEFEF">
-          <h2>I helped <span>Volvo</span> design their future website.</h2><p>2015</p>
-        </div>
-        <div class="tile-bg" data-bgcolor="#171932">
-          <img src="images/case-volvo.png" alt="">
-
-        </div>
-      </li>
-
-      <li class="tile spacer"></li>
-      <li class="tile spacer"></li>
-
-      <li class="tile promoted" >
-        <div class="tile-content" data-color="#EF403F">
-
-          <h2>I designed the future of eCommerce with <span>Delhaize.</span></h2><p>2015</p>
-        </div>
-        <div class="tile-bg" data-bgcolor="#F3F3F6">
-
-        </div>
-      </li>
-
-      <li class="tile spacer"></li>
-
-      <li class="tile">
-        <div class="tile-content" data-color="#2C760C">
-          <h2>I helped win <span>Husqvarna</span> as a client.</h2><p>2015</p>
-        </div>
-        <div class="tile-bg" data-bgcolor="#62F3BA">
-
-        </div>
-      </li>
+          <li class="tile">
+            <div class="tile-content" data-color="<%= article.data.color %>">
+              <%= link_to article.title, article.path, :relative => true %>
+            </div>
+            <div class="tile-bg" data-bgcolor=" <%= article.data.bgcolor %> ">
+              <img src="<%= article.data.image %>" alt="">
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
 
       <li class="tile">
         <div class="tile-content" data-color="#76280C">
@@ -82,31 +40,82 @@ title: Welcome to Middleman
         </div>
       </li>
 
+      <!-- <div class="portfolio">
+      <ul class="tiles">
+
+
       <li class="tile spacer"></li>
-
+      <li class="tile spacer"></li>
       <li class="tile">
-        <div class="tile-content" data-color="#000000">
-
-          <h2>I designed and developed <span>The Poetry Hour.</span></h2><p>2015</p>
-        </div>
-        <div class="tile-bg" data-bgcolor="#f0ffa5">
-          <img src="images/case-poetry.png" alt="">
-
-        </div>
-      </li>
-
-
-
-
-    </ul>
-  </div>
-
-
-
-
-
-  <div class="footer">
+      <div class="tile-content" data-color="#3FEFEF">
+      <h2>I helped <span>Volvo</span> design their future website.</h2><p>2015</p>
+    </div>
+    <div class="tile-bg" data-bgcolor="#171932">
+    <img src="images/case-volvo.png" alt="">
 
   </div>
+</li>
+
+<li class="tile spacer"></li>
+<li class="tile spacer"></li>
+
+<li class="tile promoted" >
+<div class="tile-content" data-color="#EF403F">
+
+<h2>I designed the future of eCommerce with <span>Delhaize.</span></h2><p>2015</p>
+</div>
+<div class="tile-bg" data-bgcolor="#F3F3F6">
+
+</div>
+</li>
+
+<li class="tile spacer"></li>
+
+<li class="tile">
+<div class="tile-content" data-color="#2C760C">
+<h2>I helped win <span>Husqvarna</span> as a client.</h2><p>2015</p>
+</div>
+<div class="tile-bg" data-bgcolor="#62F3BA">
+
+</div>
+</li>
+
+<li class="tile">
+<div class="tile-content" data-color="#76280C">
+
+<h2>Me and some friends built an app called <span>Heyplace.</span></h2><p>2015</p>
+</div>
+<div class="tile-bg" data-bgcolor="#F3B462">
+<img src="images/case-heyplace.png" alt="">
+
+</div>
+</li>
+
+<li class="tile spacer"></li>
+
+<li class="tile">
+<div class="tile-content" data-color="#000000">
+
+<h2>I designed and developed <span>The Poetry Hour.</span></h2><p>2015</p>
+</div>
+<div class="tile-bg" data-bgcolor="#f0ffa5">
+<img src="images/case-poetry.png" alt="">
+
+</div>
+</li>
+
+
+
+
+</ul>
+</div> -->
+
+
+
+
+
+<div class="footer">
+
+</div>
 
 </div><!-- .welcome -->
