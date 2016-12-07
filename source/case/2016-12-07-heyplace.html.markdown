@@ -6,6 +6,9 @@ image: 'case-heyplace.png'
 hovertext: 'I designed and developed <span>Heyplace.</span>'
 color: '#76280C'
 bgcolor: '#F3B462'
-lspacer: 2
+lspacer: 0
+rspacer: 0
 order: 4
 ---
+
+#heyplace

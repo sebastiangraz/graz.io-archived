@@ -16,9 +16,9 @@ title: Welcome to Middleman
       <div class="portfolio">
         <ul class="tiles">
 
-          <% blog('case').articles.sort_by{ |i| i.data.order }.each do |article| %>
+          <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
 
-            <li class="tile <%= 'promoted' if article.data.promoted == true %>" data-lspacer="<%= article.data.lspacer %>">
+            <li class="tile <%= 'promoted' if article.data.promoted == true %>" data-rspacer="<%= article.data.rspacer%>" data-lspacer="<%= article.data.lspacer %>">
 
             <a href="<%= article.url %>">
               <div class="tile-content" data-color="<%= article.data.color %>">

@@ -111,6 +111,23 @@
   }
 }
 
+.rspacer-1 {
+  @include mq(md) {
+    margin-right: 25%;
+  }
+}
+.rspacer-2 {
+  @include mq(md) {
+    margin-right: 50%;
+  }
+}
+
+.rspacer-3 {
+  @include mq(md) {
+    margin-right: 75%;
+  }
+}
+
 .lspacer-1 {
   @include mq(md) {
     margin-left: 25%;

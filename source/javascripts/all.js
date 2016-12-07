@@ -26,9 +26,11 @@ $doc.ready(function() {
     });
 
     $('.tile').each( function(){
-      var spacer = $(this).data('lspacer');
+      var lspacer = $(this).data('lspacer'),
+          rspacer = $(this).data('rspacer');
+
       var tileWidth = $(this).outerWidth();
-      $(this).addClass('lspacer-' + spacer)
+      $(this).addClass('lspacer-' + lspacer + ' rspacer-' + rspacer)
     });
   }
 

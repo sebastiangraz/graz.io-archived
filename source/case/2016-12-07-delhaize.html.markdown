@@ -6,7 +6,8 @@ image: 'case-volvo.png'
 hovertext: 'I designed and developed <span>Delhaize.</span>'
 color: '#EF403F'
 bgcolor: '#F3F3F6'
-lspacer: 1
+lspacer: 0
+rspacer: 1
 promoted: true
 order: 3
 ---

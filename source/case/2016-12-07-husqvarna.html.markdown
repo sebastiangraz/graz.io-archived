@@ -6,7 +6,8 @@ image: 'case-husqvarna.png'
 hovertext: 'I designed and developed <span>Husqvarna.</span>'
 color: '#2C760C'
 bgcolor: '#62F3BA'
-lspacer: 2
+lspacer: 1
+rspacer: 0
 order: 2
 ---
 

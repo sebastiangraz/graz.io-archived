@@ -7,6 +7,7 @@ hovertext: 'I designed and developed <span>The Poetry Hour.</span>'
 color: '#000'
 bgcolor: '#DAF362'
 lspacer: 1
+rspacer: 0
 order: 5
 ---
 
