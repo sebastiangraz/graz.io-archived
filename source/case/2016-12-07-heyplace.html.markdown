@@ -1,0 +1,11 @@
+---
+title: heyplace
+date: 2016-12-07 19:56 UTC
+tags:
+image: 'case-heyplace.png'
+hovertext: 'I designed and developed <span>Heyplace.</span>'
+color: '#76280C'
+bgcolor: '#F3B462'
+lspacer: 2
+order: 4
+---

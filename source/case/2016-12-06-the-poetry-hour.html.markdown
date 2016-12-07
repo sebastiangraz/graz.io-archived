@@ -4,10 +4,10 @@ date: 2016-12-06 15:27 UTC
 tags:
 image: 'case-poetry.png'
 hovertext: 'I designed and developed <span>The Poetry Hour.</span>'
-color: '#76280C'
-bgcolor: '#F3B462'
-lspacer: 2
-rspacer: 1
+color: '#000'
+bgcolor: '#DAF362'
+lspacer: 1
+order: 5
 ---
 
 # The Poetry Hour

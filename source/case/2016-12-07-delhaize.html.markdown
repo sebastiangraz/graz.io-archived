@@ -1,0 +1,16 @@
+---
+title: delhaize
+date: 2016-12-07 20:03 UTC
+tags:
+image: 'case-volvo.png'
+hovertext: 'I designed and developed <span>Delhaize.</span>'
+color: '#EF403F'
+bgcolor: '#F3F3F6'
+lspacer: 1
+promoted: true
+order: 3
+---
+
+# Volvo
+
+Volvo page are you at

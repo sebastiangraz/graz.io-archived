@@ -8,30 +8,28 @@ title: Welcome to Middleman
 <div class="row">
 
   <div class="intro">
-    <%= image_tag 'images/case-poetry.png' %>
     <h2>Portfolio of Sebastian Graz.</h1>
       <h2 class="secondary">Interface designer.</h1>
 
-  </div>
+      </div>
 
       <div class="portfolio">
         <ul class="tiles">
 
-          <% blog('case').articles.each do |article| %>
+          <% blog('case').articles.sort_by{ |i| i.data.order }.each do |article| %>
 
-          <li class="tile" data-lspacer="<%= article.data.lspacer %>">
+            <li class="tile <%= 'promoted' if article.data.promoted == true %>" data-lspacer="<%= article.data.lspacer %>">
+
             <a href="<%= article.url %>">
-            <div class="tile-content" data-color="<%= article.data.color %>">
-              <h2><%= article.data.hovertext %></h2>
-              <!-- <%= link_to article.title, article.path, :relative => true %> -->
-            </div>
-            <div class="tile-bg" data-bgcolor=" <%= article.data.bgcolor %> ">
-              <!-- <img
-                ix-src="<%= imgix article.data.image, 'blur=630.1' %>"
-                alt="A hot air balloon on a sunny day"
-                sizes="100vw"
-              > -->
-            </div>
+              <div class="tile-content" data-color="<%= article.data.color %>">
+                <h2><%= article.data.hovertext %></h2>
+                <p><%= article.date.strftime('%B %d, %Y') %></p>
+                <!-- <%= link_to article.title, article.path, :relative => true %> -->
+              </div>
+
+              <div class="tile-bg" data-bgcolor=" <%= article.data.bgcolor %> ">
+                <img ix-path="<%= article.data.image %>" ix-params='{ "w": 600, "h": 600 }' alt="<%= article.title %>">
+              </div>
             </a>
           </li>
           <% end %>
@@ -39,30 +37,30 @@ title: Welcome to Middleman
 
       </div>
       <!-- <li class="tile">
-        <div class="tile-content" data-color="#76280C">
+      <div class="tile-content" data-color="#76280C">
 
-          <h2>Me and some friends built an app called <span>Heyplace.</span></h2><p>2015</p>
-        </div>
-        <div class="tile-bg" data-bgcolor="#F3B462">
-          <img src="images/case-heyplace.png" alt="">
-
-        </div>
-      </li> -->
-
-      <!-- <div class="portfolio">
-      <ul class="tiles">
-
-
-      <li class="tile spacer"></li>
-      <li class="tile spacer"></li>
-      <li class="tile">
-      <div class="tile-content" data-color="#3FEFEF">
-      <h2>I helped <span>Volvo</span> design their future website.</h2><p>2015</p>
+      <h2>Me and some friends built an app called <span>Heyplace.</span></h2><p>2015</p>
     </div>
-    <div class="tile-bg" data-bgcolor="#171932">
-    <img src="images/case-volvo.png" alt="">
+    <div class="tile-bg" data-bgcolor="#F3B462">
+    <img src="images/case-heyplace.png" alt="">
 
   </div>
+</li> -->
+
+<!-- <div class="portfolio">
+<ul class="tiles">
+
+
+<li class="tile spacer"></li>
+<li class="tile spacer"></li>
+<li class="tile">
+<div class="tile-content" data-color="#3FEFEF">
+<h2>I helped <span>Volvo</span> design their future website.</h2><p>2015</p>
+</div>
+<div class="tile-bg" data-bgcolor="#171932">
+<img src="images/case-volvo.png" alt="">
+
+</div>
 </li>
 
 <li class="tile spacer"></li>
