@@ -24,6 +24,12 @@ $doc.ready(function() {
     }).mouseout( function(){
       $(this).removeClass('expanded');
     });
+
+    $('.tile').each( function(){
+      var spacer = $(this).data('lspacer');
+      var tileWidth = $(this).outerWidth();
+      $(this).addClass('lspacer-' + spacer)
+    });
   }
 
   tileColor()

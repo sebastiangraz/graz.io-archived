@@ -8,9 +8,11 @@ title: Welcome to Middleman
 <div class="row">
 
   <div class="intro">
+    <%= image_tag 'images/case-poetry.png' %>
     <h2>Portfolio of Sebastian Graz.</h1>
       <h2 class="secondary">Interface designer.</h1>
-      </div>
+
+  </div>
 
       <div class="portfolio">
         <ul class="tiles">
@@ -18,21 +20,25 @@ title: Welcome to Middleman
           <% blog('case').articles.each do |article| %>
 
           <li class="tile" data-lspacer="<%= article.data.lspacer %>">
+            <a href="<%= article.url %>">
             <div class="tile-content" data-color="<%= article.data.color %>">
               <h2><%= article.data.hovertext %></h2>
-              <%= link_to article.title, article.path, :relative => true %>
+              <!-- <%= link_to article.title, article.path, :relative => true %> -->
             </div>
             <div class="tile-bg" data-bgcolor=" <%= article.data.bgcolor %> ">
-              <img src="<%= article.data.image %>" alt="<%= article.title %>">
+              <!-- <img
+                ix-src="<%= imgix article.data.image, 'blur=630.1' %>"
+                alt="A hot air balloon on a sunny day"
+                sizes="100vw"
+              > -->
             </div>
+            </a>
           </li>
           <% end %>
         </ul>
 
       </div>
-
-
-      <li class="tile">
+      <!-- <li class="tile">
         <div class="tile-content" data-color="#76280C">
 
           <h2>Me and some friends built an app called <span>Heyplace.</span></h2><p>2015</p>
@@ -41,7 +47,7 @@ title: Welcome to Middleman
           <img src="images/case-heyplace.png" alt="">
 
         </div>
-      </li>
+      </li> -->
 
       <!-- <div class="portfolio">
       <ul class="tiles">

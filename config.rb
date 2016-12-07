@@ -2,6 +2,12 @@
 # Page options, layouts, aliases and proxies
 ###
 
+activate :directory_indexes
+set :relative_links, false #should be true
+set :images_dir, 'images'
+
+activate :imgix, host: 'grazio.imgix.net', secure_url_token: 'DGu3z9g8q3pML74D', shard_strategy: :cycle
+
 # Per-page layout changes:
 #
 # With no layout
@@ -42,11 +48,17 @@ end
 #   end
 # end
 
+helpers do
+  def imgix(url, imgattr)
+    base_url = 'http://grazio.imgix.net/' + url + '?' + imgattr
+    # "<img src='#{base_url}'>"
+  end
+end
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
   # activate :minify_css
-  activate :directory_indexes
   # Minify Javascript on build
   # activate :minify_javascript
 end
