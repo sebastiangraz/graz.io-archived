@@ -41,6 +41,7 @@
   }
 
   img {
+    transition: .5s $bezier opacity;
     width: 100%;
     bottom: 0;
     position: absolute;
@@ -66,9 +67,11 @@
       font-size: 1.5rem;
     };
   }
+
   p {
     margin: 0;
   }
+
   &.promoted {
     @include mq(md) {
       .tile-bg {

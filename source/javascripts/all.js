@@ -29,7 +29,6 @@ $doc.ready(function() {
       var lspacer = $(this).data('lspacer'),
           rspacer = $(this).data('rspacer');
 
-      var tileWidth = $(this).outerWidth();
       $(this).addClass('lspacer-' + lspacer + ' rspacer-' + rspacer)
     });
   }
