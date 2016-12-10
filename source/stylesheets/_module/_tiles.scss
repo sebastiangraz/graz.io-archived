@@ -35,20 +35,27 @@
   position: relative;
   list-style: none;
   float:left;
+  margin-bottom: 1rem;
 
   @include mq(md){
     width: 25%;
+    margin-bottom: 0
   }
 
   img {
     transition: .5s $bezier opacity;
-    width: 100%;
+    width: percentage(1/2);
     bottom: 0;
     position: absolute;
     opacity: 1;
-    transform: translateX(20%);
+    right: 0;
+    height: 100%;
+    object-fit: contain;
     @include mq(md) {
+      width: 100%;
+      transform: translateX(20%);
       opacity: 0;
+      height: 70%;
     }
   }
   .hidden {
@@ -61,9 +68,11 @@
 
   h2 {
     font-size: 1.25rem;
-    visibility: hidden;
+    width: percentage(1/2);
     margin: 0;
-    @include mq(lg) {
+    @include mq(md) {
+      visibility: hidden;
+      width: 100%;
       font-size: 1.5rem;
     };
   }

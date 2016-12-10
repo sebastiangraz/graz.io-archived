@@ -1,0 +1,12 @@
+<li class="tile <%= 'promoted' if project.data.promoted == true %>" data-rspacer="<%= project.data.rspacer%>" data-lspacer="<%= project.data.lspacer %>">
+  <a href="<%= project.url %>">
+    <div class="tile-content" data-color="<%= project.data.color %>">
+      <h2><%= project.data.hovertext %></h2>
+      <span><%= project.date.strftime('%B %d, %Y') %></p>
+    </div>
+
+    <div class="tile-bg" data-bgcolor=" <%= project.data.bgcolor %> ">
+      <%= partial(:'partials/image', :locals => { :imageurl => project.data.image, :alt => project.title }) %>
+    </div>
+  </a>
+</li>

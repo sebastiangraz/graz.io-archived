@@ -20,7 +20,7 @@
 }
 
 .intro {
-  margin-top: 8.75rem;
+  margin-top: 8rem;
   margin-bottom: 2rem;
 
   h2 {
@@ -31,6 +31,21 @@
     margin-bottom: 0rem;
   };
 }
+
+.blog {
+    @include mq(md) {
+      margin: $tileHeight 0;
+    };
+
+}
+
+.case {
+  img {
+    background: #eee;
+  }
+}
+
+
 
 //  SinicalDev : @import '0-plugins/plugins-dir';@import '1-modules/modules-dir';@import '2-layouts/layouts-dir';
 //  Turbo SinicalDev : and then layouts-dir looks like

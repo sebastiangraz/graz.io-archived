@@ -9,120 +9,33 @@ title: Welcome to Middleman
 
   <div class="intro">
     <h2>Portfolio of Sebastian Graz.</h1>
-      <h2 class="secondary">Interface designer.</h1>
-
-      </div>
-
-      <div class="portfolio">
-        <ul class="tiles">
-
-          <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
-            <li class="tile <%= 'promoted' if article.data.promoted == true %>" data-rspacer="<%= article.data.rspacer%>" data-lspacer="<%= article.data.lspacer %>">
-
-              <a href="<%= article.url %>">
-                <div class="tile-content" data-color="<%= article.data.color %>">
-                  <h2><%= article.data.hovertext %></h2>
-                  <span><%= article.date.strftime('%B %d, %Y') %></p>
-                  <!-- <%= link_to article.title, article.path, :relative => true %> -->
-                </div>
-
-                <div class="tile-bg" data-bgcolor=" <%= article.data.bgcolor %> ">
-                  <%= partial(:'partials/image', :locals => { :imageurl => article.data.image, :alt => article.title }) %>
-                </div>
-              </a>
-            </li>
-
-          <% end %>
-        </ul>
-
-      </div>
-      <!-- <li class="tile">
-      <div class="tile-content" data-color="#76280C">
-
-      <h2>Me and some friends built an app called <span>Heyplace.</span></h2><p>2015</p>
-    </div>
-    <div class="tile-bg" data-bgcolor="#F3B462">
-    <img src="images/case-heyplace.png" alt="">
-
+    <h2 class="secondary">Interface designer.</h1>
   </div>
-</li> -->
 
-<!-- <div class="portfolio">
-<ul class="tiles">
+  <div class="portfolio">
+    <ul class="tiles">
+      <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
+      <%= partial "partials/tile", locals: { project: article } %>
+      <% end %>
+    </ul>
+  </div>
 
+  <div class="intro">
+    <h2>Sometimes I write about design</h1>
+    <h2 class="secondary">All opinions are my own</h1>
+  </div>
 
-<li class="tile spacer"></li>
-<li class="tile spacer"></li>
-<li class="tile">
-<div class="tile-content" data-color="#3FEFEF">
-<h2>I helped <span>Volvo</span> design their future website.</h2><p>2015</p>
-</div>
-<div class="tile-bg" data-bgcolor="#171932">
-<img src="images/case-volvo.png" alt="">
-
-</div>
-</li>
-
-<li class="tile spacer"></li>
-<li class="tile spacer"></li>
-
-<li class="tile promoted" >
-<div class="tile-content" data-color="#EF403F">
-
-<h2>I designed the future of eCommerce with <span>Delhaize.</span></h2><p>2015</p>
-</div>
-<div class="tile-bg" data-bgcolor="#F3F3F6">
-
-</div>
-</li>
-
-<li class="tile spacer"></li>
-
-<li class="tile">
-<div class="tile-content" data-color="#2C760C">
-<h2>I helped win <span>Husqvarna</span> as a client.</h2><p>2015</p>
-</div>
-<div class="tile-bg" data-bgcolor="#62F3BA">
-
-</div>
-</li>
-
-<li class="tile">
-<div class="tile-content" data-color="#76280C">
-
-<h2>Me and some friends built an app called <span>Heyplace.</span></h2><p>2015</p>
-</div>
-<div class="tile-bg" data-bgcolor="#F3B462">
-<img src="images/case-heyplace.png" alt="">
-
-</div>
-</li>
-
-<li class="tile spacer"></li>
-
-<li class="tile">
-<div class="tile-content" data-color="#000000">
-
-<h2>I designed and developed <span>The Poetry Hour.</span></h2><p>2015</p>
-</div>
-<div class="tile-bg" data-bgcolor="#f0ffa5">
-<img src="images/case-poetry.png" alt="">
-
-</div>
-</li>
+  <div class="blog">
+    <ul class="tiles">
+      <% blog('blog').articles.each do | blog | %>
+      <%= partial "partials/tile", locals: { project: blog } %>
+      <% end %>
+    </ul>
+  </div>
 
 
-
-
-</ul>
-</div> -->
-
-
-
-
+</div><!-- .welcome -->
 
 <div class="footer">
 
 </div>
-
-</div><!-- .welcome -->

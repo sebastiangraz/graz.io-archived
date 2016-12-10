@@ -28,11 +28,18 @@ configure :development do
 end
 
 
-activate :blog do |blog|
+activate :blog do | blog |
   blog.name = 'case'
   blog.prefix = 'case'
   blog.layout = 'case-layout'
   blog.permalink = ':title.html'
+end
+
+activate :blog do | verbose |
+  verbose.name = 'blog'
+  verbose.prefix = 'blog'
+  verbose.layout = 'blog-layout'
+  verbose.permalink = ':title.html'
 end
 
 ###
