@@ -75,7 +75,7 @@
   &.promoted {
     @include mq(md) {
       .tile-bg {
-        width: $tileWidth * 2;
+        width: 200%;
       }
     }
 

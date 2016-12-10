@@ -4,6 +4,8 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta property="ix:host" content="grazio.imgix.net">
+    <meta property="ix:useHttps" content="true">
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
@@ -13,10 +15,19 @@
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :jquery %>
     <%= javascript_include_tag :all %>
+    <%= javascript_include_tag :imgix %>
 
   </head>
 
-  <body class="row <%= page_classes %>">
-    <%= yield %>
+  <body class="<%= page_classes %>">
+    <%= partial "partials/nav" %>
+    <%= partial "partials/case-header" %>
+
+    <div class="row">
+      <div class="m-t-l">
+        <%= partial "partials/case-info" %>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

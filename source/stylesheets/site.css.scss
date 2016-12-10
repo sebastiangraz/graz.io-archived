@@ -6,9 +6,12 @@
 @import "_layout/elements";
 @import "_layout/typography";
 @import "_layout/mq";
+@import "_layout/architecture";
+@import "_layout/grid";
 
 @import "_module/nav";
 @import "_module/tiles";
+@import "_module/case-header";
 
 .row {
   max-width: $max-width;
@@ -16,13 +19,7 @@
   width: 92%;
 }
 
-
-
 .intro {
-  display:flex;
-  flex-direction: column;
-  position: relative;
-  width: $tileWidth * 2;
   margin-top: 8.75rem;
   margin-bottom: 2rem;
 

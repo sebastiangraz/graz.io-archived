@@ -1,0 +1,10 @@
+@mixin grid($split : 1, $padding : $gridpadding) {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -$padding / 2;
+  width: calc(100% - -#{$padding});
+  > * {
+    margin: 0 $padding / 2;
+    width: calc(99.99% * 1/#{$split} - #{$padding});
+  }
+}

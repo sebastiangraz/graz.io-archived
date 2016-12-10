@@ -1,0 +1,29 @@
+.case-header {
+  position: relative;
+  width: 100%;
+  background: #f00;
+  height:360px;
+  display: block;
+  .row {
+    position: relative;
+    height: 100%;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin: 0;
+    @include mq(md) {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }
+  .case-content {
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    transform: translateY(5.5rem);
+    @include mq(sm) {
+      width: 20rem;
+    }
+  }
+}

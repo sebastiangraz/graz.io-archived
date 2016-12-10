@@ -35,8 +35,6 @@ GEM
     hashie (3.4.6)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    imgix (1.1.0)
-      addressable
     kramdown (1.13.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -79,9 +77,6 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
-    middleman-imgix (1.0.3)
-      imgix (>= 1.1)
-      middleman-core (>= 4.1)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -117,7 +112,6 @@ PLATFORMS
 DEPENDENCIES
   middleman (>= 4.0.0)
   middleman-blog (~> 4.0)
-  middleman-imgix
   middleman-livereload
   tzinfo-data
   wdm (~> 0.1.0)
