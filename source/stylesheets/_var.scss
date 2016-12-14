@@ -1,8 +1,12 @@
 $max-width : 960px;
-$link-color : #3404d5;
+$link-color : rgba(#000, 0.7);
 $bezier: cubic-bezier(.03, .82, .34, .99);
 
 $tileWidth : 208px;
 $tileHeight : 276px;
 $margin: 1rem;
 $gridpadding: 2rem;
+
+$mq-lg : 1024;
+$mq-md : 768;
+$mq-sm : 480;

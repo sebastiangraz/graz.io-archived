@@ -2,8 +2,11 @@
   position: relative;
   width: 100%;
   background: #f00;
-  height:360px;
+  height:260px;
   display: block;
+  @include mq(md) {
+    height:360px;
+  }
   .row {
     position: relative;
     height: 100%;

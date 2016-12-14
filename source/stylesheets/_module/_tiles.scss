@@ -6,6 +6,7 @@
     max-width: $tileWidth * 4;
   }
 }
+
 .tile-content {
   height: $tileHeight;
   padding:1.5rem;
@@ -19,6 +20,7 @@
     padding:1.5rem;
   }
 }
+
 .tile-bg {
   transition: .8s $bezier all;
   overflow: hidden;
@@ -44,19 +46,14 @@
 
   img {
     transition: .5s $bezier opacity;
-    width: percentage(1/2);
+    width: percentage(7/12);
     bottom: 0;
     position: absolute;
     opacity: 1;
     right: 0;
-    height: 100%;
-    object-fit: contain;
     @include mq(md) {
-      width: 100%;
-      transform: translateX(20%);
       opacity: 0;
-      height: 70%;
-    }
+    };
   }
   .hidden {
     opacity: 0;
@@ -107,18 +104,6 @@
       @include mq(md) {
         transform: scale(1.2);
       }
-    }
-  }
-
-  &.spacer {
-    height: $tileHeight;
-    width: $tileWidth;
-    background: transparent;
-    display: none;
-
-    @include mq(md) {
-      display: block;
-      width: 25%;
     }
   }
 }

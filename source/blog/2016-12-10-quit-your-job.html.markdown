@@ -7,7 +7,7 @@ tags:
 - 'Iconography'
 image: 'case-poetry.png'
 hovertext: '<span>Quit your job</span>'
-color: '#FFFFFF'
+color: '#ddd'
 bgcolor: '#3E46FF'
 lspacer: 0
 rspacer: 1

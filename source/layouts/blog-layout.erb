@@ -17,10 +17,16 @@
     <%= javascript_include_tag :all %>
     <%= javascript_include_tag :imgix %>
 
-
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <%= partial "partials/nav" %>
+    <%= partial "partials/case-header" %>
+
+    <div class="row">
+      <div class="m-t-l">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

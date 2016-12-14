@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Cinetype', sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 h1,
@@ -23,12 +23,17 @@ h2 {
 }
 
 p {
-  font-size: 24px;
+  font-size: calc(100% + 8 * ((100vw - 320px) / (#{$mq-lg} - 320)));
+  margin: 2rem 0;
+
+  @include mq(lg) {
+    font-size:24px;
+  };
 }
 
 a {
-  color: $link-color;
   text-decoration: none;
+  color: $link-color;
 }
 
 .secondary {

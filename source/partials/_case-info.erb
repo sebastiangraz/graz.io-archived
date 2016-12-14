@@ -1,10 +1,17 @@
-
-
-
 <div class="case-info">
-  <div class="case-tags"><p>Tags — </p>
-
+  <div class="case-tags"><span>Tags — </span>
+    <ul>
+      <% current_page.tags.each do |tag| %>
+      <li><p><%= tag %></p></li>
+      <% end %>
+    </ul>
 
   </div>
-  <div class="case-roles"><p>Roles — </p></div>
+  <div class="case-roles"><span>Roles — </span>
+    <ul>
+      <% current_page.data.roles.each do |role| %>
+      <li><p><%= role %></p></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

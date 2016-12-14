@@ -1,6 +1,7 @@
 body {
   margin: 0;
   overflow-y:scroll;
+  background: hsl(0, 0%, 97%);
 }
 
 
@@ -17,7 +18,7 @@ ul {
   padding: 0;
 
   li {
-
+    list-style: none;
   }
 }
 

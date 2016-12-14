@@ -19,7 +19,7 @@ $doc.ready(function() {
       });
     })
 
-    $('.tile:not(.spacer)').mouseover( function(){
+    $('.tile').mouseover( function(){
       $(this).addClass('expanded');
     }).mouseout( function(){
       $(this).removeClass('expanded');

@@ -1,0 +1,29 @@
+---
+title: The Poetry Hour
+date: 2016-12-06 15:27 UTC
+tags:
+- 'Rebranding'
+- 'Responsive'
+roles:
+- 'Lead Designer'
+- 'Front-end developer'
+image: 'case-poetry.png'
+hovertext: 'I designed and developed <span>The Poetry Hour.</span>'
+color: '#000000'
+bgcolor: '#DAF362'
+lspacer: 1
+rspacer: 0
+order: 5
+
+---
+
+%p
+  Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
+
+<%= partial(:'partials/image', :locals => { :imageurl => "case-heyplace.png", :alt => current_page.title }) %>
+%p.right
+  The home page is adorned with a content slider, featuring a random poetry verse matched with Memes that correspond with the verse displayed. It's a smart way to show what the website is about at a glance. Reading poetry or explore memes.
+
+<%= partial(:'partials/image', :locals => { :imageurl => "case-images/poetry-home-macbook.png", :alt => current_page.title }) %>
+%p.left
+  The user can create their own Memes through the website with the ability to customise the font, text colour, font size, and text position. The website does some minor hand holding in terms of Meme image aesthetics to ensure the Memes look pleasant. For instance the user may only choose colours that suit the average colour of the image that the user has chosen.

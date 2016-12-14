@@ -2,11 +2,11 @@
   <a href="<%= project.url %>">
     <div class="tile-content" data-color="<%= project.data.color %>">
       <h2><%= project.data.hovertext %></h2>
-      <span><%= project.date.strftime('%B %d, %Y') %></p>
+      <span><%= project.date.strftime('%Y') %></p>
     </div>
 
     <div class="tile-bg" data-bgcolor=" <%= project.data.bgcolor %> ">
-      <%= partial(:'partials/image', :locals => { :imageurl => project.data.image, :alt => project.title }) %>
+      <%= partial(:'partials/image', :locals => { :imageurl => 'case-images/' + project.data.image, :alt => project.title }) %>
     </div>
   </a>
 </li>
