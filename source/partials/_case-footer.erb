@@ -1,0 +1,8 @@
+<footer class="case-footer">
+  <h2 class="footer-h2">See more projects</h2>
+  <ul class="tiles">
+    <% blog('case').articles.delete_if{|item| item == current_article}.sort_by{ |index| rand }.take(3).each do |article| %>
+      <%= partial "partials/tile", locals: { project: article } %>
+    <% end %>
+  </ul>
+</footer>

@@ -46,13 +46,14 @@
 
   img {
     transition: .5s $bezier opacity;
-    width: percentage(7/12);
+    width: 16rem;
     bottom: 0;
     position: absolute;
     opacity: 1;
     right: 0;
     @include mq(md) {
       opacity: 0;
+      width: percentage(2/3);
     };
   }
   .hidden {
@@ -84,7 +85,9 @@
         width: 200%;
       }
     }
-
+    img {
+      opacity: 1;
+    }
   }
 
   &.expanded {
