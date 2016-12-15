@@ -81,10 +81,8 @@
 
   &.promoted {
     @include mq(md) {
-      .tile-bg {
-        width: 200%;
-      }
-    }
+      width: 50%;
+    };
     img {
       opacity: 1;
     }

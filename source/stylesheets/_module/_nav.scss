@@ -2,6 +2,8 @@ nav {
   z-index: 3;
   position: relative;
   .navigation {
+    transition: .6s $bezier opacity;
+    height: 2rem;
     width: 100%;
     margin: 0 auto;
     top:4rem;
@@ -10,6 +12,9 @@ nav {
     .row {
       display: flex;
       justify-content: space-between;
+    }
+    &.hidden {
+      opacity: 0;
     }
   }
   ul {
