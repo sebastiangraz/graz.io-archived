@@ -1,41 +1,35 @@
 ---
-title: Welcome to Middleman
+title: Sebastian Graz
 ---
 
 <%= partial "partials/nav" %>
 
 
-<div class="row">
+<div class="row portfolio">
 
-  <div class="intro">
+  <div class="mt-l mb-xs abs intro">
     <h2>Portfolio of Sebastian Graz.</h1>
     <h2 class="secondary">Interface designer.</h1>
   </div>
 
-  <div class="portfolio">
-    <ul class="tiles">
-      <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
-      <%= partial "partials/tile", locals: { project: article } %>
-      <% end %>
-    </ul>
-  </div>
 
-  <div class="intro">
+  <ul class="tiles">
+    <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
+    <%= partial "partials/tile", locals: { project: article } %>
+    <% end %>
+  </ul>
+
+  <div class="mt-l mb-xs intro">
     <h2>Sometimes I write about design</h1>
     <h2 class="secondary">All opinions are my own</h1>
   </div>
 
-  <div class="blog-section">
-    <ul class="tiles">
-      <% blog('blog').articles.each do | blog | %>
-      <%= partial "partials/tile", locals: { project: blog } %>
-      <% end %>
-    </ul>
-  </div>
 
+  <ul class="tiles">
+    <% blog('blog').articles.each do | blog | %>
+    <%= partial "partials/tile", locals: { project: blog } %>
+    <% end %>
+  </ul>
 
-</div><!-- .welcome -->
-
-<div class="footer">
 
 </div>

@@ -1,9 +1,55 @@
 //margin-top-large
-.m-t-l {
+
+.mt-xxl {
+  margin-top: $margin * 16;
+}
+
+.mt-xl {
+  margin-top: $margin * 12;
+}
+
+.mt-l {
   margin-top: $margin * 8;
 }
 
-//margin-top-large
-.m-t-s {
+.mt-s {
   margin-top: $margin * 4;
+}
+
+.mt-xs {
+  margin-top: $margin * 2;
+}
+
+
+
+.mb-xxl {
+  margin-bottom: $margin * 16;
+}
+
+.mb-xl {
+  margin-bottom: $margin * 12;
+}
+
+.mb-l {
+  margin-bottom: $margin * 8;
+}
+
+.mb-s {
+  margin-bottom: $margin * 4;
+}
+
+.mb-xs {
+  margin-bottom: $margin * 2;
+}
+
+
+
+
+
+.abs {
+  position: absolute;
+}
+
+.rel {
+  position: relative;
 }

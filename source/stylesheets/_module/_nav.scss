@@ -2,7 +2,6 @@ nav {
   z-index: 3;
   position: relative;
   .navigation {
-    transition: .6s $bezier opacity;
     height: 2rem;
     width: 100%;
     margin: 0 auto;
@@ -13,8 +12,15 @@ nav {
       display: flex;
       justify-content: space-between;
     }
+
     &.hidden {
-      opacity: 0;
+      .logo {
+        transform: translateX(2rem);
+      }
+      .menu-items {
+        opacity: 0.2;
+        transform: translateX(-2rem);
+      }
     }
   }
   ul {
@@ -24,6 +30,10 @@ nav {
       margin-left: 2rem;
     }
   }
+}
+
+.logo, .menu-items {
+  transition: 1s $bezier all;
 }
 
 .logo {

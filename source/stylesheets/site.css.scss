@@ -64,21 +64,17 @@ p {
 
 
 .intro {
-  margin-top: 8rem;
-  margin-bottom: 2rem;
-
   h2 {
     margin: 0.25rem 0;
   }
-  @include mq(md) {
-    position: absolute;
-    margin-bottom: 0rem;
-  };
 }
 
-.blog-section {
-  @include mq(md) {
-    margin: $tileHeight 0;
+.portfolio {
+  .abs {
+    position: relative;
+    @include mq(md) {
+      position: absolute;
+    };
   }
 }
 
