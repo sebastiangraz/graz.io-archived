@@ -12,10 +12,9 @@ title: Sebastian Graz
     <h2 class="secondary">Interface designer.</h1>
   </div>
 
-
   <ul class="tiles">
     <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
-    <%= partial "partials/tile", locals: { project: article } %>
+      <%= partial "partials/tile", locals: { project: article } %>
     <% end %>
   </ul>
 
@@ -24,12 +23,10 @@ title: Sebastian Graz
     <h2 class="secondary">All opinions are my own</h1>
   </div>
 
-
   <ul class="tiles">
     <% blog('blog').articles.each do | blog | %>
     <%= partial "partials/tile", locals: { project: blog } %>
     <% end %>
   </ul>
-
 
 </div>

@@ -8,3 +8,9 @@
     width: calc(99.99% * 1/#{$split} - #{$padding});
   }
 }
+
+.g2 {
+  @include mq(md) {
+    @include grid(2);
+  }
+}

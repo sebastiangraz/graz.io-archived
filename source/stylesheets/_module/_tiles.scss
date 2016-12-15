@@ -1,6 +1,7 @@
 .tiles {
   width: 100%;
   display: flex;
+  position: relative;
   flex-flow: row wrap;
   @include mq(md) {
     max-width: $tileWidth * 4;
@@ -120,11 +121,6 @@
   }
 }
 
-.rspacer-3 {
-  @include mq(md) {
-    margin-right: 75%;
-  }
-}
 
 .lspacer-1 {
   @include mq(md) {
@@ -134,11 +130,5 @@
 .lspacer-2 {
   @include mq(md) {
     margin-left: 50%;
-  }
-}
-
-.lspacer-3 {
-  @include mq(md) {
-    margin-left: 75%;
   }
 }

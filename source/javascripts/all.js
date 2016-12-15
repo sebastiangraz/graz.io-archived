@@ -2,6 +2,7 @@
 
 var $doc = $(document);
 
+
 $doc.ready(function() {
 
   function tileColor() {
@@ -11,36 +12,6 @@ $doc.ready(function() {
         'color' : color
       })
     })
-
-
-    $(function() {
-      //caches a jQuery object containing the header element
-      var header = $('.navigation');
-      var caseHeader = $('.case-header').outerHeight();
-      var calcHeader = caseHeader - ( header.outerHeight() + header.position().top ) ;
-
-
-
-      $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-
-        if (scroll >= calcHeader) {
-          header.addClass('hidden');
-        } else {
-          header.removeClass('hidden');
-        }
-      });
-    });
-
-    // $(window).on('scroll', function () {
-    //   var windowTop = $(window).scrollTop();
-    //   if (windowTop >= 200) {
-    //     console.log('scrolled 200 px');
-    //   }
-    //   else {
-    //
-    //   }
-    // });
 
     $('.tile-bg').each( function(){
       var bgcolor = $(this).data('bgcolor');
@@ -62,6 +33,23 @@ $doc.ready(function() {
       $(this).addClass('lspacer-' + lspacer + ' rspacer-' + rspacer)
     });
   }
+
+
+  $(function() {
+    var header = $('.navigation');
+    var caseHeader = $('.case-header').outerHeight();
+    var calcHeader = caseHeader - ( header.outerHeight() + header.position().top ) ;
+
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= calcHeader) {
+        header.addClass('hidden');
+      } else {
+        header.removeClass('hidden');
+      }
+    });
+  });
 
   tileColor()
 

@@ -7,6 +7,8 @@
 body {
   font-family: 'Cinetype', sans-serif;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -14,8 +16,6 @@ h2,
 h3,
 h4 {
   font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 h2 {
@@ -27,7 +27,7 @@ p {
   margin: 2rem 0;
 
   @include mq(lg) {
-    font-size:24px;
+    font-size: 1.5rem;
   };
 }
 

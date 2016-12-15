@@ -61,8 +61,6 @@ p {
   border-image: url("/images/wave.png") 32 0 24 round repeat;
 }
 
-
-
 .intro {
   h2 {
     margin: 0.25rem 0;
@@ -99,6 +97,12 @@ p {
 .case {
   img {
     margin-top: 6rem;
+  }
+}
+
+.ul-xl {
+  li {
+    font-size: 1.5rem;
   }
 }
 
