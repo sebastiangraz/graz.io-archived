@@ -10,6 +10,6 @@ hovertext: '<span>Doge Sans, the font no one liked</span>'
 color: '#9818EB'
 bgcolor: '#E8FF94'
 lspacer: 0
-rspacer: 0
+rspacer: 1
 order: 5
 ---

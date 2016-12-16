@@ -37,7 +37,6 @@
   width: 100%;
   position: relative;
   list-style: none;
-  float:left;
   margin-bottom: 1rem;
 
   @include mq(md){
@@ -106,6 +105,18 @@
       @include mq(md) {
         transform: scale(1.2);
       }
+    }
+  }
+}
+
+.spacer {
+  display:none;
+  @include mq(md) {
+    display: block;
+    width: 25%;
+    height: $tileHeight;
+    &-double {
+      width: 50%;
     }
   }
 }
