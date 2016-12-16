@@ -27,33 +27,12 @@ $doc.ready(function() {
     });
 
 
-    function get_position(e) {
-      var res = new Object();
-      var pos = e.position();
-      res.left = pos.left;
-      res.top = pos.top;
-      res.right = res.left + e.width();
-      res.bottom = res.top + e.height();
-      return res;
-    }
-
-    setTimeout(function () {
-      $('.tile').each( function(){
-        $(this).addClass( 'top-' + get_position($(this)).top)
-        $(this).addClass( 'left-' + get_position($(this)).left)
-        $(this).addClass( 'right-' + get_position($(this)).right)
-        $(this).addClass( 'bot-' + get_position($(this)).bottom)
-        console.log();
-
-      });
-    }, 200);
-
     $('.tile').each( function(){
       var lspacer = $(this).data('lspacer'),
       rspacer = $(this).data('rspacer');
 
       var spacer = $('<li />', { "class": 'spacer',}),
-      spacer_double = $('<li />', { "class": 'tile spacer-double',});
+      spacer_double = $('<li />', { "class": 'spacer-double',});
 
       if ($(this).data('lspacer') == 1) {
         spacer.insertBefore( $( this ) );
@@ -68,6 +47,47 @@ $doc.ready(function() {
         spacer_double.insertAfter( $( this ) );
       }
     });
+
+    // function addClientRectsOverlay(elt) {
+    //   var rects = elt.getClientRects();
+    //   for (var i = 0; i != rects.length; i++) {
+    //     // console.log(rect = rects[i])
+    //     // console.log(rects[i].right)
+    //     return rects[i];
+    //   }
+    //
+    // }
+
+    function get_position(e) {
+      var res = new Object();
+      var pos = e.position();
+      res.left = pos.left;
+      res.top = pos.top;
+      res.right =  res.left + e.width() - e.parent().width();
+      res.bottom = res.top + e.height() - e.parent().height();
+      return res;
+    }
+
+
+    $('.tile').each( function(){
+      if(get_position($(this)).top == 0 ) {
+        $(this).addClass('topmost');
+      }
+      if(get_position($(this)).left == 0 ) {
+        $(this).addClass('leftmost');
+      }
+      if(get_position($(this)).right == 0 ) {
+        $(this).addClass('rightmost');
+      }
+      if(get_position($(this)).bottom == 0 ) {
+        $(this).addClass('bottommost');
+      }
+      // $(this).addClass( 'top-' + get_position($(this)).top)
+      // $(this).addClass( 'left-' + get_position($(this)).left)
+      // $(this).addClass( 'right-' + get_position($(this)).right)
+      // $(this).addClass( 'bottom-' + get_position($(this)).bottom)
+    });
+
   }
 
 
