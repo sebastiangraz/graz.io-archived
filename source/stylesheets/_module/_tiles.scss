@@ -100,10 +100,94 @@
     h2 {
       visibility: visible;
     }
+  }
+}
 
+
+  .expanded {
     .tile-bg {
       @include mq(md) {
-        transform: scale(1.2);
+        transform: scale(1.25);
+      }
+    }
+  }
+
+.topmost {
+  &.expanded {
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.25);
+        transform-origin: top;
+      }
+    }
+  }
+}
+.leftmost {
+  &.expanded {
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.25);
+        transform-origin: left;
+      }
+    }
+  }
+}
+.bottommost {
+  &.expanded {
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.25);
+        transform-origin: bottom;
+      }
+    }
+  }
+}
+.rightmost {
+  &.expanded {
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.25);
+        transform-origin: right;
+      }
+    }
+  }
+}
+.leftmost.bottommost {
+  &.expanded {
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.25);
+        transform-origin: left bottom;
+      }
+    }
+  }
+}
+.rightmost.bottommost {
+  &.expanded {
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.25);
+        transform-origin: right bottom;
+      }
+    }
+  }
+}
+.rightmost.topmost {
+  &.expanded {
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.25);
+        transform-origin: right top;
+      }
+    }
+  }
+}
+.leftmost.topmost {
+  &.expanded {
+    .tile-bg {
+      @include mq(md) {
+        transform: scale(1.25);
+        transform-origin: left top;
       }
     }
   }

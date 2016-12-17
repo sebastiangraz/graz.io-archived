@@ -23,6 +23,10 @@ title: Sebastian Graz
     <h2 class="secondary">All opinions are my own</h1>
   </div>
 
-
+  <ul class="tiles">
+    <% blog('blog').articles.each do | blog | %>
+    <%= partial "partials/tile", locals: { project: blog } %>
+    <% end %>
+  </ul>
 
 </div>
