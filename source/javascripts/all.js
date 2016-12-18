@@ -70,22 +70,14 @@ $doc.ready(function() {
 
 
     $('.tile').each( function(){
-      if(get_position($(this)).top == 0 ) {
-        $(this).addClass('topmost');
-      }
+
       if(get_position($(this)).left == 0 ) {
         $(this).addClass('leftmost');
       }
       if(get_position($(this)).right == 0 ) {
         $(this).addClass('rightmost');
       }
-      if(get_position($(this)).bottom == 0 ) {
-        $(this).addClass('bottommost');
-      }
-      $(this).addClass( 'top-' + get_position($(this)).top)
-      $(this).addClass( 'left-' + get_position($(this)).left)
-      $(this).addClass( 'right-' + get_position($(this)).right)
-      $(this).addClass( 'bottom-' + get_position($(this)).bottom)
+
     });
 
   }

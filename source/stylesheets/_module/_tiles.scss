@@ -30,6 +30,7 @@
   width: 100%;
   height: 100%;
   position : absolute;
+  transform: scale(1);
 }
 
 
@@ -104,25 +105,19 @@
 }
 
 
-  .expanded {
-    .tile-bg {
-      @include mq(md) {
-        transform: scale(1.25);
-      }
-    }
-  }
-
-.topmost {
-  &.expanded {
-    .tile-bg {
-      @include mq(md) {
-        transform: scale(1.25);
-        transform-origin: top;
-      }
+.expanded {
+  .tile-bg {
+    @include mq(md) {
+      transform: scale(1.25);
     }
   }
 }
+
+
 .leftmost {
+  .tile-bg {
+    transform-origin: left;
+  }
   &.expanded {
     .tile-bg {
       @include mq(md) {
@@ -132,17 +127,11 @@
     }
   }
 }
-.bottommost {
-  &.expanded {
-    .tile-bg {
-      @include mq(md) {
-        transform: scale(1.25);
-        transform-origin: bottom;
-      }
-    }
-  }
-}
+
 .rightmost {
+  .tile-bg {
+    transform-origin: right;
+  }
   &.expanded {
     .tile-bg {
       @include mq(md) {
@@ -152,46 +141,7 @@
     }
   }
 }
-.leftmost.bottommost {
-  &.expanded {
-    .tile-bg {
-      @include mq(md) {
-        transform: scale(1.25);
-        transform-origin: left bottom;
-      }
-    }
-  }
-}
-.rightmost.bottommost {
-  &.expanded {
-    .tile-bg {
-      @include mq(md) {
-        transform: scale(1.25);
-        transform-origin: right bottom;
-      }
-    }
-  }
-}
-.rightmost.topmost {
-  &.expanded {
-    .tile-bg {
-      @include mq(md) {
-        transform: scale(1.25);
-        transform-origin: right top;
-      }
-    }
-  }
-}
-.leftmost.topmost {
-  &.expanded {
-    .tile-bg {
-      @include mq(md) {
-        transform: scale(1.25);
-        transform-origin: left top;
-      }
-    }
-  }
-}
+
 
 .spacer {
   display:none;
