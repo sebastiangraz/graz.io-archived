@@ -68,13 +68,15 @@ $doc.ready(function() {
       return res;
     }
 
-
     $('.tile').each( function(){
+      var leftpos = Math.round(get_position($(this)).left );
+      var rightpos = Math.round(get_position($(this)).right );
 
-      if(get_position($(this)).left == 0 ) {
+      if(leftpos == 0 ) {
         $(this).addClass('leftmost');
       }
-      if(get_position($(this)).right == 0 ) {
+
+      if(rightpos == 0 ) {
         $(this).addClass('rightmost');
       }
 
@@ -103,16 +105,16 @@ $doc.ready(function() {
 
 
   // Changing the defaults
-window.sr = ScrollReveal({ reset: false });
+  window.sr = ScrollReveal({ reset: false });
 
-var fooReveal = {
-  origin: 'bottom',
-  scale: 1,
-  distance: '24px',
-  duration: 1200,
-  easing: 'cubic-bezier(.03, .82, .34, .99)'
-};
-sr.reveal('.case img', fooReveal);
+  var fooReveal = {
+    origin: 'bottom',
+    scale: 1,
+    distance: '24px',
+    duration: 1200,
+    easing: 'cubic-bezier(.03, .82, .34, .99)'
+  };
+  sr.reveal('.case-container img', fooReveal);
 
 
 });

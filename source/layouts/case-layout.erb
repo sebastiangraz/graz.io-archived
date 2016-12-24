@@ -1,38 +1,38 @@
 <!doctype html>
 <html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-    <meta property="ix:host" content="grazio.imgix.net">
-    <meta property="ix:useHttps" content="true">
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta property="ix:host" content="grazio.imgix.net">
+  <meta property="ix:useHttps" content="true">
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title><%= current_page.data.title || "Middleman" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag :site %>
+  <%= javascript_include_tag :jquery %>
+  <%= javascript_include_tag :all %>
+  <%= javascript_include_tag :imgix %>
 
-    <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :jquery %>
-    <%= javascript_include_tag :all %>
-    <%= javascript_include_tag :imgix %>
+</head>
 
-  </head>
+<body class="<%= page_classes %>">
+  <%= partial "partials/svg-container" %>
+  <%= partial "partials/nav" %>
+  <%= partial "partials/case-header" %>
 
-  <body class="<%= page_classes %>">
-    <%= partial "partials/nav" %>
-    <%= partial "partials/case-header" %>
-
-    <div class="row">
-      <div class="mt-l">
-        <%= partial "partials/case-info" %>
+  <div class="row">
+    <div class="mt-l">
+      <%= partial "partials/case-info" %>
+      <div class="case-container">
         <%= yield %>
-
-          <%= partial "partials/case-footer" %>
-
       </div>
-    </div>
-    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+      <%= partial "partials/case-footer" %>
 
-  </body>
+    </div>
+  </div>
+  <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+
+</body>
 </html>

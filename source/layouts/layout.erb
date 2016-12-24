@@ -10,8 +10,6 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :jquery %>
     <%= javascript_include_tag :all %>
@@ -21,6 +19,9 @@
   </head>
 
   <body class="<%= page_classes %>">
+    <%= partial "partials/svg-container" %>
     <%= yield %>
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+
   </body>
 </html>

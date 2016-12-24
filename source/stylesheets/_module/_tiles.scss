@@ -3,6 +3,7 @@
   display: flex;
   position: relative;
   flex-flow: row wrap;
+
   @include mq(md) {
     max-width: $tileWidth * 4;
   }
@@ -17,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
   @include mq(md) {
     padding:1.5rem;
   }
@@ -45,20 +47,24 @@
     margin-bottom: 0
   }
 
+  a {
+    position: static;
+  }
+
   img {
     transition: .5s $bezier opacity;
-    width: 16rem;
+    width: 50%;
+    max-width: 14rem;
     bottom: 0;
     position: absolute;
     opacity: 1;
     right: 0;
+
     @include mq(md) {
       opacity: 0;
+      max-width: initial;
       width: percentage(2/3);
-    };
-  }
-  .hidden {
-    opacity: 0;
+    }
   }
 
   h2>span {
@@ -69,6 +75,7 @@
     font-size: 1.25rem;
     width: percentage(1/2);
     margin: 0;
+
     @include mq(md) {
       visibility: hidden;
       width: 100%;
@@ -83,9 +90,6 @@
   &.promoted {
     @include mq(md) {
       width: 50%;
-    };
-    img {
-      opacity: 1;
     }
   }
 
@@ -142,9 +146,9 @@
   }
 }
 
-
 .spacer {
   display:none;
+
   @include mq(md) {
     display: block;
     width: 25%;
@@ -152,28 +156,5 @@
     &-double {
       width: 50%;
     }
-  }
-}
-
-.rspacer-1 {
-  @include mq(md) {
-    margin-right: 25%;
-  }
-}
-.rspacer-2 {
-  @include mq(md) {
-    margin-right: 50%;
-  }
-}
-
-
-.lspacer-1 {
-  @include mq(md) {
-    margin-left: 25%;
-  }
-}
-.lspacer-2 {
-  @include mq(md) {
-    margin-left: 50%;
   }
 }

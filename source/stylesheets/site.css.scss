@@ -14,6 +14,8 @@
 @import "_module/case-header";
 @import "_module/case-footer";
 
+@import "case";
+
 .row {
   max-width: $max-width;
   margin: 0 auto;
@@ -56,11 +58,6 @@ p {
   }
 }
 
-.case-title span {
-  border-bottom: 12px solid transparent;
-  border-image: url("/images/wave.png") 32 0 24 round repeat;
-}
-
 .intro {
   h2 {
     margin: 0.25rem 0;
@@ -90,7 +87,10 @@ p {
     margin: 0.5rem 0;
   }
   & > * {
-    max-width: 24rem;
+    max-width: 17rem;
+    &:first-child {
+      margin-right: 1rem;
+    }
   }
 }
 
@@ -106,8 +106,9 @@ p {
   }
 }
 
-
-
-//  SinicalDev : @import '0-plugins/plugins-dir';@import '1-modules/modules-dir';@import '2-layouts/layouts-dir';
-//  Turbo SinicalDev : and then layouts-dir looks like
-//  Turbo SinicalDev : @import 'index/index';@import 'projects/projects';
+.svg-hide {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

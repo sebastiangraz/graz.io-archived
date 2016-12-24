@@ -34,6 +34,30 @@ p {
 a {
   text-decoration: none;
   color: $link-color;
+  position: relative;
+}
+
+
+a {
+  .svg-stroke {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    height: 20px;
+    transition: stroke-dashoffset 1s linear;
+    transform: translateY(-50%);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1;
+    stroke-dasharray: 400px;
+    stroke-dashoffset: 400px;
+  }
+  &:hover svg{
+    stroke-dashoffset: 0px;
+  }
 }
 
 .secondary {
