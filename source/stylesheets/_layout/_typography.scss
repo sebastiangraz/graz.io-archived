@@ -1,11 +1,17 @@
 @font-face {
-  font-family: 'Cinetype';
+  font-family: 'Cinetype-Regular';
   font-weight: 100;
   src: url('/fonts/GT-Cinetype-Regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Cinetype-Italic';
+  font-weight: 100;
+  src: url('/fonts/GT-Cinetype-Regular-Italic.woff') format('woff');
+}
+
 body {
-  font-family: 'Cinetype', sans-serif;
+  font-family: 'Cinetype-Regular', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -37,6 +43,9 @@ a {
   position: relative;
 }
 
+i, blockquote, em {
+  font-family: 'Cinetype-Italic', sans-serif;
+}
 
 a {
   .svg-stroke {
@@ -61,5 +70,5 @@ a {
 }
 
 .secondary {
-  color: #aaa;
+  font-family: 'Cinetype-Italic', sans-serif;
 }

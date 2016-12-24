@@ -104,10 +104,12 @@
 
     h2 {
       visibility: visible;
+      span {
+        font-family: 'Cinetype-Italic', sans-serif;
+      }
     }
   }
 }
-
 
 .expanded {
   .tile-bg {
@@ -116,17 +118,24 @@
     }
   }
 }
-
-
 .leftmost {
   .tile-bg {
     transform-origin: left;
+
+    @include mq(lg) {
+      transform-origin: center;
+    }
   }
+
   &.expanded {
     .tile-bg {
       @include mq(md) {
         transform: scale(1.25);
         transform-origin: left;
+      }
+      @include mq(lg) {
+        transform: scale(1.25);
+        transform-origin: center;
       }
     }
   }
@@ -135,12 +144,19 @@
 .rightmost {
   .tile-bg {
     transform-origin: right;
+    @include mq(lg) {
+      transform-origin: center;
+    }
   }
   &.expanded {
     .tile-bg {
       @include mq(md) {
         transform: scale(1.25);
         transform-origin: right;
+      }
+      @include mq(lg) {
+        transform: scale(1.25);
+        transform-origin: center;
       }
     }
   }
