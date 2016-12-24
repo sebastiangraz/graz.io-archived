@@ -52,7 +52,8 @@
   }
 
   img {
-    transition: .5s $bezier opacity;
+    transition: .8s $bezier all;
+    transform: translate(16px, 16px);
     width: 50%;
     max-width: 14rem;
     bottom: 0;
@@ -94,12 +95,11 @@
   }
 
   &.expanded {
-
     position: relative;
     z-index: 2;
-
     img {
       opacity: 1;
+      transform: translate(0, 0);
     }
 
     h2 {

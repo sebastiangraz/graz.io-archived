@@ -1,7 +1,6 @@
 .case-header {
   position: relative;
   width: 100%;
-  background: #f00;
   height:260px;
   display: block;
   @include mq(md) {
@@ -18,6 +17,9 @@
     @include mq(md) {
       font-size: 3.5rem;
       line-height: 4rem;
+    }
+    span {
+      font-family: 'Cinetype-Italic', sans-serif;
     }
   }
   .case-content {

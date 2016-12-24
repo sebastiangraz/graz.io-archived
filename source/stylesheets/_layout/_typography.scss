@@ -10,6 +10,12 @@
   src: url('/fonts/GT-Cinetype-Regular-Italic.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Cinetype-Mono';
+  font-weight: 100;
+  src: url('/fonts/GT-Cinetype-Mono.woff') format('woff');
+}
+
 body {
   font-family: 'Cinetype-Regular', sans-serif;
   line-height: 1.5;
@@ -44,31 +50,5 @@ a {
 }
 
 i, blockquote, em {
-  font-family: 'Cinetype-Italic', sans-serif;
-}
-
-a {
-  .svg-stroke {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    overflow: hidden;
-    margin: 0;
-    width: 100%;
-    height: 20px;
-    transition: stroke-dashoffset 1s linear;
-    transform: translateY(-50%);
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1;
-    stroke-dasharray: 400px;
-    stroke-dashoffset: 400px;
-  }
-  &:hover svg{
-    stroke-dashoffset: 0px;
-  }
-}
-
-.secondary {
   font-family: 'Cinetype-Italic', sans-serif;
 }
