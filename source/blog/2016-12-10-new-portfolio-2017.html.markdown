@@ -9,8 +9,7 @@ image: 'case-poetry.png'
 hovertext: '<span style="color:<%= current_page.data.color%>">New Portfolio 2017.</span>'
 color: '#49006A'
 bgcolor: '#D690AC'
-lspacer: 1
-rspacer: 0
+lspacer: 2
 order: 5
 ---
 

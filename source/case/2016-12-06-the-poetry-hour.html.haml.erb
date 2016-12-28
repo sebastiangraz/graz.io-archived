@@ -12,7 +12,7 @@ hovertext: 'I designed and developed <span>The Poetry Hour.</span>'
 color: '#000000'
 bgcolor: '#DAF362'
 lspacer: 1
-rspacer: 0
+
 order: 5
 
 ---
@@ -21,20 +21,41 @@ order: 5
   Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
 
 <%= partial(:'partials/image', :locals => { :imageurl => "poetry/overview.jpg", :alt => current_page.title }) %>
+
+<%= partial(:'partials/image', :locals => { :imageurl => "poetry/homepage.jpg", :alt => current_page.title }) %>
+%p.title-left
+  Home page
 %p.right
   The home page is adorned with a content slider, featuring a random poetry verse matched with Memes that correspond with the verse displayed. It's a smart way to show what the website is about at a glance. Reading poetry or explore memes.
 
-<%= partial(:'partials/image', :locals => { :imageurl => "poetry/homepage.jpg", :alt => current_page.title }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "poetry/poem-page.jpg", :alt => current_page.title }) %>
+%p.title-left
+  Poem page
+%p.right
+  The poem page was designed to achieve two things: reading poetry and creating Memes. The user may create a Meme by either selecting the text, or be guided into creating a meme by clicking the create Meme button, which will automatically select the first verse.
+<%= partial(:'partials/image', :locals => { :imageurl => "poetry/meme-creator.jpg", :alt => current_page.title }) %>
+%p.title-right
+  Meme creator
 %p.left
   The user can create their own Memes through the website with the ability to customise the font, text colour, font size, and text position. The website does some minor hand holding in terms of Meme image aesthetics to ensure the Memes look pleasant. For instance the user may only choose colours that suit the average colour of the image that the user has chosen.
-<%= partial(:'partials/image', :locals => { :imageurl => "poetry/poem-page.jpg", :alt => current_page.title }) %>
-
-<%= partial(:'partials/image', :locals => { :imageurl => "poetry/meme-creator.jpg", :alt => current_page.title }) %>
 
 <%= partial(:'partials/image', :locals => { :imageurl => "poetry/mobile-meme.jpg", :alt => current_page.title }) %>
-
+%p.title-right
+  Meme creator for mobile
 <%= partial(:'partials/image', :locals => { :imageurl => "poetry/narrators.jpg", :alt => current_page.title }) %>
-
+%p.title-right
+  Narrators
+%p.left
+  Another big part of the website is the famed narrators. Celebrities and artists read their favourite poems out loud recorded on video or audio.
 <%= partial(:'partials/image', :locals => { :imageurl => "poetry/search.jpg", :alt => current_page.title }) %>
-
+%p.title-left
+  Search
+%p.right
+  Every corner of the website is searchable. The search results are divided into it's respective content types.
 <%= partial(:'partials/image', :locals => { :imageurl => "poetry/styleguide.jpg", :alt => current_page.title }) %>
+
+<%= partial(:'partials/image', :locals => { :imageurl => "poetry/iconography.jpg", :alt => current_page.title }) %>
+%p.title-right
+  Iconography
+%p.left
+  The iconography set for poetry was created to be as legible as possible from a size of 16x16 pixels and sometimes smaller. That meant that each icon had to be thoughtfully crafted on a 16x16 pixel grid to avoid rendering issues on lower-resolution screens

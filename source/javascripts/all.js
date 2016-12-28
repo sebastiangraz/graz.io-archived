@@ -31,32 +31,17 @@ $doc.ready(function() {
       var lspacer = $(this).data('lspacer'),
       rspacer = $(this).data('rspacer');
 
-      var spacer = $('<li />', { "class": 'spacer',}),
-      spacer_double = $('<li />', { "class": 'spacer-double',});
+      var spacer = $('<li />', { "class": 'spacer'});
 
-      if ($(this).data('lspacer') == 1) {
-        spacer.insertBefore( $( this ) );
-      }
-      if ($(this).data('lspacer') == 2) {
-        spacer_double.insertBefore( $( this ) );
-      }
-      if ($(this).data('rspacer') == 1) {
-        spacer.insertAfter( $( this ) );
-      }
-      if ($(this).data('rspacer') == 2) {
-        spacer_double.insertAfter( $( this ) );
+      switch ($(this).data('lspacer')) {
+        case 1:
+          spacer.insertBefore( $( this ) );
+        break;
+        case 2:
+          spacer.insertBefore( $( this ) ).clone().insertBefore( $( this ));
+        break;
       }
     });
-
-    // function addClientRectsOverlay(elt) {
-    //   var rects = elt.getClientRects();
-    //   for (var i = 0; i != rects.length; i++) {
-    //     // console.log(rect = rects[i])
-    //     // console.log(rects[i].right)
-    //     return rects[i];
-    //   }
-    //
-    // }
 
     function get_position(e) {
       var res = new Object();

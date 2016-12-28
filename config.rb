@@ -3,8 +3,12 @@
 ###
 
 activate :directory_indexes
+activate :syntax
+
 set :relative_links, false #should be true
 set :images_dir, 'images'
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true, auto_ids: false
 
 # Per-page layout changes:
 #

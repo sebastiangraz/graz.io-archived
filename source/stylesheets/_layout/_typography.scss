@@ -11,9 +11,20 @@
 }
 
 @font-face {
+  font-family: 'Cinetype-Light';
+  font-weight: 100;
+  src: url('/fonts/GT-Cinetype-Light.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Cinetype-Mono';
   font-weight: 100;
   src: url('/fonts/GT-Cinetype-Mono.woff') format('woff');
+}
+@font-face {
+  font-family: 'Cinetype-Bold';
+  font-weight: 100;
+  src: url('/fonts/GT-Cinetype-Bold.woff') format('woff');
 }
 
 body {
@@ -47,8 +58,4 @@ a {
   text-decoration: none;
   color: $link-color;
   position: relative;
-}
-
-i, blockquote, em {
-  font-family: 'Cinetype-Italic', sans-serif;
 }

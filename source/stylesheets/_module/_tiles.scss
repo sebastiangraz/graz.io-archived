@@ -25,6 +25,7 @@
 }
 
 .tile-bg {
+  box-shadow: 0 0 0 rgba(0,0,0,0.1);
   transition: .8s $bezier all;
   overflow: hidden;
   top: 0;
@@ -111,8 +112,10 @@
   }
 }
 
+
 .expanded {
   .tile-bg {
+    // box-shadow: 20px 20px 50px -15px rgba(#000, 0.2);
     @include mq(md) {
       transform: scale(1.25);
     }

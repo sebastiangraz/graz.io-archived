@@ -10,6 +10,5 @@ hovertext: '<span>Quit your job</span>'
 color: '#ddd'
 bgcolor: '#3E46FF'
 lspacer: 0
-rspacer: 1
 order: 5
 ---

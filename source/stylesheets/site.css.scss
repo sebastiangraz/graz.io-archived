@@ -37,6 +37,7 @@ p {
   }
 
   &.title-right, &.title-left {
+    margin-bottom: 6rem;
     font-size: 1rem;
     padding: 0 4%;
     &:before {
@@ -59,6 +60,7 @@ p {
 }
 
 .intro {
+  z-index: 2;
   h2 {
     margin: 0.25rem 0;
   }
@@ -91,6 +93,33 @@ p {
     &:first-child {
       margin-right: 1rem;
     }
+  }
+}
+
+.blog-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  ul {
+    display:flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+  }
+  li {
+    list-style: circle;
+    margin: 1rem 2rem;
+  }
+}
+
+.highlight {
+  display: inline-block;
+  padding: 2rem;
+  width: 100%;
+  overflow: auto;
+  text-rendering: geometricPrecision;
+  code {
+    background: transparent;
+    padding: 0;
+    white-space: pre;
   }
 }
 

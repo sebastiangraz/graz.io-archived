@@ -10,8 +10,7 @@ image: 'case-husqvarna.png'
 hovertext: 'I helped win <span>Husqvarna</span> as a client'
 color: '#a52dea'
 bgcolor: '#62F3BA'
-lspacer: 1
-rspacer: 0
+lspacer: 2
 order: 2
 ---
 
@@ -24,13 +23,15 @@ order: 2
 %p.title-right
   Home page
 %p.left
-  Our thinking behind the homepage was to put extra focus on the inspirational stories and knowledge content for the users, because they are less likely to have a set goal at this point in the journey. But catering for the minority of users with a clear goal we included entires to the different product lines.
+  Our thinking behind the homepage was to put extra focus on the inspirational stories and knowledge content for the users, because they are less likely to have a set goal at this point in the journey. But catering for the minority of users with a clear goal we included entries to the different product lines.
 
 <%= partial(:'partials/image', :locals => { :imageurl => "husqvarna/product-page.jpg", :alt => current_page.title }) %>
 %p.left
   The product details page focuses on bringing out contextual stories with the product involved. The user can watch a promotional video of a forestry worker using the Husqvarna chainsaw, read reviews, see related products and also at the end of the page there is a call to action to find a dealer.
 
 <%= partial(:'partials/image', :locals => { :imageurl => "husqvarna/product-listing-page.jpg", :alt => current_page.title }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "husqvarna/product-listing-page-detail.jpg", :alt => current_page.title }) %>
+
 %p.left
   The product listing page features filters and slider to allow the user to find the right tool for the job.
 

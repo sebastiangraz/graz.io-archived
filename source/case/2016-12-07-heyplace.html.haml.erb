@@ -1,0 +1,39 @@
+---
+title: heyplace
+date: 2016-12-07 19:56 UTC
+tags:
+- 'Side projects'
+roles:
+- 'Designer'
+- 'Front-end developer'
+image: 'case-heyplace.png'
+hovertext: 'Me and my friends created an app called <span>Heyplace.</span>'
+color: '#76280C'
+bgcolor: '#F3B462'
+lspacer: 0
+
+order: 4
+---
+
+%p
+  Geo-locked content. Unlock your friends photos or videos if you happen to be in that exact same spot where they took it. With the rise of ephemeral apps such as Snapchat. Me and a couple of friends decided to tackle another similar idea of but having geo-location dictating the content visibility.
+<%= partial(:'partials/image', :locals => { :imageurl => "heyplace/overview.jpg", :alt => current_page.title }) %>
+%p.title-right
+  Overview
+%p.left
+  The HeyPlace app was a result of a 12-hour Hackathon. The app was planned weeks ahead the event so when the time came we had a pretty solid scaffold that we could work from. We had the servers set up and ready to send requests to and from our app, the HTML scaffold was build, even a basic design groundwork was put together. To put it short, we had a MVP version working before the event even started (but don't tell anyone). That said we still had to put the pieces together in mere 12 hours.
+%p.left
+  Below you'll find some designs for the proof-of-concept app. The actual app looks a bit different today
+<%= partial(:'partials/image', :locals => { :imageurl => "heyplace/log-in.jpg", :alt => current_page.title }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "heyplace/map-view.jpg", :alt => current_page.title }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "heyplace/camera.jpg", :alt => current_page.title }) %>
+%p.title-left
+  Camera
+%p.right
+  The user may swipe through from a selection of filters to enchance the images that they took. Nothing fancy.
+<%= partial(:'partials/image', :locals => { :imageurl => "heyplace/misc-view.jpg", :alt => current_page.title }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "heyplace/iconography.jpg", :alt => current_page.title }) %>
+%p.title-right
+  Iconography
+%p.left
+  The iconography was designed to be elegant and simple. In addition we wanted to inject some emotion into the iconography. We went anthropomorphic with the set, and added a friendly face to the heart icon. With the added benefit of having a brand mascot in the future. Win-win!

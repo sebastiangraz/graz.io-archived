@@ -11,6 +11,8 @@
     <title><%= current_page.data.title || "Middleman" %></title>
 
     <%= stylesheet_link_tag :site %>
+    <%= stylesheet_link_tag :syntax %>
+
     <%= javascript_include_tag :jquery %>
     <%= javascript_include_tag :all %>
     <%= javascript_include_tag :imgix %>
@@ -23,7 +25,9 @@
 
     <div class="row">
       <div class="mt-l">
-        <%= yield %>
+        <div class="blog-wrapper">
+          <%= yield %>
+        </div>
       </div>
     </div>
   </body>
