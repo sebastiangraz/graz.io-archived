@@ -14,7 +14,7 @@ order: 5
 ---
 
 
-Adding syntax highlighting to your code blocks is the new swag. Here's how to do it in a Middleman project
+Adding syntax highlighting to your code blocks is the new swag 💯. Here's how to do it in a Middleman project
 
 # Install the dependencies
 
@@ -64,15 +64,11 @@ copy(String.fromCodePoint(0x200B))
 
 And you should be able to paste 4 times on the left of the ticks (you won't see them move), this means you won't have unwanted indentation
 
-Apologies for the side track
-
-Now for the colorful bit
-
 By now the syntax should be loaded and actually work — however it might look like it doesn't work because theres no color highlighting the code
 
 Now you have two options
 
-- Either import a Pygment compatible ready-made CSS from [here][218919b1] (Python enabled syntax highlighting) and it should work out of the box.
+- Either import a Pygment compatible ready-made CSS file from [here][218919b1] (Python enabled syntax highlighting) and it should work out of the box.
 - Or create a css file name for instance: `syntax.css.erb` inside the `/source/stylesheets` folder and add the following code:
 
 ```ruby
