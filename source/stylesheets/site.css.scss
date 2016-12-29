@@ -19,7 +19,7 @@
 .row {
   max-width: $max-width;
   margin: 0 auto;
-  width: 92%;
+  width: 88%;
   position: relative;
 }
 
@@ -73,6 +73,15 @@ p {
     @include mq(md) {
       position: absolute;
     };
+  }
+}
+
+.about {
+  .tiles {
+    margin-top: 8rem;
+    @include mq(md) {
+      margin-top: 0;
+    }
   }
 }
 

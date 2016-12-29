@@ -1,13 +1,11 @@
 nav {
-  z-index: 3;
-  position: relative;
   .navigation {
     height: 2rem;
     width: 100%;
     margin: 0 auto;
     top:4rem;
     position: fixed;
-
+    z-index: 3;
     .row {
       display: flex;
       justify-content: space-between;

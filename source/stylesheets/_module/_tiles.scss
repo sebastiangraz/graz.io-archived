@@ -10,7 +10,7 @@
 }
 
 .tile-content {
-  height: $tileHeight;
+  height: $tileHeight - 72px;
   padding:1.5rem;
   z-index: 1;
   width: 100%;
@@ -18,8 +18,12 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
+  @include mq(sm) {
+    height: $tileHeight - 32px;
+    padding:1.5rem;
+  }
   @include mq(md) {
+    height: $tileHeight;
     padding:1.5rem;
   }
 }
@@ -41,8 +45,9 @@
   width: 100%;
   position: relative;
   list-style: none;
-  margin-bottom: 1rem;
-
+  @include mq(sm) {
+    width: 50%;
+  }
   @include mq(md){
     width: 25%;
     margin-bottom: 0
@@ -75,12 +80,9 @@
 
   h2 {
     font-size: 1.25rem;
-    width: percentage(1/2);
     margin: 0;
-
-    @include mq(md) {
-      visibility: hidden;
-      width: 100%;
+    visibility: hidden;
+    @include mq(lg) {
       font-size: 1.5rem;
     };
   }
@@ -105,9 +107,6 @@
 
     h2 {
       visibility: visible;
-      span {
-        font-family: 'Cinetype-Italic', sans-serif;
-      }
     }
   }
 }
