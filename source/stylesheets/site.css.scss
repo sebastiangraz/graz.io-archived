@@ -20,6 +20,7 @@
   max-width: $max-width;
   margin: 0 auto;
   width: 92%;
+  position: relative;
 }
 
 p {
@@ -66,7 +67,7 @@ p {
   }
 }
 
-.portfolio {
+.portfolio, .about {
   .abs {
     position: relative;
     @include mq(md) {
@@ -126,11 +127,5 @@ p {
 .case {
   img {
     margin-top: 6rem;
-  }
-}
-
-.ul-xl {
-  li {
-    font-size: 1.5rem;
   }
 }
