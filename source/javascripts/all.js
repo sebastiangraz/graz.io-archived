@@ -55,6 +55,7 @@ $doc.ready(function() {
     }
 
     $('.tile').each( function(){
+
       var leftpos = Math.round(get_position($(this)).left );
       var rightpos = Math.round(get_position($(this)).right );
 
@@ -66,9 +67,22 @@ $doc.ready(function() {
         $(this).addClass('rightmost');
       }
 
+      $(this).addClass('centermost');
+
     });
 
   }
+
+  $(function() {
+    var tiles = $(".tiles > .tile");
+    var interval = setInterval(function () {
+        var ds = tiles.not(".flip");
+        ds.eq(Math.floor(Math.random() * ds.length)).addClass('flip');
+        if (ds.length == 1) {
+            clearInterval(interval);
+        }
+    }, 70);
+  });
 
 
 

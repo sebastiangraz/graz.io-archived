@@ -23,6 +23,7 @@ nav {
   }
   ul {
     display: flex;
+    align-items: center;
     li {
       list-style: none;
       margin-left: 2rem;
@@ -36,7 +37,7 @@ nav {
 
 .logo {
   width: 2rem;
-
+  height: 2rem;
   svg {
     width: 100%;
     object-fit: contain;
