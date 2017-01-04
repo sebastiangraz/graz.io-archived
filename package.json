@@ -1,0 +1,31 @@
+{
+  "name": "portfolio-prototype",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run autoprefixer && npm run minifycss",
+    "prestart" : "npm run clean",
+    "autoprefixer": "postcss -u autoprefixer -r build/stylesheets/*",
+    "minifycss": "cleancss -o build/stylesheets/site-min.css build/stylesheets/*",
+    "clean": "rimraf build/stylesheets/*",
+    "build" : "bundle exec middleman build --clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umbriel/portfolio-prototype.git"
+  },
+  "author": "Sebastian Graz",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/umbriel/portfolio-prototype/issues"
+  },
+  "homepage": "https://github.com/umbriel/portfolio-prototype#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.6.0",
+    "clean-css": "^3.4.23",
+    "postcss-cli": "^2.6.0",
+    "rimraf": "^2.5.4"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "description": ""
+}

@@ -8,7 +8,7 @@ activate :syntax
 set :relative_links, true #should be true
 set :images_dir, 'images'
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true, auto_ids: false
+set :markdown, :fenced_code_blocks => true, :disable_indented_code_blocks => true, :smartypants => true, auto_ids: false
 
 # Per-page layout changes:
 #
@@ -31,6 +31,10 @@ configure :development do
   activate :livereload
 end
 
+# activate :external_pipeline,
+#   name: :npm,
+#   command: "npm run start",
+#   source: ".tmp"
 
 activate :blog do | blog |
   blog.name = 'case'
@@ -68,7 +72,7 @@ end
 configure :build do
   activate :relative_assets
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end

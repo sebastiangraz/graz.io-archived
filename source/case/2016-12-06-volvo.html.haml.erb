@@ -1,6 +1,7 @@
 ---
 title: Volvo
 date: 2016-12-06 15:10 UTC
+year: 2014
 tags:
 - 'Visual Design'
 - 'Pitch'
@@ -18,9 +19,9 @@ order: 1
 %p
   The core values for Volvo Cars is simplicity, functionality and durability. Volvos Scandinavian heritage is an integral part of the brand and we wanted to create a website which mirrors all these values through an modern and aesthetic web experience.
 
-<%= partial(:'partials/image', :locals => { :imageurl => "volvo/overview.jpg", :alt => current_page.title }) %>
-<%= partial(:'partials/image', :locals => { :imageurl => "volvo/macbook.jpg", :alt => current_page.title }) %>
-<%= partial(:'partials/image', :locals => { :imageurl => "volvo/product-details-page.jpg", :alt => current_page.title }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "volvo/overview.jpg",  :alt => current_page.title, :ratio => "4x3" }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "volvo/macbook.jpg",  :alt => current_page.title, :ratio => "4x3" }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "volvo/product-details-page.jpg",  :alt => current_page.title, :ratio => "1x3" }) %>
 %p.title-right
   Car configurator
 %p.left
@@ -28,10 +29,10 @@ order: 1
 %p.left
   The modular design allows the site to guide the user and create their car of their dreams, without thinking too much.
 
-<%= partial(:'partials/image', :locals => { :imageurl => "volvo/car-page.jpg", :alt => current_page.title }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "volvo/car-page.jpg",  :alt => current_page.title, :ratio => "2x3" }) %>
 %p.title-right
   Product listing page
-<%= partial(:'partials/image', :locals => { :imageurl => "volvo/iconography.jpg", :alt => current_page.title }) %>
+<%= partial(:'partials/image', :locals => { :imageurl => "volvo/iconography.jpg",  :alt => current_page.title, :ratio => "2x3" }) %>
 %p.title-left
   Iconography
 %p.right

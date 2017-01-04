@@ -14,7 +14,7 @@
   <%= javascript_include_tag :jquery %>
   <%= javascript_include_tag :all %>
   <%= javascript_include_tag :imgix %>
-
+  
 </head>
 
 <body class="<%= page_classes %>">
@@ -27,11 +27,11 @@
       <div class="case-container">
         <%= yield %>
       </div>
-      <%= partial "partials/case-footer" %>
+
+      <%= partial(:'partials/footer', :locals => {:content => 'case', :title => 'See more projects'}) %>
 
     </div>
   </div>
-  <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
 </body>
 </html>

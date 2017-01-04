@@ -5,6 +5,7 @@ var $doc = $(document);
 
 $doc.ready(function() {
 
+
   function tileColor() {
     $('.tile-content').each (function() {
       var color = $(this).data('color');
@@ -35,10 +36,10 @@ $doc.ready(function() {
 
       switch ($(this).data('lspacer')) {
         case 1:
-          spacer.insertBefore( $( this ) );
+        spacer.insertBefore( $( this ) );
         break;
         case 2:
-          spacer.insertBefore( $( this ) ).clone().insertBefore( $( this ));
+        spacer.insertBefore( $( this ) ).clone().insertBefore( $( this ));
         break;
       }
     });
@@ -70,6 +71,7 @@ $doc.ready(function() {
   }
 
 
+
   $(function() {
     var header = $('.navigation');
     var caseHeader = $('.case-header').outerHeight();
@@ -89,17 +91,6 @@ $doc.ready(function() {
   tileColor()
 
 
-  // Changing the defaults
-  window.sr = ScrollReveal({ reset: false });
-
-  var fooReveal = {
-    origin: 'bottom',
-    scale: 1,
-    distance: '24px',
-    duration: 1200,
-    easing: 'cubic-bezier(.03, .82, .34, .99)'
-  };
-  sr.reveal('.case-container img', fooReveal);
 
 
 });

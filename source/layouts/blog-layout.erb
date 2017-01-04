@@ -28,6 +28,7 @@
         <div class="blog-wrapper">
           <%= yield %>
         </div>
+        <%= partial(:'partials/footer', :locals => {:content => 'blog', :title => 'Read more posts'}) %>
       </div>
     </div>
   </body>

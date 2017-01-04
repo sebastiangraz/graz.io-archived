@@ -40,7 +40,6 @@
   transform: scale(1);
 }
 
-
 .tile {
   width: 100%;
   position: relative;
@@ -57,7 +56,7 @@
     position: static;
   }
 
-  img {
+  .tile-image {
     transition: .8s $bezier all;
     transform: translate(16px, 16px);
     width: 50%;
@@ -100,7 +99,7 @@
   &.expanded {
     position: relative;
     z-index: 2;
-    img {
+    .tile-image {
       opacity: 1;
       transform: translate(0, 0);
     }

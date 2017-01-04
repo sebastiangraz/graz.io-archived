@@ -93,6 +93,8 @@ Then use the code fencing like so:
 
 >Notice the <code>```haml</code> which you can replace with almost any language you want, full list here — [list of supported languages][467c66d3]
 
+My file in which I paste the code below has the 2016-12-10-name-of-page `.html.markdown` ending if it is of any help.
+
 ```haml
 ​​​​```haml
 %header
