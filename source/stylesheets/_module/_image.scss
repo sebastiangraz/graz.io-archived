@@ -1,21 +1,21 @@
 .r\:1x3   { padding-top: 300%; }
 .r\:1x2   { padding-top: 200%; }
-.r\:9x16  { padding-top: 177.777%; }
 .r\:2x3   { padding-top: 150%; }
 .r\:3x4   { padding-top: 133.333%; }
 .r\:1x1   { padding-top: 100%; }
 .r\:4x3   { padding-top: 75%; }
-.r\:3x2   { padding-top: 66.66%; }
-.r\:16x9  { padding-top: 56.25%; }
 .r\:2x1   { padding-top: 50%; }
+.r\:3x1   { padding-top: 33.333%; }
 
 .image {
-  background: #e0e;
+  overflow: hidden;
   position: relative;
   img {
     position: absolute;
-    top:0;
-    height: 100%;
+    height: calc(100% + 6px);
     object-fit: contain;
+    width: calc(100% + 6px);
+    left: -3px;
+    top: -3px;
   }
 }
