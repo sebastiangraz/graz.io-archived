@@ -62,9 +62,8 @@ end
 # end
 
 helpers do
-  def imgix(url, imgattr)
-    base_url = 'http://grazio.imgix.net/' + url + '?' + imgattr
-    # "<img src='#{base_url}'>"
+  def nav_active(path)
+    current_page.path == path ? "active" : ''
   end
 end
 

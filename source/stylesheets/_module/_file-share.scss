@@ -1,0 +1,17 @@
+.file-share {
+  a {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  p {
+    margin: 0;
+  }
+  img {
+    max-width: 3rem;
+    float: left;
+    margin-right:1rem;
+  }
+}

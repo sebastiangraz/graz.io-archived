@@ -34,12 +34,12 @@
 
 .tile-bg {
   box-shadow: 0 0 0 rgba(0,0,0,0.1);
-  transition: .8s $bezier all;
+  transition: 1s $bezier all;
   overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
-  transform: scale(1) translate3D(0,-24px,0);
+  transform: scale(0.01);
   opacity: 0;
   height: 100%;
   position : absolute;
@@ -54,7 +54,7 @@
     }
     .tile-bg {
       opacity: 1;
-      transform: translate3D(0px,0px,0px);
+      transform: scale(1);
     }
   }
   width: 100%;
@@ -157,9 +157,6 @@
   }
 }
 .centermost {
-  .tile-bg {
-    transform-origin: center;
-  }
   &.expanded {
     .tile-bg {
       @include mq(md) {

@@ -31,6 +31,12 @@ nav {
   }
 }
 
+li.active {
+  a {
+    color: #000;
+  }
+}
+
 .logo, .menu-items {
   transition: 1s $bezier all;
 }

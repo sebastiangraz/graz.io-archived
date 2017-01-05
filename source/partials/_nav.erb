@@ -7,7 +7,9 @@
         <!-- <%= image_tag "logo.svg" %> -->
       </a>
       <ul class="menu-items">
-        <li><a style="color:<%=current_page.data.color %>" href="/about">About</a></li>
+        <li class="<%= nav_active('index.html') %>"><a href="/">Work</a></li>
+        <li class="<%= nav_active('about.html') %>"><a href="/about">About</a></li>
+        <li class="<%= nav_active('contact.html') %>"><a href="/contact">Contact</a></li>
       </ul>
     </div>
   </div>
