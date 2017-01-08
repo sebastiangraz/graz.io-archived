@@ -2,6 +2,16 @@
 
 @import "var";
 
+@mixin isometric($inverted: 'true') {
+
+    @if $inverted == 'true' {
+        transform: scaleY(0.86603) rotate(30deg) skew(-30deg) translate3d(0, 0, 0);
+    }
+    @else {
+        transform: scaleY(0.86603) rotate(-30deg) skew(30deg) translate3d(0, 0, 0);
+    }
+}
+
 @import "_layout/mq";
 @import "_layout/normalize";
 @import "_layout/elements";
@@ -21,7 +31,7 @@
 .row {
   max-width: $max-width;
   margin: 0 auto;
-  width: 88%;
+  width: 84%;
   position: relative;
 }
 
@@ -62,12 +72,6 @@ p {
   }
 }
 
-.intro {
-  z-index: 2;
-  h2 {
-    margin: 0.25rem 0;
-  }
-}
 
 .portfolio, .about {
   .abs {
@@ -78,21 +82,12 @@ p {
   }
 }
 
-.about {
-  .tiles {
-    margin-top: 8rem;
-    @include mq(md) {
-      margin-top: 0;
-    }
-  }
-}
-
 .case-info {
   margin-bottom: 3rem;
   @include mq(md) {
     margin-bottom: 6rem;
     margin-left: auto;
-    width: percentage(1/2);
+    width: percentage(6/12);
     display: flex;
     justify-content: space-between;
   }
@@ -103,7 +98,8 @@ p {
   & > * {
     max-width: 17rem;
     &:first-child {
-      margin-right: 1rem;
+      margin-bottom: 2rem;
+      margin-right: 2rem;
     }
   }
 }
@@ -134,6 +130,7 @@ p {
     white-space: pre;
   }
 }
+
 
 .case {
   .image {

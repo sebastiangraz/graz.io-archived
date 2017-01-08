@@ -6,9 +6,9 @@ title: Sebastian Graz
 
 <div class="row portfolio">
 
-  <div class="mt-l mb-xs abs intro">
-    <h2>Portfolio of Sebastian Graz.</h1>
-    <h2><i>Interface designer.</i></h1>
+  <div class="mt-l mb-xs abs">
+    <h1>Sebastian Graz</h1>
+    <p class="hide-md"> Freelance interaction designer and a front-end developer based in London </p>
   </div>
 
   <ul class="tiles">
@@ -17,9 +17,13 @@ title: Sebastian Graz
     <% end %>
   </ul>
 
-  <div class="mt-l mb-xs intro">
-    <h2>Sometimes I write about design</h1>
-    <h2><i>All opinions are my own</i></h1>
+
+
+  <div class="mt-l mb-xs">
+    <div class="flex-between">
+        <h1>Articles <sup><%= blog('blog').articles.count%></sup></h1>
+        <a href="/blog">Read all articles</a>
+    </div>
   </div>
 
   <ul class="tiles">

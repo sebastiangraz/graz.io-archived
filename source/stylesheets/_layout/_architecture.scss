@@ -49,3 +49,21 @@
 .rel {
   position: relative;
 }
+
+.hide-md {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: column;
+
+  @include mq(sm) {
+    flex-direction: row;
+  };
+}

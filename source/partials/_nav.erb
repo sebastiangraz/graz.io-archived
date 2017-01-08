@@ -1,7 +1,7 @@
 <nav>
   <div class="navigation">
     <div class="row">
-      <a class="logo" href="/">
+      <a class="logo" href="/" data-colorflip="<% blog('case').articles.each do | blog | %><%= blog.data.bgcolor %>;<% end %>">
         <%= partial(:'partials/logo', :locals => { :color => current_page.data.color }) %>
 
         <!-- <%= image_tag "logo.svg" %> -->
@@ -9,7 +9,6 @@
       <ul class="menu-items">
         <li class="<%= nav_active('index.html') %>"><a href="/">Work</a></li>
         <li class="<%= nav_active('about.html') %>"><a href="/about">About</a></li>
-        <li class="<%= nav_active('contact.html') %>"><a href="/contact">Contact</a></li>
       </ul>
     </div>
   </div>

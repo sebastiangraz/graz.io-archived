@@ -3,9 +3,13 @@ nav {
     height: 2rem;
     width: 100%;
     margin: 0 auto;
-    top:4rem;
+    top:2rem;
+    transition: .4s $bezier top;
     position: fixed;
     z-index: 3;
+    @include mq(sm) {
+      top:4rem;
+    };
     .row {
       display: flex;
       justify-content: space-between;

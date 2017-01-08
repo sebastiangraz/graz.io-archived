@@ -7,6 +7,7 @@ $doc.ready(function() {
 
 
   function tileColor() {
+
     $('.tile-content').each (function() {
       var color = $(this).data('color');
       $(this).css({
@@ -76,13 +77,32 @@ $doc.ready(function() {
   $(function() {
     var tiles = $(".tiles > .tile");
     var interval = setInterval(function () {
-        var ds = tiles.not(".flip");
-        ds.eq(Math.floor(Math.random() * ds.length)).addClass('flip');
-        if (ds.length == 1) {
-            clearInterval(interval);
-        }
+      var ds = tiles.not(".flip");
+      ds.eq(Math.floor(Math.random() * ds.length)).addClass('flip');
+      if (ds.length == 1) {
+        clearInterval(interval);
+      }
     }, 70);
   });
+
+
+  // $(function() {
+  //   var arr = document.querySelector(".logo").getAttribute("data-colorflip").split(";");
+  //
+  //   (function recurse(counter) {
+  //
+  //     var color = arr[counter];
+  //     $('#logo').css({
+  //       stroke: color
+  //     }, 100);
+  //
+  //     arr.push(color);
+  //     setTimeout(function() {
+  //       recurse(counter + 1);
+  //     }, 100);
+  //
+  //   })(0);
+  // });
 
 
 
@@ -115,6 +135,9 @@ $doc.ready(function() {
     easing: 'cubic-bezier(.03, .82, .34, .99)'
   };
   sr.reveal('.case-container .image', reveal);
+
+
+
 
 
 

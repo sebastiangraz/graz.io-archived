@@ -12,6 +12,12 @@
   img {
     max-width: 3rem;
     float: left;
+    transition: 1s $bezier transform;
     margin-right:1rem;
+  }
+  &:hover {
+    img {
+      transform: translateY(-4px);
+    }
   }
 }

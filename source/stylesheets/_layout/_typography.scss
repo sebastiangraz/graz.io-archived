@@ -11,6 +11,12 @@
 }
 
 @font-face {
+  font-family: 'Cinetype-Light-Italic';
+  font-weight: 100;
+  src: url('/fonts/GT-Cinetype-Light-Italic.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Cinetype-Light';
   font-weight: 100;
   src: url('/fonts/GT-Cinetype-Light.woff') format('woff');
@@ -29,9 +35,8 @@
 
 body {
   font-family: 'Cinetype-Regular', sans-serif;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  line-height: 1.5;
 }
 
 h1,
@@ -48,7 +53,6 @@ h2 {
 p {
   font-size: calc(100% + 8 * ((100vw - 320px) / (#{$mq-lg} - 320)));
   margin: 2rem 0;
-
   @include mq(lg) {
     font-size: 1.5rem;
   };
@@ -61,4 +65,16 @@ a {
   &:hover {
     color : #000;
   }
+}
+
+i, blockquote, em {
+  font-family: 'Cinetype-Italic', sans-serif;
+}
+
+code, pre {
+  font-family: 'Cinetype-Mono', sans-serif;
+  font-style: normal;
+  letter-spacing: -1px;
+  padding: .25rem .5rem;
+  background: #fff;
 }
