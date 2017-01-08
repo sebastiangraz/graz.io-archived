@@ -2,16 +2,6 @@
 
 @import "var";
 
-@mixin isometric($inverted: 'true') {
-
-    @if $inverted == 'true' {
-        transform: scaleY(0.86603) rotate(30deg) skew(-30deg) translate3d(0, 0, 0);
-    }
-    @else {
-        transform: scaleY(0.86603) rotate(-30deg) skew(30deg) translate3d(0, 0, 0);
-    }
-}
-
 @import "_layout/mq";
 @import "_layout/normalize";
 @import "_layout/elements";
