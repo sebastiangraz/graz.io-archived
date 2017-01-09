@@ -5,7 +5,7 @@ tags:
 - 'Client pitch'
 - 'Web design'
 - 'Iconography'
-image: 'case-poetry.png'
+image: 'blog-syntax.png'
 hovertext: '<span>Syntax highlighting with Middleman</span>'
 color: '#9818EB'
 bgcolor: '#E8FF94'
