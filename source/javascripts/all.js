@@ -86,61 +86,58 @@ $doc.ready(function() {
   });
 
 
-  // $(function() {
-  //   var arr = document.querySelector(".logo").getAttribute("data-colorflip").split(";");
-  //
-  //   (function recurse(counter) {
-  //
-  //     var color = arr[counter];
-  //     $('#logo').css({
-  //       stroke: color
-  //     }, 100);
-  //
-  //     arr.push(color);
-  //     setTimeout(function() {
-  //       recurse(counter + 1);
-  //     }, 100);
-  //
-  //   })(0);
-  // });
 
+  var mInt;
+  var mLink;
+  var cCol = 0;
+  var colors = document.querySelector(".logo").getAttribute("data-colorflip").split(";");
+  var mColors = colors.filter(v=>v!='');
 
-
-  $(function() {
-    var header = $('.navigation');
-    var caseHeader = $('.case-header').outerHeight();
-    var calcHeader = caseHeader - ( header.outerHeight() + header.position().top ) ;
-
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-
-      if (scroll >= calcHeader) {
-        header.addClass('hidden');
-      } else {
-        header.removeClass('hidden');
-      }
+  $('.logo').hover(
+    function () {
+      mLink = $(this).find('#logo');
+      mInt = setInterval(function(){mColor()},150);
+    },
+    function () {
+      clearInterval(mInt);
+      $('.logo').find('#logo').css('stroke','');
     });
+
+    function mColor() {
+      mLink.css('stroke', mColors[cCol++]);
+      if (cCol >= mColors.length) {
+        cCol = 0;
+      }
+    }
+
+    $(function() {
+      var header = $('.navigation');
+      var caseHeader = $('.case-header').outerHeight();
+      var calcHeader = caseHeader - ( header.outerHeight() + header.position().top ) ;
+
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= calcHeader) {
+          header.addClass('hidden');
+        } else {
+          header.removeClass('hidden');
+        }
+      });
+    });
+
+    tileColor()
+
+    // Changing the defaults
+    window.sr = ScrollReveal({ reset: false });
+
+    var reveal = {
+      origin: 'bottom',
+      scale: 1,
+      distance: '24px',
+      duration: 1200,
+      easing: 'cubic-bezier(.03, .82, .34, .99)'
+    };
+    sr.reveal('.case-container .image', reveal);
+
   });
-
-  tileColor()
-
-  // Changing the defaults
-  window.sr = ScrollReveal({ reset: false });
-
-  var reveal = {
-    origin: 'bottom',
-    scale: 1,
-    distance: '24px',
-    duration: 1200,
-    easing: 'cubic-bezier(.03, .82, .34, .99)'
-  };
-  sr.reveal('.case-container .image', reveal);
-
-
-
-
-
-
-
-
-});

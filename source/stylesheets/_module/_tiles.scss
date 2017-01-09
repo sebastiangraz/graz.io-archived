@@ -47,9 +47,11 @@
   position : absolute;
 }
 
-
-
 .tile {
+  width: 100%;
+  position: relative;
+  list-style: none;
+  margin: 0;
   &.flip {
     .tile-content {
       opacity: 1;
@@ -60,9 +62,6 @@
 
     }
   }
-  width: 100%;
-  position: relative;
-  list-style: none;
 
   @include mq(sm) {
     width: 50%;

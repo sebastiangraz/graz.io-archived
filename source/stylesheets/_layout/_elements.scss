@@ -18,6 +18,7 @@ ul {
 
   li {
     list-style: none;
+    margin-bottom: 0.25rem;
     p {
       margin-bottom: 1rem;
       margin-top: 0;
@@ -34,4 +35,8 @@ kbd {
   border: 2px solid;
   border-radius: 4px;
   margin: 2px;
+}
+
+blockquote {
+  margin: 4rem;
 }

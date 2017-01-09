@@ -1,5 +1,5 @@
 ---
-title: 'Syntax'
+title: 'Syntax highlighting'
 date: 2016-12-10 15:11 UTC
 tags:
 - 'Client pitch'
@@ -91,10 +91,6 @@ Load the stylesheet in your `head`
 
 Then use the code fencing like so:
 
->Notice the <code>```haml</code> which you can replace with almost any language you want, full list here — [list of supported languages][467c66d3]
-
-My file in which I paste the code below has the 2016-12-10-name-of-page `.html.markdown` ending if it is of any help.
-
 ```haml
 ​​​​```haml
 %header
@@ -110,8 +106,11 @@ My file in which I paste the code below has the 2016-12-10-name-of-page `.html.m
         %a{:href => "/verbose"} Verbose
 ​​​​```
 ```
+>Notice the <code>```haml</code> which you can replace with almost any language you want, full list here — [list of supported languages][467c66d3]
 
-Done
+My file in which I paste the code below has the 2016-12-10-name-of-page `.html.markdown` ending if it is of any help.
+
+I think that's it!
 
 
   [218919b1]: https://github.com/richleland/pygments-css "pygments"

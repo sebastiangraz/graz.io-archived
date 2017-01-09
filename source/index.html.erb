@@ -7,7 +7,7 @@ title: Sebastian Graz
 <div class="row portfolio">
 
   <div class="mt-l mb-xs abs">
-    <h1>Sebastian Graz</h1>
+    <h1>Sebastian Grąz</h1>
     <p class="hide-md"> Freelance interaction designer and a front-end developer based in London </p>
   </div>
 
@@ -22,7 +22,9 @@ title: Sebastian Graz
   <div class="mt-l mb-xs">
     <div class="flex-between">
         <h1>Articles <sup><%= blog('blog').articles.count%></sup></h1>
-        <a href="/blog">Read all articles</a>
+        <% if blog('blog').articles.count > 5%>
+          <a href="/blog">Read all articles</a>
+        <% end %>
     </div>
   </div>
 

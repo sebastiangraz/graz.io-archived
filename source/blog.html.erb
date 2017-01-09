@@ -1,0 +1,18 @@
+---
+title: Blog
+---
+
+<%= partial "partials/nav" %>
+
+<div class="row">
+  <div class="mt-l mb-xs">
+    <div class="flex-between">
+        <h1>Articles <sup><%= blog('blog').articles.count%></sup></h1>
+    </div>
+  </div>
+  <ul class="tiles">
+    <% blog('blog').articles.each do | blog | %>
+    <%= partial "partials/tile", locals: { project: blog } %>
+    <% end %>
+  </ul>
+</div>

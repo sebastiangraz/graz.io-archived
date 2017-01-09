@@ -14,3 +14,9 @@
     @include grid(2);
   }
 }
+
+.g3 {
+  @include mq(md) {
+    @include grid(3);
+  }
+}
