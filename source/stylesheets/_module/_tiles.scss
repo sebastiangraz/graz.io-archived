@@ -110,6 +110,10 @@
   }
 
   &.promoted {
+    width: 100%;
+    @include mq(sm) {
+      width: 75%;
+    }
     @include mq(md) {
       width: 50%;
     }

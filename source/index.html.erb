@@ -8,12 +8,12 @@ title: Sebastian Graz
 
   <div class="mt-l mb-xs abs">
     <h1>Sebastian Grąz</h1>
-    <p class="hide-md"> Freelance interaction designer and a front-end developer based in London </p>
+    <p class="hide-md"> Interaction designer and a front-end developer based in London </p>
   </div>
 
   <ul class="tiles">
     <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
-      <%= partial "partials/tile", locals: { project: article } %>
+      <%= partial "partials/tile", locals: { project: article, secondary: article.data.year } %>
     <% end %>
   </ul>
 
@@ -30,7 +30,8 @@ title: Sebastian Graz
 
   <ul class="tiles">
     <% blog('blog').articles.each do | blog | %>
-    <%= partial "partials/tile", locals: { project: blog } %>
+    <% time = blog.date %>
+    <%= partial "partials/tile", locals: { project: blog, secondary: blog.date.strftime("%b #{time.day.ordinalize}") } %>
     <% end %>
   </ul>
 

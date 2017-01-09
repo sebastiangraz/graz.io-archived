@@ -10,7 +10,6 @@ hovertext: '<span>Syntax highlighting with Middleman</span>'
 color: '#9818EB'
 bgcolor: '#E8FF94'
 lspacer: 1
-order: 5
 ---
 
 

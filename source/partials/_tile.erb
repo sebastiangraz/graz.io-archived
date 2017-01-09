@@ -2,13 +2,13 @@
   <a href="<%= project.url %>">
     <div class="tile-content" data-color="<%= project.data.color %>">
       <h2><%= project.data.hovertext %></h2>
-      <span><%= project.data.year %></p>
-      </div>
+      <span><%= secondary %></p>
+    </div>
 
-      <div class="tile-bg" data-bgcolor=" <%= project.data.bgcolor %> ">
-        <div class="tile-image">
-          <%= partial(:'partials/image', :locals => { :imageurl => 'case-images/' + project.data.image, :alt => project.title, :ratio => "1x1" }) %>
-        </div>
+    <div class="tile-bg" data-bgcolor=" <%= project.data.bgcolor %> ">
+      <div class="tile-image">
+        <%= partial(:'partials/image', :locals => { :imageurl => 'case-images/' + project.data.image, :alt => project.title, :ratio => "1x1" }) %>
       </div>
+    </div>
     </a>
   </li>
