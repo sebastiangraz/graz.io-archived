@@ -5,74 +5,71 @@ var $doc = $(document);
 
 $doc.ready(function() {
 
-
-  function tileColor() {
-
-    $('.tile-content').each (function() {
-      var color = $(this).data('color');
-      $(this).css({
-        'color' : color
-      })
-    })
-
-    $('.tile-bg').each( function(){
-      var bgcolor = $(this).data('bgcolor');
-      $(this).css({
-        'background': bgcolor,
-      });
-    })
-
-    $('.tile').mouseover( function(){
-      $(this).addClass('expanded');
-    }).mouseout( function(){
-      $(this).removeClass('expanded');
+  $('.tile-content').each (function() {
+    var color = $(this).data('color');
+    $(this).css({
+      'color' : color
     });
+  });
 
-
-    $('.tile').each( function(){
-      var lspacer = $(this).data('lspacer'),
-      rspacer = $(this).data('rspacer');
-
-      var spacer = $('<li />', { "class": 'spacer'});
-
-      switch ($(this).data('lspacer')) {
-        case 1:
-        spacer.insertBefore( $( this ) );
-        break;
-        case 2:
-        spacer.insertBefore( $( this ) ).clone().insertBefore( $( this ));
-        break;
-      }
+  $('.tile-bg').each( function(){
+    var bgcolor = $(this).data('bgcolor');
+    $(this).css({
+      'background': bgcolor,
     });
+  });
 
-    function get_position(e) {
-      var res = new Object();
-      var pos = e.position();
-      res.left = pos.left;
-      res.top = pos.top;
-      res.right =  res.left + e.width() - e.parent().width();
-      res.bottom = res.top + e.height() - e.parent().height();
-      return res;
+  $('.tile').mouseover( function(){
+    $(this).addClass('expanded');
+  }).mouseout( function(){
+    $(this).removeClass('expanded');
+  });
+
+
+  $('.tile').each( function(){
+    var lspacer = $(this).data('lspacer'),
+    rspacer = $(this).data('rspacer');
+
+    var spacer = $('<li />', { "class": 'spacer'});
+
+    switch ($(this).data('lspacer')) {
+      case 1:
+      spacer.insertBefore( $( this ) );
+      break;
+      case 2:
+      spacer.insertBefore( $( this ) ).clone().insertBefore( $( this ));
+      break;
+    }
+  });
+
+  function get_position(e) {
+    var res = new Object();
+    var pos = e.position();
+    res.left = pos.left;
+    res.top = pos.top;
+    res.right =  res.left + e.width() - e.parent().width();
+    res.bottom = res.top + e.height() - e.parent().height();
+    return res;
+  };
+
+  $('.tile').each( function(){
+
+    var leftpos = Math.round(get_position($(this)).left );
+    var rightpos = Math.round(get_position($(this)).right );
+
+    if(leftpos == 0 ) {
+      $(this).addClass('leftmost');
     }
 
-    $('.tile').each( function(){
+    if(rightpos == 0 ) {
+      $(this).addClass('rightmost');
+    }
 
-      var leftpos = Math.round(get_position($(this)).left );
-      var rightpos = Math.round(get_position($(this)).right );
+    $(this).addClass('centermost');
 
-      if(leftpos == 0 ) {
-        $(this).addClass('leftmost');
-      }
+  });
 
-      if(rightpos == 0 ) {
-        $(this).addClass('rightmost');
-      }
 
-      $(this).addClass('centermost');
-
-    });
-
-  }
 
   $(function() {
     var tiles = $(".tiles > .tile");
@@ -125,7 +122,6 @@ $doc.ready(function() {
       });
     });
 
-    tileColor()
 
     $(function() {
       window.sr = ScrollReveal({ reset: false });
