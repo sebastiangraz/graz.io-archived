@@ -12,7 +12,8 @@ title: Blog
   </div>
   <ul class="tiles">
     <% blog('blog').articles.each do | blog | %>
-    <%= partial "partials/tile", locals: { project: blog } %>
+    <% time = blog.date %>
+    <%= partial "partials/tile", locals: { project: blog, secondary: blog.date.strftime("%b #{time.day.ordinalize}") } %>
     <% end %>
   </ul>
 </div>
