@@ -123,17 +123,4 @@ $doc.ready(function() {
     });
 
 
-    $(function() {
-      window.sr = ScrollReveal({ reset: false });
-
-      var reveal = {
-        origin: 'bottom',
-        scale: 1,
-        distance: '24px',
-        duration: 1200,
-        easing: 'cubic-bezier(.03, .82, .34, .99)'
-      };
-      sr.reveal('.case-container .image', reveal);
-    });
-
   });
