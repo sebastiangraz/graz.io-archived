@@ -86,29 +86,28 @@ $doc.ready(function() {
   });
 
 
+  $(function() {
+    var mInt;
+    var mLink;
+    var cCol = 0;
+    var colors = document.querySelector(".logo").getAttribute("data-colorflip").split(";");
+    $('.logo').hover(
+      function () {
+        mLink = $(this).find('#logo');
+        mInt = setInterval(function(){mColor()},150);
+      },
+      function () {
+        clearInterval(mInt);
+        $('.logo').find('#logo').css('stroke','');
+      });
 
-  var mInt;
-  var mLink;
-  var cCol = 0;
-  var colors = document.querySelector(".logo").getAttribute("data-colorflip").split(";");
-  var mColors = colors.filter(v=>v!='');
-
-  $('.logo').hover(
-    function () {
-      mLink = $(this).find('#logo');
-      mInt = setInterval(function(){mColor()},150);
-    },
-    function () {
-      clearInterval(mInt);
-      $('.logo').find('#logo').css('stroke','');
-    });
-
-    function mColor() {
-      mLink.css('stroke', mColors[cCol++]);
-      if (cCol >= mColors.length) {
-        cCol = 0;
+      function mColor() {
+        mLink.css('stroke', colors[cCol++]);
+        if (cCol >= colors.length) {
+          cCol = 0;
+        }
       }
-    }
+    });
 
     $(function() {
       var header = $('.navigation');
@@ -128,16 +127,17 @@ $doc.ready(function() {
 
     tileColor()
 
-    // Changing the defaults
-    window.sr = ScrollReveal({ reset: false });
+    $(function() {
+      window.sr = ScrollReveal({ reset: false });
 
-    var reveal = {
-      origin: 'bottom',
-      scale: 1,
-      distance: '24px',
-      duration: 1200,
-      easing: 'cubic-bezier(.03, .82, .34, .99)'
-    };
-    sr.reveal('.case-container .image', reveal);
+      var reveal = {
+        origin: 'bottom',
+        scale: 1,
+        distance: '24px',
+        duration: 1200,
+        easing: 'cubic-bezier(.03, .82, .34, .99)'
+      };
+      sr.reveal('.case-container .image', reveal);
+    });
 
   });

@@ -27,11 +27,16 @@
 
 p {
   &.left, &.right {
-    width: percentage(8/12);
+    @include mq(sm) {
+      width: percentage(8/12);
+    }
   }
 
   &.left{
-    padding: 0 0 4% 4%;
+    @include mq(sm) {
+      padding: 0 0 4% 4%;
+    }
+
   }
 
   &.right{
@@ -40,12 +45,14 @@ p {
   }
 
   &.title-right, &.title-left {
-    margin-bottom: 6rem;
     font-size: 1rem;
-    padding: 0 4%;
     &:before {
       content: '—';
       display: block;
+    }
+    @include mq(sm) {
+      padding: 0 4%;
+      margin-bottom: 6rem;
     }
   }
 
@@ -70,6 +77,15 @@ p {
       position: absolute;
     };
   }
+}
+
+.about {
+ .mt-l {
+   margin-top: 8rem;
+   @include mq(sm) {
+     margin-top: 12rem;
+   };
+ }
 }
 
 .case-info {

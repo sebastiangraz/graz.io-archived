@@ -54,6 +54,14 @@ h4 {
   }
 }
 
+h1 {
+  font-size: 1.5rem;
+  margin: 0.67rem 0;
+  @include mq(sm) {
+    font-size: 2rem;
+  };
+}
+
 h2 {
   font-size: 1.5rem;
 }
