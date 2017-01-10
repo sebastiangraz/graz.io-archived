@@ -62,9 +62,9 @@ end
 # end
 
 helpers do
-  def nav_active(path)
-    current_page.path == path ? "active" : ''
-  end
+  # def nav_active(path)
+  #   current_page.path == path ? "active" : ''
+  # end
 end
 
 # Build-specific configuration

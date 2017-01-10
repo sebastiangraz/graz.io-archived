@@ -6,7 +6,7 @@ tags:
 - 'Web design'
 - 'Iconography'
 image: 'blog-ratio.png'
-hovertext: '1,000,000 reasons to <span>design with image ratios</span>'
+hovertext: '3 reasons to <span>design with image ratios</span>'
 color: '#280785'
 bgcolor: '#e054d2'
 lspacer: 1
@@ -27,15 +27,17 @@ When deciding on what image size you should use for your intricate product tiles
 
 # Seriously why though
 
+Reason 1 —
 To avoid re-inventing the wheel it's a good idea to constrain the images you are working with to a ratio, which can be reused to keep the design more consistent.
 
 <%= partial(:'partials/image', :locals => { :imageurl => "blog-images/ratio.jpg",  :alt => current_page.title, :ratio => "4x3" }) %>
 
+Reason 2 —
 Certain photographs are made to be constrained within a certain ratio. So by using ratios we are ensuring the image is being presented in the best way possible.
 
+Reason 3 —
 From a developer point of view a big reasons to keep image ratios in mind is the fact that you can eliminate page jumps all together whilst the images are loading. This is because the image is placed inside a fixed-height div.
-
-Now these reasons might not be enough to convince most. It certainly helped me a great deal.
+Many call this Lazy Loading, I just call it correct usage of image ratios.
 
 With that said, an implementation of an image could look similar to this:
 

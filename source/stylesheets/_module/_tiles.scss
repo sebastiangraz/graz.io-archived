@@ -10,7 +10,6 @@
 }
 
 
-
 .tile-content {
   height: $tileHeight - 72px;
   padding:1.5rem;
@@ -41,7 +40,6 @@
   left: 0;
   width: 100%;
   transform: scale(0.01);
-
   opacity: 0;
   height: 100%;
   position : absolute;
@@ -194,7 +192,7 @@
 
 .spacer {
   display:none;
-
+  margin: 0;
   @include mq(md) {
     display: block;
     width: 25%;

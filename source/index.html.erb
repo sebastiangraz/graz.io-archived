@@ -4,16 +4,16 @@ title: Sebastian Graz
 
 <%= partial "partials/nav" %>
 
-<div class="row portfolio">
+<div id="home" class="row">
 
   <div class="mt-l mb-xs abs">
     <h1>Sebastian Grąz</h1>
     <p class="hide-md"> Interaction designer and a front-end developer based in London </p>
   </div>
 
-  <ul class="tiles">
+  <ul class="tiles section" id="work">
     <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
-      <%= partial "partials/tile", locals: { project: article, secondary: article.data.year } %>
+    <%= partial "partials/tile", locals: { project: article, secondary: article.data.year } %>
     <% end %>
   </ul>
 
@@ -21,18 +21,22 @@ title: Sebastian Graz
 
   <div class="mt-l mb-xs">
     <div class="flex-between">
-        <h1>Articles <sup><%= blog('blog').articles.count%></sup></h1>
-        <% if blog('blog').articles.count > 5%>
-          <a href="/blog">Read all articles</a>
-        <% end %>
+      <h1>Articles <sup><%= blog('blog').articles.count%></sup></h1>
+      <% if blog('blog').articles.count > 5%>
+      <a href="/blog">Read all articles</a>
+      <% end %>
     </div>
   </div>
 
-  <ul class="tiles">
+  <ul class="tiles section" id="blog">
     <% blog('blog').articles.each do | blog | %>
     <% time = blog.date %>
     <%= partial "partials/tile", locals: { project: blog, secondary: blog.date.strftime("%b #{time.day.ordinalize}") } %>
     <% end %>
   </ul>
+
+  <div class="section" id="about">
+      <%= partial "partials/about" %>
+  </div>
 
 </div>

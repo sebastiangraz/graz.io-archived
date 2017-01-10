@@ -70,22 +70,13 @@ p {
 }
 
 
-.portfolio, .about {
+#home {
   .abs {
     position: relative;
     @include mq(md) {
       position: absolute;
     };
   }
-}
-
-.about {
- .mt-l {
-   margin-top: 8rem;
-   @include mq(sm) {
-     margin-top: 12rem;
-   };
- }
 }
 
 .case-info {
@@ -136,8 +127,9 @@ p {
     white-space: pre;
   }
 }
-
-
+#about, #home {
+  display: table;
+}
 .case {
   .image {
     margin-top: 6rem;
