@@ -1,35 +1,39 @@
 <!doctype html>
 <html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-    <meta property="ix:host" content="grazio.imgix.net">
-    <meta property="ix:useHttps" content="true">
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta property="ix:host" content="grazio.imgix.net">
+  <meta property="ix:useHttps" content="true">
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"></link>
+  <link href="/images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"></link>
 
-    <%= stylesheet_link_tag :site %>
-    <%= stylesheet_link_tag :syntax %>
 
-    <%= javascript_include_tag :jquery %>
-    <%= javascript_include_tag :all %>
-    <%= javascript_include_tag :imgix %>
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title><%= current_page.data.title || "Middleman" %></title>
 
-  </head>
+  <%= stylesheet_link_tag :site %>
+  <%= stylesheet_link_tag :syntax %>
 
-  <body class="<%= page_classes %>">
-    <%= partial "partials/nav" %>
-    <%= partial "partials/case-header" %>
+  <%= javascript_include_tag :jquery %>
+  <%= javascript_include_tag :all %>
+  <%= javascript_include_tag :imgix %>
 
-    <div class="row">
-      <div class="mt-xl">
-        <div class="blog-wrapper">
-          <%= yield %>
-        </div>
-        <%= partial(:'partials/footer', :locals => {:content => 'blog', :title => 'Read more posts'}) %>
+</head>
+
+<body class="<%= page_classes %>">
+  <%= partial "partials/nav" %>
+  <%= partial "partials/case-header" %>
+
+  <div class="row">
+    <div class="mt-xl">
+      <div class="blog-wrapper">
+        <%= yield %>
       </div>
+      <%= partial(:'partials/footer', :locals => {:content => 'blog', :title => 'Read more posts'}) %>
     </div>
-  </body>
+  </div>
+</body>
 </html>

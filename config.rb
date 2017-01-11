@@ -5,7 +5,7 @@
 activate :directory_indexes
 activate :syntax
 
-set :relative_links, true #should be true
+set :relative_links, false #should be true
 set :images_dir, 'images'
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :disable_indented_code_blocks => true, :smartypants => true, auto_ids: false
@@ -16,6 +16,7 @@ set :markdown, :fenced_code_blocks => true, :disable_indented_code_blocks => tru
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/404.html", directory_index: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -69,7 +70,7 @@ end
 
 # Build-specific configuration
 configure :build do
-  activate :relative_assets
+  # activate :relative_assets
   # Minify CSS on build
   activate :minify_css
   # Minify Javascript on build
