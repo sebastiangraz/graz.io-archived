@@ -69,7 +69,7 @@
     margin-bottom: 0
   }
 
-  a {
+  .tile-link {
     position: static;
   }
 
@@ -122,8 +122,10 @@
     position: relative;
     z-index: 2;
     .tile-image {
-      opacity: 1;
-      transform: translate(0, 0);
+      @include mq(md) {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
     }
     h2 {
       visibility: visible;
@@ -133,6 +135,16 @@
 
 
 .expanded {
+  .tile-image {
+    opacity: 0;
+  }
+  .readmore {
+    opacity: 1;
+    transform: translateX(8px);
+    @include mq(md) {
+      opacity: 0;
+    }
+  }
   .tile-bg {
     @include mq(md) {
       transform: scale(1.25);
@@ -200,5 +212,18 @@
     &-double {
       width: 50%;
     }
+  }
+}
+
+.readmore {
+  transition: 0.5s $bezier all;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  display: table;
+  float: right;
+
+  .arrow {
+    max-height: 24px;
   }
 }

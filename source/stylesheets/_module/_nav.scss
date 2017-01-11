@@ -17,9 +17,15 @@ nav {
 
     &.hidden {
       .logo {
-        transform: translateX(2rem);
+        transform: translateX(-50%);
+        left: 50%;
+        @include mq(sm) {
+          transform: translateX(2rem);
+          left: 0;
+        };
       }
       .menu-items {
+        visibility: hidden;
         opacity: 0;
         transform: translateX(-2rem);
       }
@@ -52,12 +58,13 @@ li.active {
 }
 
 .logo, .menu-items {
-  transition: 1s $bezier all;
+  transition: .3s $bezier all;
 }
 
 .logo {
   width: 2rem;
   height: 2rem;
+  left: 0;
   svg {
     width: 100%;
     object-fit: contain;

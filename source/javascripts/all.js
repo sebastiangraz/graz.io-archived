@@ -5,7 +5,6 @@ var $doc = $(document);
 
 $doc.ready(function() {
 
-
   $('.tile-content').each (function() {
     var color = $(this).data('color');
     $(this).css({
@@ -20,12 +19,25 @@ $doc.ready(function() {
     });
   });
 
-  $('.tile').mouseover( function(){
-    $(this).addClass('expanded');
-  }).mouseout( function(){
-    $(this).removeClass('expanded');
-  });
+  function isTouchDevice() {
+    return 'ontouchstart' in document.documentElement;
+  }
 
+  if (isTouchDevice()) {
+    $('.tile').on('touchstart', function(){
+      $(this).addClass('expanded');
+    }).on('touchend', function(){
+      $(this).removeClass('expanded');
+    });
+  }
+
+  else {
+    $('.tile').on('mouseover', function(){
+      $(this).addClass('expanded');
+    }).on('mouseout', function(){
+      $(this).removeClass('expanded');
+    });
+  }
 
   $('.tile').each( function(){
     var lspacer = $(this).data('lspacer'),

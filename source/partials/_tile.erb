@@ -1,8 +1,12 @@
+
 <li class="tile <%= 'promoted' if project.data.promoted == true %>" data-rspacer="<%= project.data.rspacer%>" data-lspacer="<%= project.data.lspacer %>">
-  <a href="<%= project.url %>">
+  <a class="tile-link" href="<%= project.url %>">
     <div class="tile-content" data-color="<%= project.data.color %>">
       <h2><%= project.data.hovertext %></h2>
-      <span><%= secondary %></p>
+      <span>
+        <%= secondary %>
+        <span class="readmore" href="<%= project.url %>"><%= partial(:'partials/arrow', :locals => { :strokecolor => project.data.color }) %></span>
+      </span>
     </div>
 
     <div class="tile-bg" data-bgcolor=" <%= project.data.bgcolor %> ">
@@ -10,5 +14,5 @@
         <%= partial(:'partials/image', :locals => { :imageurl => 'case-images/' + project.data.image, :alt => project.title, :ratio => "1x1" }) %>
       </div>
     </div>
-    </a>
-  </li>
+  </a>
+</li>
