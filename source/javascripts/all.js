@@ -2,7 +2,6 @@
 
 var $doc = $(document);
 
-
 $doc.ready(function() {
 
   $('.tile-content').each (function() {
@@ -84,16 +83,20 @@ $doc.ready(function() {
 
 
 
-  $(function() {
-    var tiles = $(".tiles > .tile");
-    var interval = setInterval(function () {
-      var ds = tiles.not(".flip");
-      ds.eq(Math.floor(Math.random() * ds.length)).addClass('flip');
-      if (ds.length == 1) {
-        clearInterval(interval);
-      }
-    }, 70);
+  $(function(){
+    $('.tile').viewportChecker({
+      classToAdd: 'tiles-visible',
+      classToRemove: 'tiles-visible',
+      repeat: false
+    });
+
+    $('.case-container .image img').viewportChecker({
+      classToAdd: 'image-visible',
+      classToRemove: 'image-visible',
+      repeat: false
+    });
   });
+
 
 
   $(function() {
@@ -102,13 +105,15 @@ $doc.ready(function() {
     var cCol = 0;
     var colors = document.querySelector(".logo").getAttribute("data-colorflip").split(";");
     $('.logo').hover(
-      function () {
+      function() {
         mLink = $(this).find('#logo');
-        mInt = setInterval(function(){mColor()},150);
+        mInt = setInterval(function() {
+          mColor()
+        }, 150);
       },
-      function () {
+      function() {
         clearInterval(mInt);
-        $('.logo').find('#logo').css('stroke','');
+        $('.logo').find('#logo').css('stroke', '');
       });
 
       function mColor() {
@@ -118,6 +123,7 @@ $doc.ready(function() {
         }
       }
     });
+
 
     $(function() {
       var header = $('.navigation');
@@ -134,5 +140,7 @@ $doc.ready(function() {
         }
       });
     });
+
+
 
   });

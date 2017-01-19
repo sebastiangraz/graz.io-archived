@@ -1,29 +1,28 @@
 <!doctype html>
 <html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta property="ix:host" content="grazio.imgix.net">
-    <meta property="ix:useHttps" content="true">
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta property="ix:host" content="grazio.imgix.net">
+  <meta property="ix:useHttps" content="true">
 
-    <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"></link>
-    <link href="/images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"></link>
-
-
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-
-    <%= stylesheet_link_tag :site %>
-
-    <%= javascript_include_tag :jquery %>
-    <%= javascript_include_tag :all %>
-    <%= javascript_include_tag :imgix %>
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"></link>
+  <link href="/images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"></link>
 
 
-  </head>
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title><%= current_page.data.title || "Middleman" %></title>
 
-  <body class="<%= page_classes %>">
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag :site %>
+  <%= javascript_include_tag :jquery %>
+  <%= javascript_include_tag :all %>
+  <%= javascript_include_tag :imgix %>
+  <%= javascript_include_tag :scrollreveal %>
+
+</head>
+
+<body class="<%= page_classes %>">
+  <%= yield %>
+</body>
 </html>
