@@ -41,22 +41,6 @@ nav {
   }
 }
 
-.case {
-  .menu-items a {
-    opacity: 0.7;
-    &:hover{
-      opacity: 1;
-    }
-  }
-}
-
-
-li.active {
-  a {
-    color: #000;
-  }
-}
-
 .logo, .menu-items {
   transition: .3s $bezier all;
 }
