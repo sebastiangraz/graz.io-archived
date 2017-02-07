@@ -83,11 +83,15 @@ p {
 .case-info {
   margin-bottom: 3rem;
   @include mq(md) {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include mq(lg) {
+    margin-top: 0rem;
     margin-bottom: 6rem;
     margin-left: auto;
     width: percentage(6/12);
-    display: flex;
-    justify-content: space-between;
   }
 
   li p {
@@ -135,4 +139,27 @@ p {
   .image {
     margin-top: 6rem;
   }
+}
+
+.icon-set {
+  display: flex;
+  align-items:center;
+  justify-content: flex-start;
+  & > * {
+    margin-right: 2rem;
+  }
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+  img {
+    height: 1rem;
+    width: 1rem;
+  }
+
 }

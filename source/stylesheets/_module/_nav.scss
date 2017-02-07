@@ -3,16 +3,17 @@ nav {
     height: 2rem;
     width: 100%;
     margin: 0 auto;
-    top:2rem;
+    top:1rem;
     transition: .4s $bezier top;
     position: fixed;
     z-index: 3;
     @include mq(sm) {
-      top:4rem;
+      top:3rem;
     };
     .row {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     &.hidden {
@@ -36,7 +37,20 @@ nav {
     align-items: center;
     li {
       list-style: none;
-      margin-left: 2rem;
+      margin-left: .5rem;
+      a {
+        height: 4rem;
+        width: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        border-radius: 50%;
+        display: block;
+        &:hover {
+          height: 4rem;
+          width: 4rem;
+          box-shadow: 0px 0px 0px 1.5px currentColor inset;
+        }
+      }
     }
   }
 }
