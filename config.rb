@@ -74,6 +74,25 @@ helpers do
   end
 end
 
+activate :contentful do |f|
+  f.access_token = 'e300c3de976fa349df685a08973ded272eb0cbb2dd3423ba2ee48753e1bc4ac5'
+  f.space = { site: 'y77stanzu634'}
+  f.rebuild_on_webhook = true
+  f.content_types = {
+    caseStudy: 'caseStudy',
+    blog: 'blog'
+  }
+end
+
+
+data.site.caseStudy.each do | id, this |
+  proxy "/cases/#{this.title.parameterize}/index.html", "/cases/cases-template.html", :locals => { this: this }, :ignore => true
+end
+
+data.site.blog.each do | id, this |
+  proxy "/blog/#{this.title.parameterize}/index.html", "/blog/blog-template.html", :locals => { this: this }, :ignore => true
+end
+
 
 # Build-specific configuration
 configure :build do

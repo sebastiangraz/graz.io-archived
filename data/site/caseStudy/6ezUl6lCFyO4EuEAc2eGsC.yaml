@@ -1,0 +1,32 @@
+---
+:id: 6ezUl6lCFyO4EuEAc2eGsC
+:title: The Poetry Hour
+:titleHover: I helped design and code <span>The Poetry Hour.</span>
+:thumbnail:
+  :title: case-poetry
+  :description: 
+  :url: "//images.contentful.com/y77stanzu634/5KG6GBqh5SmMC4yYwW8mUG/8c80270e023ddde91d155ef739feebcc/case-poetry.png"
+:tags:
+- Rebranding
+- Responsive
+:roles:
+- Lead Designer
+- Front-end developer
+:caseStudyContainer:
+- :id: 7kvm4Co80gksKqGcesayEc
+  :textBlock: Indulging into the world of poetry can be quite daunting especially
+    for an audience with increasingly short web-attention. At This Place we came up
+    with a fresh way to introduce poetry for a new audience - through Memes. In other
+    words, a hand-picked poem verse pasted onto an image. With the idea of it being
+    shared online
+- :id: 1fFAu8A7V4sU2MYMmYW268
+  :imageName: overview
+  :mediaContainer:
+    :title: overview
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/6yMu2IrJFmYI6wsuAesWgo/a16ed382ceca44ef25d49e73a015fc43/overview.jpg"
+:bgColor: "#DAF362"
+:textColor: "#ff00b0"
+:leftSpacing: 2
+:promoted: true
+:year: 2015

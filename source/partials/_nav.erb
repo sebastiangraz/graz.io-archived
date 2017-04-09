@@ -1,15 +1,12 @@
 <nav>
   <div class="navigation">
     <div class="row">
-      <a class="logo" href="/" data-colorflip="
-      <% blog('case').articles.each do | blog | %><%= blog.data.bgcolor %>;<% end %>
-      <% blog('blog').articles.each do | blog | %><%= blog.data.bgcolor %>;<% end %>
-      ">
-        <%= partial(:'partials/logo', :locals => { :color => current_page.data.color }) %>
+      <a class="logo" href="/">
+        <%= partial(:'partials/logo', :locals => { :color => textColor }) %>
       </a>
       <ul class="menu-items">
-        <li><a style="color:<%=current_page.data.color%>" href="/#home">Work</a></li>
-        <li><a style="color:<%=current_page.data.color%>" href="/#about">About</a></li>
+        <li><a style="color:<%=textColor%>" href="/#home">Work</a></li>
+        <li><a style="color:<%=textColor%>" href="/#about">About</a></li>
       </ul>
     </div>
   </div>

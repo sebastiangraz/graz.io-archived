@@ -1,0 +1,23 @@
+---
+:id: 4fMXImdsC4YYq26mGUSiW0
+:title: Volvo
+:titleHover: I led the design for a <span>Volvo<span> pitch
+:thumbnail:
+  :title: case-poetry
+  :description: 
+  :url: "//images.contentful.com/y77stanzu634/5KG6GBqh5SmMC4yYwW8mUG/8c80270e023ddde91d155ef739feebcc/case-poetry.png"
+:tags:
+- Visual Design
+- Pitch
+:roles:
+- Lead Designer
+:caseStudyContainer:
+- :id: 5SWn7NNbSocaOaai8aUWIy
+  :textBlock: |-
+    Back in 2014 during my time at DigitasLBi I was part of the pitch team to design a future Volvo website.
+
+    The core values for Volvo Cars is simplicity, functionality and durability. Volvos Scandinavian heritage is an integral part of the brand and we wanted to create a website which mirrors all these values through an modern and aesthetic web experience.
+:bgColor: "#0F52EB"
+:textColor: "#06eddf"
+:leftSpacing: 2
+:year: 2014

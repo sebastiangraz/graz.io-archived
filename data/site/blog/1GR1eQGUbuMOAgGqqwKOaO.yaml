@@ -1,0 +1,20 @@
+---
+:id: 1GR1eQGUbuMOAgGqqwKOaO
+:title: Design with image ratios
+:titleHover: 3 reasons to Design with image ratios
+:blogContent:
+- :id: 6BdRTXc1FKksMOIkAMwuQe
+  :markdownBlock: |
+    # Why though
+
+    Gone are the days when we simply slap our images onto web pages like so:
+
+    ```html
+    <!-- Don't do this -->
+    <img src="images/avo.png" alt="avocado" />
+    ```
+:bgColor: "#e054d2"
+:textColor: "#280785"
+:leftSpacing: 0
+:promoted: false
+:postedDate: !ruby/object:DateTime 2017-02-08 00:00:00.000000000 Z

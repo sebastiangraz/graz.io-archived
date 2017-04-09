@@ -2,7 +2,8 @@
 title: Sebastian Graz
 ---
 
-<%= partial "partials/nav" %>
+<%= partial "partials/nav", :locals => {:textColor => '#000' } %>
+
 
 <div id="home" class="row">
 
@@ -12,12 +13,10 @@ title: Sebastian Graz
   </div>
 
   <ul class="tiles section" id="work">
-    <% blog('case').articles.sort_by{ |index| index.data.order }.each do |article| %>
-    <%= partial "partials/tile", locals: { project: article, secondary: article.data.year } %>
+    <% data.site.caseStudy.take(6).each do |id, this | %>
+      <%= partial "partials/tile", :locals => { :this => this, :dir => 'cases/', :secondary => this.year }%>
     <% end %>
   </ul>
-
-
 
   <div class="mt-l mb-xs">
     <div class="flex-between">
@@ -28,10 +27,12 @@ title: Sebastian Graz
     </div>
   </div>
 
+
   <ul class="tiles section" id="blog">
-    <% blog('blog').articles[0...5].each do | blog | %>
-    <% time = blog.date %>
-    <%= partial "partials/tile", locals: { project: blog, secondary: blog.date.strftime("%b #{time.day.ordinalize}") } %>
+    <% data.site.blog.take(5).each do |id, this | %>
+
+    <% date = Time.now %>
+      <%= partial "partials/tile", :locals => { :this => this, :dir => 'blog/', :secondary => this.postedDate }%>
     <% end %>
   </ul>
 

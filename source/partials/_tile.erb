@@ -1,18 +1,19 @@
+      <li class="reveal tile <%= 'promoted' if this.promoted == true %>" data-lspacer="<%= this.leftSpacing %>">
+        <a class="tile-link" href="<%= dir %><%= this.title.parameterize %>">
+          <div class="tile-content" data-color="<%= this.textColor %>">
+            <h2><%= this.titleHover %></h2>
+            <span>
+              <%= secondary %>
+              <span class="readmore" href="<%= this.title.parameterize %>"><%= partial(:'partials/arrow', :locals => { :strokecolor => this.textColor }) %></span>
+            </span>
+          </div>
 
-<li class="reveal tile <%= 'promoted' if project.data.promoted == true %>" data-rspacer="<%= project.data.rspacer%>" data-lspacer="<%= project.data.lspacer %>">
-  <a class="tile-link" href="<%= project.url %>">
-    <div class="tile-content" data-color="<%= project.data.color %>">
-      <h2><%= project.data.hovertext %></h2>
-      <span>
-        <%= secondary %>
-        <span class="readmore" href="<%= project.url %>"><%= partial(:'partials/arrow', :locals => { :strokecolor => project.data.color }) %></span>
-      </span>
-    </div>
-
-    <div class="tile-bg" data-bgcolor=" <%= project.data.bgcolor %> ">
-      <div class="tile-image">
-        <%= partial(:'partials/image', :locals => { :imageurl => 'case-images/' + project.data.image, :alt => project.title, :ratio => "1x1" }) %>
-      </div>
-    </div>
-  </a>
-</li>
+          <div class="tile-bg" data-bgcolor=" <%= this.bgColor %> ">
+            <% if this.key? :thumbnail %>
+              <div class="tile-image">
+                <%= partial(:'partials/image', :locals => { :imageurl => this.thumbnail['url'], :alt => this.thumbnail['title'], :ratio => "1x1" }) %>
+              </div>
+            <% end %>
+          </div>
+        </a>
+      </li>

@@ -1,0 +1,20 @@
+<%= partial "partials/nav", :locals => {:textColor => this.textColor } %>
+
+<%= partial "partials/case-header" %>
+
+
+<div class="row">
+  <div class="mt-s">
+    <div class="case-container">
+      <%= partial "partials/case-info" %>
+      <% this.caseStudyContainer.each do | this | %>
+      <% if this.key?("textBlock") && this["textBlock"] %>
+      <p><%= this['textBlock']%></p>
+      <% end %>
+      <% if this.key?("mediaContainer") && this["mediaContainer"] %>
+      <%= partial(:'partials/image', :locals => { :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'], :ratio => "3x4" }) %>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
