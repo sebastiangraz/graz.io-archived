@@ -83,19 +83,19 @@ $doc.ready(function() {
 
 
 
-  $(function(){
-    $('.tile').viewportChecker({
-      classToAdd: 'tiles-visible',
-      classToRemove: 'tiles-visible',
-      repeat: false
-    });
-
-    $('.case-container .image img').viewportChecker({
-      classToAdd: 'image-visible',
-      classToRemove: 'image-visible',
-      repeat: false
-    });
-  });
+  // $(function(){
+  //   $('.tile').viewportChecker({
+  //     classToAdd: 'tiles-visible',
+  //     classToRemove: 'tiles-visible',
+  //     repeat: false
+  //   });
+  //
+  //   $('.case-container .image img').viewportChecker({
+  //     classToAdd: 'image-visible',
+  //     classToRemove: 'image-visible',
+  //     repeat: false
+  //   });
+  // });
 
 
 

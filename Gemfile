@@ -16,3 +16,5 @@ gem 'middleman-livereload'
 
 gem "middleman-syntax"
 gem "redcarpet"
+
+gem 'contentful_middleman', :git => 'https://github.com/contentful/contentful_middleman.git', :branch => 'dl/upgrade-to-v4'

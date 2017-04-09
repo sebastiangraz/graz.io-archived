@@ -21,7 +21,7 @@ title: Sebastian Graz
 
   <div class="mt-l mb-xs">
     <div class="flex-between">
-      <h1>Articles <sup><%= blog('blog').articles.count%></sup></h1>
+      <h1>Recent articles <sup><%= blog('blog').articles.count%></sup></h1>
       <% if blog('blog').articles.count > 5%>
       <a href="/blog">Read all articles</a>
       <% end %>
@@ -29,7 +29,7 @@ title: Sebastian Graz
   </div>
 
   <ul class="tiles section" id="blog">
-    <% blog('blog').articles.each do | blog | %>
+    <% blog('blog').articles[0...5].each do | blog | %>
     <% time = blog.date %>
     <%= partial "partials/tile", locals: { project: blog, secondary: blog.date.strftime("%b #{time.day.ordinalize}") } %>
     <% end %>

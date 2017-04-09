@@ -14,9 +14,7 @@
 
   height: $tileHeight - 72px;
   padding:1.5rem;
-  transition: 2s $bezier opacity;
   z-index: 1;
-  opacity: 0;
   width: 100%;
   position: relative;
   display: flex;
@@ -33,25 +31,24 @@
   }
 }
 
-.tiles-visible {
-  & .tile-bg {
-    opacity: 1;
-    transform: scale(1);
-  }
-  & .tile-content {
-    opacity: 1;
-  }
-}
+
+// .tiles-visible {
+//   & .tile-bg {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+//   & .tile-content {
+//     opacity: 1;
+//   }
+// }
 
 .tile-bg {
   box-shadow: 0 0 0 rgba(0,0,0,0.1);
-  transition: 1.2s $bezier all;
   overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
   transform: scale(0.01);
-  opacity: 0;
   height: 100%;
   position : absolute;
 }
@@ -85,8 +82,7 @@
   }
 
   .tile-image {
-    transition: .8s $bezier all;
-    transform: translate(16px, 16px);
+    transition: .4s $bezier all;
     width: 50%;
     max-width: 14rem;
     bottom: 0;
@@ -95,6 +91,7 @@
     right: 0;
 
     @include mq(md) {
+      transform: translate(16px, 16px);
       opacity: 0;
       max-width: initial;
       width: percentage(2/3);
@@ -164,7 +161,9 @@
 }
 .leftmost {
   .tile-bg {
-    transform-origin: left;
+    @include mq(md) {
+      transform-origin: left;
+    }
     @include mq(lg) {
       transform-origin: center;
     }
@@ -194,7 +193,9 @@
 }
 .rightmost {
   .tile-bg {
-    transform-origin: right;
+    @include mq(md) {
+      transform-origin: right;
+    }
     @include mq(lg) {
       transform-origin: center;
     }
@@ -227,7 +228,7 @@
 }
 
 .readmore {
-  transition: 0.5s $bezier all;
+  transition: 0.4s $bezier all;
   position: relative;
   z-index: 1;
   padding: 0;

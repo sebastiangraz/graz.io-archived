@@ -5,15 +5,5 @@
   .image {
     background: transparent;
     clear: both;
-    img {
-      opacity: 0;
-      transform: scale(1.05);
-      transition: 1s $bezier all;
-
-      &.image-visible {
-        transform: scale(1);
-        opacity: 1
-      }
-    }
   }
 }

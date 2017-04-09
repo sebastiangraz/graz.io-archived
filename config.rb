@@ -68,6 +68,13 @@ helpers do
   # end
 end
 
+helpers do
+  def markdown(text)
+    Tilt['markdown'].new { text }.render
+  end
+end
+
+
 # Build-specific configuration
 configure :build do
   # activate :relative_assets
