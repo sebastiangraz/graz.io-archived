@@ -4,15 +4,15 @@
 :titleHover: 3 reasons to Design with image ratios
 :blogContent:
 - :id: 6BdRTXc1FKksMOIkAMwuQe
-  :markdownBlock: |
+  :markdownBlock: |+
     # Why though
 
     Gone are the days when we simply slap our images onto web pages like so:
 
-    ```html
-    <!-- Don't do this -->
-    <img src="images/avo.png" alt="avocado" />
-    ```
+
+        <!-- Don't do this -->
+        <img src="images/avo.png" alt="avocado" />
+
 :bgColor: "#e054d2"
 :textColor: "#280785"
 :leftSpacing: 0

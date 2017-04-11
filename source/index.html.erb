@@ -32,7 +32,7 @@ title: Sebastian Graz
     <% data.site.blog.take(5).each do |id, this | %>
 
     <% date = Time.now %>
-      <%= partial "partials/tile", :locals => { :this => this, :dir => 'blog/', :secondary => this.postedDate }%>
+      <%= partial "partials/tile", :locals => { :this => this, :dir => 'blog/', :secondary => this.postedDate.strftime("%e %a") }%>
     <% end %>
   </ul>
 
