@@ -5,7 +5,7 @@
 :thumbnail:
   :title: case-poetry
   :description: 
-  :url: "//images.contentful.com/y77stanzu634/5KG6GBqh5SmMC4yYwW8mUG/8c80270e023ddde91d155ef739feebcc/case-poetry.png"
+  :url: "//images.contentful.com/y77stanzu634/2woND5IZyIqque4S4COI4i/2829edd1a57a31e5dd7ae0f3c904ddb5/case-poetry.png"
 :tags:
 - Rebranding
 - Responsive
@@ -22,11 +22,11 @@
 - :id: 1fFAu8A7V4sU2MYMmYW268
   :imageName: overview
   :mediaContainer:
-    :title: overview
-    :description: 
-    :url: "//images.contentful.com/y77stanzu634/6yMu2IrJFmYI6wsuAesWgo/a16ed382ceca44ef25d49e73a015fc43/overview.jpg"
+    :id: 6yMu2IrJFmYI6wsuAesWgo
 :bgColor: "#DAF362"
 :textColor: "#ff00b0"
-:leftSpacing: 2
+:leftSpacing: 0
 :promoted: true
 :year: 2015
+:created_at: !ruby/object:DateTime 2017-04-09 01:04:23.521000000 Z
+:updated_at: !ruby/object:DateTime 2017-04-15 10:21:34.236000000 Z

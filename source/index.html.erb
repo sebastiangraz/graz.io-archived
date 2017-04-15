@@ -12,6 +12,8 @@ title: Sebastian Graz
     <p class="hide-md"> Interaction designer and a front-end developer based in London </p>
   </div>
 
+
+
   <ul class="tiles section" id="work">
     <% data.site.caseStudy.take(6).each do |id, this | %>
       <%= partial "partials/tile", :locals => { :this => this, :dir => 'cases/', :secondary => this.year }%>
@@ -20,9 +22,9 @@ title: Sebastian Graz
 
   <div class="mt-l mb-xs">
     <div class="flex-between">
-      <h1>Recent articles <sup><%= blog('blog').articles.count%></sup></h1>
+      <h1>Recent articles <sup><%= data.site.blog.count %></sup></h1>
       <% if blog('blog').articles.count > 5%>
-      <a href="/blog">Read all articles</a>
+        <a href="/blog">Read all articles</a>
       <% end %>
     </div>
   </div>
@@ -30,9 +32,7 @@ title: Sebastian Graz
 
   <ul class="tiles section" id="blog">
     <% data.site.blog.take(5).each do |id, this | %>
-
-    <% date = Time.now %>
-      <%= partial "partials/tile", :locals => { :this => this, :dir => 'blog/', :secondary => this.postedDate.strftime("%e %a") }%>
+      <%= partial "partials/tile", :locals => { :this => this, :dir => 'blog/', :secondary => this.postedDate.strftime("%e %a")} %>
     <% end %>
   </ul>
 

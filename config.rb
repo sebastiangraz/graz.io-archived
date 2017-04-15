@@ -74,6 +74,8 @@ helpers do
   end
 end
 
+
+
 activate :contentful do |f|
   f.access_token = 'e300c3de976fa349df685a08973ded272eb0cbb2dd3423ba2ee48753e1bc4ac5'
   f.space = { site: 'y77stanzu634'}
@@ -83,6 +85,7 @@ activate :contentful do |f|
     blog: 'blog'
   }
 end
+
 
 
 data.site.caseStudy.each do | id, this |

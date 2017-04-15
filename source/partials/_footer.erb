@@ -1,8 +1,8 @@
 <footer class="footer mb-l">
   <h2 class="footer-h2"><%= title %></h2>
   <ul class="tiles">
-    <% blog(content).articles.delete_if{|item| item == current_article}.sort_by{ |index| rand }.take(4).each do |article| %>
-      <%= partial "partials/tile", locals: { project: article, secondary: '' } %>
+    <% content.take(5).shuffle.each do |id, this| %>
+      <%= partial "partials/tile", :locals => { :this => this, :dir => nil, :secondary => this.year } %>
     <% end %>
   </ul>
 </footer>

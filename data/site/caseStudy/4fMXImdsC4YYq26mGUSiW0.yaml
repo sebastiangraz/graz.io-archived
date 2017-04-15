@@ -3,9 +3,9 @@
 :title: Volvo
 :titleHover: I led the design for a Volvo pitch
 :thumbnail:
-  :title: case-poetry
+  :title: case-volvo
   :description: 
-  :url: "//images.contentful.com/y77stanzu634/5KG6GBqh5SmMC4yYwW8mUG/8c80270e023ddde91d155ef739feebcc/case-poetry.png"
+  :url: "//images.contentful.com/y77stanzu634/5w26gbyEqQOAgcScC4usuy/bc202762047d4a5970349215dbcea0ce/case-volvo.png"
 :tags:
 - Visual Design
 - Pitch
@@ -21,3 +21,5 @@
 :textColor: "#06eddf"
 :leftSpacing: 2
 :year: 2014
+:created_at: !ruby/object:DateTime 2017-04-09 11:49:01.742000000 Z
+:updated_at: !ruby/object:DateTime 2017-04-15 10:22:14.941000000 Z
