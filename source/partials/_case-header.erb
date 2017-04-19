@@ -1,6 +1,9 @@
 <div class="case-header" style="background:<%= this.bgColor %>;">
   <div class="row">
       <div class="case-content" style="color:<%= this.textColor%>">
+        <% if locals.key?(:subheader) %>
+          <span class="fadeInDown"><%= subheader %></span>
+        <% end %>
         <h1 class="h0 fadeInDown"><%= this.titleHover %></h1>
       </div>
   </div>

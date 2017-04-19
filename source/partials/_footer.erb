@@ -1,8 +1,10 @@
 <footer class="footer mb-l">
   <h2 class="footer-h2"><%= title %></h2>
   <ul class="tiles">
-    <% content.take(5).shuffle.each do |id, this| %>
-      <%= partial "partials/tile", :locals => { :this => this, :dir => nil, :secondary => this.year } %>
+    <% current = current_page.url.split('/').last %>
+
+    <% content.sort_by{ |index| rand }.take(3).each do |id, this| %>
+      <%= partial "partials/tile", :locals => { :this => this, :dir => nil, :secondary => 'View' } %>
     <% end %>
   </ul>
 </footer>

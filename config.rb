@@ -37,20 +37,6 @@ end
 #   command: "npm run start",
 #   source: ".tmp"
 
-activate :blog do | blog |
-  blog.name = 'case'
-  blog.prefix = 'case'
-  blog.layout = 'case-layout'
-  blog.permalink = ':title.html'
-end
-
-activate :blog do | verbose |
-  verbose.name = 'blog'
-  verbose.prefix = 'blog'
-  verbose.layout = 'blog-layout'
-  verbose.permalink = ':title.html'
-end
-
 ###
 # Helpers
 ###
@@ -74,15 +60,21 @@ helpers do
   end
 end
 
-
+class MapperWithContentTypeData < ContentfulMiddleman::Mapper::Base
+  def map(context, entry)
+    super
+    context.content_type_id = entry.content_type.id
+    context.updated_at = entry.sys[:updatedAt]
+  end
+end
 
 activate :contentful do |f|
   f.access_token = 'e300c3de976fa349df685a08973ded272eb0cbb2dd3423ba2ee48753e1bc4ac5'
   f.space = { site: 'y77stanzu634'}
   f.rebuild_on_webhook = true
   f.content_types = {
-    caseStudy: 'caseStudy',
-    blog: 'blog'
+    blog: {mapper: MapperWithContentTypeData, id: 'blog'},
+    caseStudy: {mapper: MapperWithContentTypeData, id: 'caseStudy'}
   }
 end
 

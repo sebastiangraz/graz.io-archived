@@ -1,6 +1,7 @@
 ---
 title: Sebastian Graz
 ---
+<% content_for(:title, 'Sebastian Graz') %>
 
 <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
 
@@ -15,7 +16,7 @@ title: Sebastian Graz
 
 
   <ul class="tiles section" id="work">
-    <% data.site.caseStudy.take(6).each do |id, this | %>
+    <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.take(6).each do |id, this | %>
       <%= partial "partials/tile", :locals => { :this => this, :dir => 'cases/', :secondary => this.year }%>
     <% end %>
   </ul>
@@ -23,16 +24,15 @@ title: Sebastian Graz
   <div class="mt-l mb-xs">
     <div class="flex-between">
       <h1>Recent articles <sup><%= data.site.blog.count %></sup></h1>
-      <% if blog('blog').articles.count > 5%>
+      <% if data.site.blog.count > 5%>
         <a href="/blog">Read all articles</a>
       <% end %>
     </div>
   </div>
 
-
   <ul class="tiles section" id="blog">
     <% data.site.blog.take(5).each do |id, this | %>
-      <%= partial "partials/tile", :locals => { :this => this, :dir => 'blog/', :secondary => this.postedDate.strftime("%e %a")} %>
+      <%= partial "partials/tile", :locals => { :this => this, :dir => 'blog/', :secondary => this.postedDate.strftime("%a #{this.postedDate.day.ordinalize}")} %>
     <% end %>
   </ul>
 

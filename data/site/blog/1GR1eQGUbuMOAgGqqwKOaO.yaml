@@ -18,3 +18,5 @@
 :leftSpacing: 0
 :promoted: false
 :postedDate: !ruby/object:DateTime 2017-02-08 00:00:00.000000000 Z
+:content_type_id: blog
+:updated_at: !ruby/object:DateTime 2017-04-09 12:31:08.485000000 Z

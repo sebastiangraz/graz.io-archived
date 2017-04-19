@@ -22,11 +22,14 @@
 - :id: 1fFAu8A7V4sU2MYMmYW268
   :imageName: overview
   :mediaContainer:
-    :id: 6yMu2IrJFmYI6wsuAesWgo
+    :title: overview
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/3UsVninNZuCukKACysMs82/83246541409d9e22f130419c6d5c170c/overview.jpg"
 :bgColor: "#DAF362"
 :textColor: "#ff00b0"
-:leftSpacing: 0
+:leftSpacing: 2
 :promoted: true
 :year: 2015
-:created_at: !ruby/object:DateTime 2017-04-09 01:04:23.521000000 Z
-:updated_at: !ruby/object:DateTime 2017-04-15 10:21:34.236000000 Z
+:order: 2
+:content_type_id: caseStudy
+:updated_at: !ruby/object:DateTime 2017-04-19 21:40:31.717000000 Z

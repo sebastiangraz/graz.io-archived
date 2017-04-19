@@ -8,9 +8,8 @@
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"></link>
   <link href="/images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"></link>
 
-
   <!-- Use title if it's in the page YAML frontmatter -->
-  <title><%= current_page.data.title || "Middleman" %></title>
+  <title><%= yield_content(:title) %></title>
 
   <%= stylesheet_link_tag :site %>
   <%= javascript_include_tag :jquery %>

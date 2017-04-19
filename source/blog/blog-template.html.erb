@@ -1,9 +1,10 @@
 <%= partial "partials/nav", :locals => {:textColor => this.textColor } %>
 
-<%= partial "partials/case-header" %>
-
+<%= partial "partials/case-header", :locals => {:subheader => this.postedDate.strftime("%b #{this.postedDate.day.ordinalize} — %Y")} %>
 
 <div class="row">
+
+
   <div class="mt-s">
     <div class="case-container mt-xl">
       <% this.blogContent.each do | this | %>

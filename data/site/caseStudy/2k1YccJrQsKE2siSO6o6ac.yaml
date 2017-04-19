@@ -59,5 +59,6 @@
 :leftSpacing: 0
 :promoted: false
 :year: 2015
-:created_at: !ruby/object:DateTime 2017-04-14 14:35:14.982000000 Z
-:updated_at: !ruby/object:DateTime 2017-04-15 10:17:17.875000000 Z
+:order: 4
+:content_type_id: caseStudy
+:updated_at: !ruby/object:DateTime 2017-04-19 21:42:41.390000000 Z

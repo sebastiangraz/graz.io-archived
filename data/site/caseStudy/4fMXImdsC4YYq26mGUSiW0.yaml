@@ -21,5 +21,6 @@
 :textColor: "#06eddf"
 :leftSpacing: 2
 :year: 2014
-:created_at: !ruby/object:DateTime 2017-04-09 11:49:01.742000000 Z
-:updated_at: !ruby/object:DateTime 2017-04-15 10:22:14.941000000 Z
+:order: 1
+:content_type_id: caseStudy
+:updated_at: !ruby/object:DateTime 2017-04-19 21:38:09.904000000 Z
