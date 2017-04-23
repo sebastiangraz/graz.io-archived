@@ -12,8 +12,4 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman', '>= 4.2.0'
 gem 'middleman-livereload'
-
-gem "middleman-syntax"
-gem "redcarpet"
-
 gem 'contentful_middleman', :git => 'https://github.com/contentful/contentful_middleman.git', :branch => 'v4-1.x-stable'

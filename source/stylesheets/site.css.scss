@@ -25,49 +25,31 @@
   width: 84%;
   position: relative;
 }
-
-p {
-  &.left, &.right {
-    @include mq(sm) {
+.case-image {
+  margin-top: 6rem;
+}
+.case-text {
+  margin: 1rem auto;
+  &-right, &-left {
+    display: flex;
+    justify-content: space-between;
+    width: percentage(11/12);
+    margin: 2rem auto 4rem;
+    .case-text {
+      margin: 0;
       width: percentage(8/12);
     }
-  }
-
-  &.left{
-    @include mq(sm) {
-      padding: 0 0 4% 4%;
-    }
-
-  }
-
-  &.right{
-    margin-left: auto;
-    padding: 0 4% 4% 0
-  }
-
-  &.title-right, &.title-left {
-    font-size: 1rem;
-    &:before {
-      content: '—';
-      display: block;
-    }
-    @include mq(sm) {
-      padding: 0 4%;
-      margin-bottom: 6rem;
+    span {
+      &:before {
+        content: '—';
+        display: block;
+      }
     }
   }
 
-  &.title-right {
-    @include mq(sm) {
-      float: right;
-    }
-  }
+  &-right { span {order: 0} .case-text {order: 1}}
+  &-left { span {order: 1} .case-text {order: 0}}
 
-  &.title-left {
-    @include mq(sm) {
-      float: left;
-    }
-  }
 }
 
 
@@ -145,13 +127,13 @@ p {
 
 .highlight {
   display: inline-block;
-  padding: 2rem;
+  padding: 0;
   width: 100%;
   overflow: auto;
   text-rendering: geometricPrecision;
   code {
+    padding: 6%;
     background: transparent;
-    padding: 0;
     white-space: pre;
   }
 }

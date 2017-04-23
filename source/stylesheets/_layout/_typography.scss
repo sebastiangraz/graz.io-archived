@@ -74,6 +74,14 @@ p {
   };
 }
 
+
+pre {
+  font-size: calc(75% + 8 * ((100vw - 320px) / (#{$mq-lg} - 320)));
+  @include mq(lg) {
+    font-size: 1.25rem;
+  };
+}
+
 p a {
   @include a;
 }
@@ -96,7 +104,7 @@ code, pre {
   font-style: normal;
   letter-spacing: -1px;
   padding: .25rem .5rem;
-  background: #fff;
+  background: #000;
 }
 
 .h0 {

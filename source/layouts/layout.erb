@@ -11,6 +11,8 @@
   <!-- Use title if it's in the page YAML frontmatter -->
   <title><%= yield_content(:title) %></title>
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.11.0/styles/monokai-sublime.min.css">
+<script src="//cdn.jsdelivr.net/highlight.js/9.11.0/highlight.min.js"></script>
   <%= stylesheet_link_tag :site %>
   <%= javascript_include_tag :jquery %>
   <%= javascript_include_tag :all %>

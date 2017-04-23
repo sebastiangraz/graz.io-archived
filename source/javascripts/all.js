@@ -99,32 +99,6 @@ $doc.ready(function() {
 
 
 
-  $(function() {
-    var mInt;
-    var mLink;
-    var cCol = 0;
-    var colors = document.querySelector(".logo").getAttribute("data-colorflip").split(";");
-    $('.logo').hover(
-      function() {
-        mLink = $(this).find('#logo');
-        mInt = setInterval(function() {
-          mColor()
-        }, 150);
-      },
-      function() {
-        clearInterval(mInt);
-        $('.logo').find('#logo').css('stroke', '');
-      });
-
-      function mColor() {
-        mLink.css('stroke', colors[cCol++]);
-        if (cCol >= colors.length) {
-          cCol = 0;
-        }
-      }
-    });
-
-
     $(function() {
       var header = $('.navigation');
       var caseHeader = $('.case-header').outerHeight();

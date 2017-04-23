@@ -7,15 +7,18 @@
     <div class="case-container">
       <%= partial "partials/case-info" %>
       <% this.caseStudyContainer.each do | this | %>
-        <% if this.key?("textBlock") && this["textBlock"] %>
-        <p><%= this['textBlock']%></p>
+        <% if this.key?("textBlock") && this['textBlock'] %>
+          <section class="<%= "case-text-#{this['align']}" if this.key?('align') %>">
+            <div class="case-text"><%= markdown(this['textBlock']) %></div>
+            <span><%= this['subHeader']%></span>
+          </section>
         <% end %>
-        <% if this.key?("mediaContainer") && this["mediaContainer"] %>
-        <%= partial(:'partials/image', :locals => { :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'], :ratio => "3x4" }) %>
+        <% if this.key?("mediaContainer")%>
+        <%= partial(:'partials/image', :locals => { :cssClass => 'case-image', :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'], :ratio => this.ratio }) %>
         <% end %>
       <% end %>
     </div>
   </div>
-  <%= partial(:'partials/footer', :locals => {:content => data.site.caseStudy, :title => 'See more projects'}) %>
+  <%= partial(:'partials/footer', :locals => {:content => data.site.caseStudy, :title => 'See more projects', :name => data.site.caseStudy.title}) %>
 
 </div>

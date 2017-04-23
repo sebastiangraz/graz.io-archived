@@ -1,3 +1,3 @@
-<div class="reveal image r:<%=ratio%>">
+<div class="<%= cssClass if locals[:cssClass] %> reveal image r:<%= locals[:ratio] ? (ratio) : ("1x1") %>">
   <img src="<%=imageurl%>" alt="<%=alt%>"/>
 </div>

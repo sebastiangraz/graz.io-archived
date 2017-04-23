@@ -3,7 +3,6 @@
 ###
 
 activate :directory_indexes
-activate :syntax
 
 set :relative_links, false #should be true
 set :images_dir, 'images'
@@ -60,11 +59,12 @@ helpers do
   end
 end
 
-class MapperWithContentTypeData < ContentfulMiddleman::Mapper::Base
+class CustomMapper < ContentfulMiddleman::Mapper::Base
   def map(context, entry)
     super
     context.content_type_id = entry.content_type.id
-    context.updated_at = entry.sys[:updatedAt]
+    context.updated_at = entry.sys[:updatedAt].strftime("%b #{entry.sys[:updatedAt].day.ordinalize} — %Y")
+    context.slug = entry.title.parameterize
   end
 end
 
@@ -73,19 +73,19 @@ activate :contentful do |f|
   f.space = { site: 'y77stanzu634'}
   f.rebuild_on_webhook = true
   f.content_types = {
-    blog: {mapper: MapperWithContentTypeData, id: 'blog'},
-    caseStudy: {mapper: MapperWithContentTypeData, id: 'caseStudy'}
+    blog: {mapper: CustomMapper, id: 'blog'},
+    caseStudy: {mapper: CustomMapper, id: 'caseStudy'}
   }
 end
 
 
 
 data.site.caseStudy.each do | id, this |
-  proxy "/cases/#{this.title.parameterize}/index.html", "/cases/cases-template.html", :locals => { this: this }, :ignore => true
+  proxy "/cases/#{this.slug}/index.html", "/cases/cases-template.html", :locals => { this: this }, :ignore => true
 end
 
 data.site.blog.each do | id, this |
-  proxy "/blog/#{this.title.parameterize}/index.html", "/blog/blog-template.html", :locals => { this: this }, :ignore => true
+  proxy "/blog/#{this.slug}/index.html", "/blog/blog-template.html", :locals => { this: this }, :ignore => true
 end
 
 

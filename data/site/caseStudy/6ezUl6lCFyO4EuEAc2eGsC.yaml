@@ -25,6 +25,35 @@
     :title: overview
     :description: 
     :url: "//images.contentful.com/y77stanzu634/3UsVninNZuCukKACysMs82/83246541409d9e22f130419c6d5c170c/overview.jpg"
+  :ratio: 2x3
+- :id: 5QL45I9V9m8iYksq68sC2I
+  :imageName: homepage
+  :mediaContainer:
+    :title: homepage
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/1f2jVmALb4kya8CMKSgyeo/3f92b432d099377f6bda98f0a37536ad/homepage.jpg"
+  :ratio: 2x3
+- :id: TNj4nNnnK8Woac8CukC04
+  :textBlock: "# Test \nThe home page is adorned with a content slider, featuring
+    a random poetry verse matched with Memes that correspond with the verse displayed.
+    It's a smart way to show what the website is about at a glance. Reading poetry
+    or explore memes."
+  :subHeader: Home page
+  :align: right
+- :id: 5gcQMdRcVq4E6AuMyeyw8A
+  :imageName: poem page
+  :mediaContainer:
+    :title: poem-page
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/6q6qTefPBmewSUiWGiSUAK/1d26ce8090e83b7e58fb1d41466d7ed9/poem-page.jpg"
+  :ratio: 2x3
+- :id: 6qqZL0A5pu8IWEKSAsy2cy
+  :textBlock: |-
+    # Test
+
+    The poem page was designed to achieve two things: reading poetry and creating Memes. The user may create a Meme by either selecting the text, or be guided into creating a meme by clicking the create Meme button, which will automatically select the first verse.
+  :subHeader: Poem page
+  :align: left
 :bgColor: "#DAF362"
 :textColor: "#ff00b0"
 :leftSpacing: 2
@@ -32,4 +61,5 @@
 :year: 2015
 :order: 2
 :content_type_id: caseStudy
-:updated_at: !ruby/object:DateTime 2017-04-19 21:40:31.717000000 Z
+:updated_at: Apr 21st — 2017
+:slug: the-poetry-hour
