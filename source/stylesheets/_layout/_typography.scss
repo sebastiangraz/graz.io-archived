@@ -115,7 +115,11 @@ code, pre {
     font-size: 3.5rem;
     line-height: 4rem;
   }
-  span {
-    font-family: 'Cinetype-Italic'
+  .reveal {
+    display: inline-block;
+    transform: translateY(-1rem);
+    &.reveal_visible {
+      transform: translateY(0);
+    }
   }
 }

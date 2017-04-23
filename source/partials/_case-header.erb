@@ -4,7 +4,12 @@
         <% if locals.key?(:subheader) %>
           <span class="fadeInDown"><%= subheader %></span>
         <% end %>
-        <h1 class="h0 fadeInDown"><%= this.titleHover %></h1>
+        <h1 class="h0">
+          <% wrapped = word_wrap(this.titleHover.sub(this.title, "<i>#{this.title}</i>"), line_width: 1)%>
+          <% splitted = wrapped.each_line.each do | lines |%>
+            <span class="reveal"><%= lines %></span>
+          <% end %>
+        </h1>
       </div>
   </div>
 </div>

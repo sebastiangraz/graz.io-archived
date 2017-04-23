@@ -1,7 +1,6 @@
+<% content_for(:title, this.title) %>
 <%= partial "partials/nav", :locals => {:textColor => this.textColor } %>
-
 <%= partial "partials/case-header", :locals => {:subheader => this.postedDate.strftime("%b #{this.postedDate.day.ordinalize} — %Y")} %>
-
 <div class="row">
 
 

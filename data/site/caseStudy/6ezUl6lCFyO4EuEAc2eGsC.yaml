@@ -34,10 +34,9 @@
     :url: "//images.contentful.com/y77stanzu634/1f2jVmALb4kya8CMKSgyeo/3f92b432d099377f6bda98f0a37536ad/homepage.jpg"
   :ratio: 2x3
 - :id: TNj4nNnnK8Woac8CukC04
-  :textBlock: "# Test \nThe home page is adorned with a content slider, featuring
-    a random poetry verse matched with Memes that correspond with the verse displayed.
-    It's a smart way to show what the website is about at a glance. Reading poetry
-    or explore memes."
+  :textBlock: The home page is adorned with a content slider, featuring a random poetry
+    verse matched with Memes that correspond with the verse displayed. It's a smart
+    way to show what the website is about at a glance. Reading poetry or explore memes.
   :subHeader: Home page
   :align: right
 - :id: 5gcQMdRcVq4E6AuMyeyw8A
@@ -48,12 +47,54 @@
     :url: "//images.contentful.com/y77stanzu634/6q6qTefPBmewSUiWGiSUAK/1d26ce8090e83b7e58fb1d41466d7ed9/poem-page.jpg"
   :ratio: 2x3
 - :id: 6qqZL0A5pu8IWEKSAsy2cy
-  :textBlock: |-
-    # Test
-
-    The poem page was designed to achieve two things: reading poetry and creating Memes. The user may create a Meme by either selecting the text, or be guided into creating a meme by clicking the create Meme button, which will automatically select the first verse.
+  :textBlock: 'The poem page was designed to achieve two things: reading poetry and
+    creating Memes. The user may create a Meme by either selecting the text, or be
+    guided into creating a meme by clicking the create Meme button, which will automatically
+    select the first verse.'
   :subHeader: Poem page
   :align: left
+- :id: 2K7ucb7EWcqAUk4WayaUMi
+  :imageName: meme-creator
+  :mediaContainer:
+    :title: meme-creator
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/5DY9QQghUI8QIIKSWmMW0Y/20da4d43f0b9e9d8667c6c17b28e89e7/meme-creator.jpg"
+  :ratio: 3x4
+- :id: 6mrwDS4wdU8MoIUCowS2YG
+  :imageName: mobile-meme
+  :mediaContainer:
+    :title: mobile-meme
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/4neomqJNNKkyWCUkwmsCMG/c79b8564b0bcec540400cf541523903a/mobile-meme.jpg"
+  :ratio: 3x4
+- :id: 356CGD5nXi4u2e228mqqsC
+  :imageName: narrators
+  :mediaContainer:
+    :title: narrators
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/5t0b0rJf320EWGKMkIIGck/52a29fdac830fc68905bb7fa3b6ab5a2/narrators.jpg"
+  :ratio: 1x1
+- :id: 5c9qh3Yj0sEkkkgWYGcCWa
+  :imageName: search
+  :mediaContainer:
+    :title: search
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/4PmKtrPvjaM0gsCQAaUCCw/55fcb730a73bbf84ae7caa555d3131bc/search.jpg"
+  :ratio: 1x1
+- :id: 34CJUJyJ72mEOwOYWugWyG
+  :imageName: styleguide
+  :mediaContainer:
+    :title: styleguide
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/2xZAcyaZ1u2U4iua24sa8y/47c5167de772d827d389ffa63d412abc/styleguide.jpg"
+  :ratio: 2x3
+- :id: 4OzkxV1U3mEIuUc0EocyUO
+  :imageName: icons
+  :mediaContainer:
+    :title: iconography
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/3HbCD2tVSom24KYgWo4qGU/be865b03c93fe40bf5aab1e1abf46179/iconography.jpg"
+  :ratio: 4x3
 :bgColor: "#DAF362"
 :textColor: "#ff00b0"
 :leftSpacing: 2
@@ -61,5 +102,5 @@
 :year: 2015
 :order: 2
 :content_type_id: caseStudy
-:updated_at: Apr 21st — 2017
+:updated_at: Apr 23rd — 2017
 :slug: the-poetry-hour

@@ -4,7 +4,7 @@
 :titleHover: 3 reasons to Design with image ratios
 :blogContent:
 - :id: 4W3sJgQ9zqKeayw6g8iQ8c
-  :textBlock: |-
+  :textBlock: |+
     # Why though
 
     Gone are the days when we simply slap our images onto web pages like so:
@@ -13,28 +13,7 @@
         <!-- Don't do this -->
         <img src="images/avo.png" alt="avocado" />
 
-    Test
 
-        var deferImage = function(element) {
-            var i, len, attr;
-            var img = new Image();
-            var placehold = element.children[0];
-
-            element.className+= ' is-loading';
-
-            img.onload = function() {
-                element.className = element.className.replace('is-loading', 'is-loaded');
-                element.replaceChild(img, placehold);
-            };
-
-            for (i = 0, len = placehold.attributes.length; i < len; i++) {
-                attr = placehold.attributes[i];
-
-                if (attr.name.match(/^data-/)) {
-                    img.setAttribute(attr.name.replace('data-', ''), attr.value);
-                }
-            }
-        }
 :bgColor: "#e054d2"
 :textColor: "#280785"
 :leftSpacing: 0

@@ -1,7 +1,11 @@
 <li class="reveal tile <%= 'promoted' if this.promoted == true %>" data-lspacer="<%= this.leftSpacing %>">
   <a class="tile-link" href="<%= dir %><%= this.title.parameterize %>">
     <div class="tile-content" data-color="<%= this.textColor %>">
+
       <h2><%= this.titleHover.sub(this.title, "<span>#{this.title}</span>")%></h2>
+      <h2 class="tile-title">
+
+      </h2>
       <span>
         <%= secondary %>
         <span class="readmore" href="<%= this.title.parameterize %>"><%= partial(:'partials/arrow', :locals => { :strokecolor => this.textColor }) %></span>

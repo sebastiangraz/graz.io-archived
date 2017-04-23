@@ -1,6 +1,3 @@
----
-title: Sebastian Graz
----
 <% content_for(:title, 'Sebastian Graz') %>
 
 <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
@@ -16,7 +13,7 @@ title: Sebastian Graz
 
 
   <ul class="tiles section" id="work">
-    <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.take(6).each do |id, this | %>
+    <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.each do |id, this | %>
       <%= partial "partials/tile", :locals => { :this => this, :dir => 'cases/', :secondary => this.year }%>
     <% end %>
   </ul>

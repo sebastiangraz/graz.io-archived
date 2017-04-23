@@ -33,10 +33,12 @@ $doc.ready(function() {
   else {
     $('.tile').on('mouseover', function(){
       $(this).addClass('expanded');
-    }).on('mouseout', function(){
+    }).on('mouseleave', function(){
       $(this).removeClass('expanded');
     });
   }
+
+
 
   $('.tile').each( function(){
     var lspacer = $(this).data('lspacer'),
@@ -99,22 +101,22 @@ $doc.ready(function() {
 
 
 
-    $(function() {
-      var header = $('.navigation');
-      var caseHeader = $('.case-header').outerHeight();
-      var calcHeader = caseHeader - ( header.outerHeight() + header.position().top ) ;
+  $(function() {
+    var header = $('.navigation');
+    var caseHeader = $('.case-header').outerHeight();
+    var calcHeader = caseHeader - ( header.outerHeight() + header.position().top ) ;
 
-      $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
 
-        if (scroll >= calcHeader) {
-          header.addClass('hidden');
-        } else {
-          header.removeClass('hidden');
-        }
-      });
+      if (scroll >= calcHeader) {
+        header.addClass('hidden');
+      } else {
+        header.removeClass('hidden');
+      }
     });
-
-
-
   });
+
+
+
+});

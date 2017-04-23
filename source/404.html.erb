@@ -1,8 +1,6 @@
----
-title: Not found
----
+<% content_for(:title, 'Not Found') %>
 
-<%= partial "partials/nav" %>
+<%= partial "partials/nav", :locals => {:textColor => '#000' } %>
 
 <div class="row center">
   <h1 class="mt-l">Page not found</h1>

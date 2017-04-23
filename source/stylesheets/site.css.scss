@@ -31,13 +31,21 @@
 .case-text {
   margin: 1rem auto;
   &-right, &-left {
+    flex-direction: column;
     display: flex;
     justify-content: space-between;
-    width: percentage(11/12);
+    width: percentage(12/12);
     margin: 2rem auto 4rem;
+    @include mq(sm) {
+      width: percentage(10/12);
+    };
     .case-text {
-      margin: 0;
-      width: percentage(8/12);
+      margin: 2rem 0 0 0;
+      width: percentage(12/12);
+      @include mq(sm){
+        width: percentage(8/12);
+        margin: 0;
+      };
     }
     span {
       &:before {
@@ -45,6 +53,12 @@
         display: block;
       }
     }
+    p:first-child {
+      margin-top:0;
+    }
+    @include mq(sm) {
+      flex-direction: row
+    };
   }
 
   &-right { span {order: 0} .case-text {order: 1}}
