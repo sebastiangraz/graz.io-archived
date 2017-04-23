@@ -7,7 +7,7 @@
     <div class="case-container">
       <%= partial "partials/case-info" %>
       <% this.caseStudyContainer.each do | this | %>
-        <% if this.key?("textBlock") && this['textBlock'] %>
+        <% if this.key?("textBlock") %>
           <section class="<%= "case-text-#{this['align']}" if this.key?('align') %>">
             <div class="case-text"><%= markdown(this['textBlock']) %></div>
             <span><%= this['subHeader']%></span>
