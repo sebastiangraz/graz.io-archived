@@ -55,7 +55,8 @@ end
 
 helpers do
   def markdown(text)
-    Tilt['markdown'].new { text }.render
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    return markdown.render(text).html_safe
   end
 end
 

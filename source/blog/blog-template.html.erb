@@ -6,14 +6,20 @@
 
   <div class="mt-s">
     <div class="case-container mt-xl">
+      <% globalThis = this %>
+      <div class="blog-wrapper">
       <% this.blogContent.each do | this | %>
         <% if this.key?("textBlock") && this["textBlock"] %>
-          <p><%= markdown(this['textBlock'])%></p>
+          <%= markdown(this['textBlock'])%>
+        <% end %>
+        <% if this.key?("fileContainer") && this["fileContainer"] %>
+            <%= partial(:'partials/file-share', :locals => { :this => this, :globalThis => globalThis }) %>
         <% end %>
         <% if this.key?("mediaContainer") && this["mediaContainer"] %>
           <%= partial(:'partials/image', :locals => { :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'], :ratio => "3x4" }) %>
         <% end %>
       <% end %>
+      </div>
     </div>
   </div>
   <%= partial(:'partials/footer', :locals => {:content => data.site.blog, :title => 'Read more articles'}) %>

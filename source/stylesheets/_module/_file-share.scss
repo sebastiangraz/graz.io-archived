@@ -1,10 +1,17 @@
 .file-share {
   a {
+    display: block;
     padding: 1.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    margin-top:2px;
+    &:hover {
+      img {
+        transform: translateY(-4px);
+      }
+    }
   }
   p {
     margin: 0;
@@ -14,10 +21,5 @@
     float: left;
     transition: 1s $bezier transform;
     margin-right:1rem;
-  }
-  &:hover {
-    img {
-      transform: translateY(-4px);
-    }
   }
 }
