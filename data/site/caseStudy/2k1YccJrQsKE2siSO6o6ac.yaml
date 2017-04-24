@@ -24,12 +24,20 @@
     :title: overview
     :description: 
     :url: "//images.contentful.com/y77stanzu634/6GwKWNWYyQeIYswcIQEeEK/bc7b7873b5db2a18f86db7b6dd331906/overview.jpg"
+  :ratio: 3x4
+- :id: 6QIrOkCRVe4wcsYwSigIQm
+  :textBlock: |-
+    The HeyPlace app was a result of a 12-hour Hackathon. The app was planned weeks ahead the event so when the time came we had a pretty solid scaffold that we could work from. We had the servers set up and ready to send requests to and from our app, the HTML scaffold was build, even a basic design groundwork was put together. To put it short, we had a MVP version working before the event even started (but don't tell anyone). That said we still had to put the pieces together in mere 12 hours.
+
+    Below you'll find some designs for the proof-of-concept app. The actual app looks a bit different today
+  :subHeader: Overview
+  :align: left
 - :id: 2aBEDBV8Aw2qoOoOYe4KM6
   :imageName: log in
   :mediaContainer:
     :title: log-in
     :description: 
-    :url: "//images.contentful.com/y77stanzu634/5nG4Sb7eh2gyMYI8We6ws6/19672fc0b5a47fa8df88725fc0695e91/log-in.jpg"
+    :url: "//images.contentful.com/y77stanzu634/5nG4Sb7eh2gyMYI8We6ws6/b7ac85f441a2c5e58b32a234431bccb0/log-in.jpg"
 - :id: 35CooYgc6cu68UQi8iYKom
   :imageName: map view
   :mediaContainer:
@@ -48,12 +56,24 @@
     :title: camera
     :description: 
     :url: "//images.contentful.com/y77stanzu634/13mKWvQ986iIaYUkq4musA/99d18adffb56a1a0255919ee04797793/camera.jpg"
+- :id: 1LfvVd0r6Q8meGuCOiWaIw
+  :textBlock: The user may swipe through from a selection of filters to enchance the
+    images that they took. Nothing fancy.
+  :subHeader: Camera
+  :align: right
 - :id: 4rQ4KLIuTYEE6kYUQSAYui
   :imageName: icons
   :mediaContainer:
     :title: iconography
     :description: 
     :url: "//images.contentful.com/y77stanzu634/5bnExr5yqQuwGk46Eokk0i/f5399040cc98e5f091eb626acd44cb17/iconography.jpg"
+- :id: KbGbu3FogmKEayKycwogs
+  :textBlock: The iconography was designed to be elegant and simple. In addition we
+    wanted to inject some emotion into the iconography. We went anthropomorphic with
+    the set, and added a friendly face to the heart icon. With the added benefit of
+    having a brand mascot in the future. Win-win!
+  :subHeader: Iconography
+  :align: left
 :bgColor: "#F3B462"
 :textColor: "#76280C"
 :leftSpacing: 0
@@ -61,5 +81,5 @@
 :year: 2015
 :order: 4
 :content_type_id: caseStudy
-:updated_at: Apr 19th — 2017
+:updated_at: Apr 24th — 2017
 :slug: heyplace

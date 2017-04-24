@@ -67,20 +67,6 @@
     worker using the Husqvarna chainsaw, read reviews, see related products and also
     at the end of the page there is a call to action to find a dealer.
   :align: left
-- :id: 5O5U8di83CWIiqO8UKsoKq
-  :imageName: slider detail
-  :mediaContainer:
-    :title: slider-detail
-    :description: 
-    :url: "//images.contentful.com/y77stanzu634/5M9Srsq7AW6k0QiwEMQssk/ed67eb2de5f833fe0a4924bb409f88bb/slider-detail.jpg"
-  :ratio: 3x1
-- :id: 6X8Bbm0RvUougOuE4Ci4K6
-  :imageName: iconography
-  :mediaContainer:
-    :title: iconography
-    :description: 
-    :url: "//images.contentful.com/y77stanzu634/4xRtTUxfUIAGcA8MsO84k2/c57be4139771f6e15d7329d896111f59/iconography.jpg"
-  :ratio: 4x3
 - :id: 2l76w9cirew6iuw8OMOsui
   :imageName: product listing page
   :mediaContainer:
@@ -88,6 +74,34 @@
     :description: 
     :url: "//images.contentful.com/y77stanzu634/TPwLCjPsuQ8q8A2aUQGMa/8afd4af0ccb4a9f8d0d496c99dba7848/product-listing-page.jpg"
   :ratio: 2x3
+- :id: 5O5U8di83CWIiqO8UKsoKq
+  :imageName: slider detail
+  :mediaContainer:
+    :title: slider-detail
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/5M9Srsq7AW6k0QiwEMQssk/ed67eb2de5f833fe0a4924bb409f88bb/slider-detail.jpg"
+  :ratio: 3x1
+- :id: 7HDZmiSakg8Qu2GI6462mE
+  :textBlock: The product listing page features filters and slider to allow the user
+    to find the right tool for the job.
+  :subHeader: UI Sliders
+  :align: right
+- :id: 6X8Bbm0RvUougOuE4Ci4K6
+  :imageName: iconography
+  :mediaContainer:
+    :title: iconography
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/4xRtTUxfUIAGcA8MsO84k2/c57be4139771f6e15d7329d896111f59/iconography.jpg"
+  :ratio: 4x3
+- :id: 5v7mfDKfXaqwaIMgSoKWGG
+  :textBlock: We did what we could in the limited timeframe – however the fact the
+    we won the client meant that our ideas and designs still resonated positively
+    with Husqvarna. The pitch was a start of a bigger conversation between the client
+    and DigitasLBi. And from there the design took off into production, with major
+    changes to the layout but the DNA still intact. Unfortunately I wasnt part of
+    the production phase, I only produced the vision, but I'm happy to see the essence
+    is still there on the live site.
+  :align: left
 :bgColor: "#62F3BA"
 :textColor: "#a52dea"
 :leftSpacing: 0
@@ -95,5 +109,5 @@
 :year: 2014
 :order: 3
 :content_type_id: caseStudy
-:updated_at: Apr 23rd — 2017
+:updated_at: Apr 24th — 2017
 :slug: husqvarna

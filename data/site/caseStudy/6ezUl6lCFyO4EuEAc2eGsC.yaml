@@ -60,6 +60,14 @@
     :description: 
     :url: "//images.contentful.com/y77stanzu634/5DY9QQghUI8QIIKSWmMW0Y/20da4d43f0b9e9d8667c6c17b28e89e7/meme-creator.jpg"
   :ratio: 3x4
+- :id: 3uwHGUJuD68Q2Gc0YkUKio
+  :textBlock: The user can create their own Memes through the website with the ability
+    to customise the font, text colour, font size, and text position. The website
+    does some minor hand holding in terms of Meme image aesthetics to ensure the Memes
+    look pleasant. For instance the user may only choose colours that suit the average
+    colour of the image that the user has chosen.
+  :subHeader: Meme creator
+  :align: left
 - :id: 6mrwDS4wdU8MoIUCowS2YG
   :imageName: mobile-meme
   :mediaContainer:
@@ -74,6 +82,11 @@
     :description: 
     :url: "//images.contentful.com/y77stanzu634/5t0b0rJf320EWGKMkIIGck/52a29fdac830fc68905bb7fa3b6ab5a2/narrators.jpg"
   :ratio: 1x1
+- :id: unhzVHPGLY2Q0GKgQQuig
+  :textBlock: Another big part of the website is the famed narrators. Celebrities
+    and artists read their favourite poems out loud recorded on video or audio.
+  :subHeader: Narrators
+  :align: right
 - :id: 5c9qh3Yj0sEkkkgWYGcCWa
   :imageName: search
   :mediaContainer:
@@ -81,6 +94,11 @@
     :description: 
     :url: "//images.contentful.com/y77stanzu634/4PmKtrPvjaM0gsCQAaUCCw/55fcb730a73bbf84ae7caa555d3131bc/search.jpg"
   :ratio: 1x1
+- :id: IbP1vSqHIYMeCaIOIqwa4
+  :textBlock: Every corner of the website is searchable. The search results are divided
+    into it's respective content types.
+  :subHeader: Search
+  :align: left
 - :id: 34CJUJyJ72mEOwOYWugWyG
   :imageName: styleguide
   :mediaContainer:
@@ -95,6 +113,13 @@
     :description: 
     :url: "//images.contentful.com/y77stanzu634/3HbCD2tVSom24KYgWo4qGU/be865b03c93fe40bf5aab1e1abf46179/iconography.jpg"
   :ratio: 4x3
+- :id: LgYPaoOlgq6qu0UgsIcoG
+  :textBlock: The iconography set for poetry was created to be as legible as possible
+    from a size of 16x16 pixels and sometimes smaller. That meant that each icon had
+    to be thoughtfully crafted on a 16x16 pixel grid to avoid rendering issues on
+    lower-resolution screens
+  :subHeader: Iconography
+  :align: left
 :bgColor: "#DAF362"
 :textColor: "#ff00b0"
 :leftSpacing: 2
@@ -102,5 +127,5 @@
 :year: 2015
 :order: 2
 :content_type_id: caseStudy
-:updated_at: Apr 23rd — 2017
+:updated_at: Apr 24th — 2017
 :slug: the-poetry-hour
