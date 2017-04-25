@@ -1,3 +1,15 @@
 <div class="<%= cssClass if locals[:cssClass] %> reveal image r:<%= locals[:ratio] ? (ratio) : ("1x1") %>">
   <img src="<%=imageurl%>" alt="<%=alt%>"/>
 </div>
+
+<%
+require 'fastimage'
+if locals[:cssClass] == 'case-image'
+  @imageSize = FastImage.size("http:#{imageurl}")
+end
+%>
+
+<% width = @imageSize[0] %>
+<% height = @imageSize[1]%>
+<% calc = height.fdiv(width) %>
+<%= calc.to_r.rationalize(Rational('0.001')) %>

@@ -122,7 +122,7 @@
   opacity: 0;
   transition: opacity 0.6s, transform .6s $bezier;
   .tile-bg {
-    transition: 0.6s $bezier all;
+    transition: .8s $bezier all;
   }
   &.image {
     transform: translateY(80px);

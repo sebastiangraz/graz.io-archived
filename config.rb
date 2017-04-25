@@ -4,7 +4,7 @@
 
 activate :directory_indexes
 
-set :relative_links, false #should be true
+set :relative_links, false  #should be true
 set :images_dir, 'images'
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :disable_indented_code_blocks => true, :smartypants => true, auto_ids: false
@@ -92,7 +92,6 @@ end
 
 # Build-specific configuration
 configure :build do
-  # activate :relative_assets
   # Minify CSS on build
   activate :minify_css
   # Minify Javascript on build
