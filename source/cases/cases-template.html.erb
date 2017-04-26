@@ -14,7 +14,7 @@
           </section>
         <% end %>
         <% if this.key?("mediaContainer")%>
-        <%= partial(:'partials/image', :locals => { :cssClass => 'case-image', :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'], :ratio => this.ratio }) %>
+        <%= partial(:'partials/image', :locals => { :cssClass => 'case-image', :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'] }) %>
         <% end %>
       <% end %>
     </div>

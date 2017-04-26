@@ -1,12 +1,12 @@
 <nav>
   <div class="navigation">
     <div class="row">
-      <a style="color:<%=textColor%>" class="logo" href="/">
+      <a style="color:<%= textColor ? (textColor) : ('#999') %>" class="logo" href="/">
         <%= partial(:'partials/logo', :locals => { :color => textColor }) %>
       </a>
       <ul class="menu-items">
-        <li><a style="color:<%=textColor%>" href="/#home">Work</a></li>
-        <li><a style="color:<%=textColor%>" href="/#about">About</a></li>
+        <li><a style="color:<%= textColor ? (textColor) : ('#999') %>" href="/#home">Work</a></li>
+        <li><a style="color:<%= textColor ? (textColor) : ('#999') %>"  href="/#about">About</a></li>
       </ul>
     </div>
   </div>

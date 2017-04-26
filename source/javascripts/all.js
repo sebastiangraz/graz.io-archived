@@ -4,6 +4,7 @@ var $doc = $(document);
 
 $doc.ready(function() {
 
+
   $('.tile-content').each (function() {
     var color = $(this).data('color');
     $(this).css({
@@ -117,6 +118,12 @@ $doc.ready(function() {
     });
   });
 
+    $(function(){
+      $('.disqus-toggle').on('click', function(e){
+        e.preventDefault();
+        $('.disqus-wrapper').toggleClass('visible');
+      });
+    });
 
 
 });

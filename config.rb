@@ -80,6 +80,10 @@ activate :contentful do |f|
 end
 
 
+activate :disqus do |d|
+  d.shortname = 'sebastiangraz' # Replace with your Disqus shortname.
+end
+
 
 data.site.caseStudy.each do | id, this |
   proxy "/cases/#{this.slug}/index.html", "/cases/cases-template.html", :locals => { this: this }, :ignore => true

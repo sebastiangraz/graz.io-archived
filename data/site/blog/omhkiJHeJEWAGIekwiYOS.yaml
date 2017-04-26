@@ -1,0 +1,46 @@
+---
+:id: omhkiJHeJEWAGIekwiYOS
+:title: Figma
+:titleHover: Figma for teams
+:thumbnail:
+  :title: case-delhaize
+  :description: 
+  :url: "//images.contentful.com/y77stanzu634/3MhMt6bZAcU8aCEQGYQcs2/1709a4dd24f2e6ad492d1c63168ddb1a/case-delhaize.png"
+:blogContent:
+- :id: 6QIrOkCRVe4wcsYwSigIQm
+  :textBlock: |-
+    The HeyPlace app was a result of a 12-hour Hackathon. The app was planned weeks ahead the event so when the time came we had a pretty solid scaffold that we could work from. We had the servers set up and ready to send requests to and from our app, the HTML scaffold was build, even a basic design groundwork was put together. To put it short, we had a MVP version working before the event even started (but don't tell anyone). That said we still had to put the pieces together in mere 12 hours.
+
+    Below you'll find some designs for the proof-of-concept app. The actual app looks a bit different today
+  :subHeader: Overview
+  :align: left
+- :id: 4i0i1hCuRqaomIkgwCU4KC
+  :title: Download Sketch ratio files
+  :fileContainer:
+  - :id: 4UBmj3lNOU4EaAmWMiYQaA
+    :title: Sketch Ratio Template
+    :filetype: sketch
+    :fileImage:
+      :title: sketch-symbol
+      :description: 
+      :url: "//images.contentful.com/y77stanzu634/2k3MKOL1RCeQcG0KwISqgQ/e3647827092b71ef1b327b48da259f23/sketch-symbol.svg"
+    :fileMedia:
+      :title: image-ratios
+      :description: 
+      :url: "//assets.contentful.com/y77stanzu634/4J1YAZFnlSyyygIEwEgOIa/398bc40f5c7810290f8c8ad77bfa1bc8/image-ratios.sketch"
+  - :id: 3EcQxL1bFKwc2c0OAaocI6
+    :title: Test
+    :filetype: testfiletype
+    :fileImage:
+      :title: '404'
+      :description: 
+      :url: "//images.contentful.com/y77stanzu634/38mByINXYAsISm4UAaWECM/4f87d94b39fb79c136e09d9689a8ff60/404.svg"
+    :fileMedia:
+      :title: '404'
+      :description: 
+      :url: "//images.contentful.com/y77stanzu634/38mByINXYAsISm4UAaWECM/4f87d94b39fb79c136e09d9689a8ff60/404.svg"
+:leftSpacing: 1
+:postedDate: !ruby/object:DateTime 2017-04-26 00:00:00.000000000 Z
+:content_type_id: blog
+:updated_at: Apr 26th — 2017
+:slug: figma

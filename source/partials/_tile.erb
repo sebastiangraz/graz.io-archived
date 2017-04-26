@@ -1,6 +1,6 @@
 <li class="reveal tile <%= 'promoted' if this.promoted == true %>" data-lspacer="<%= this.leftSpacing %>">
   <a class="tile-link" href="<%= dir %><%= this.title.parameterize %>">
-    <div class="tile-content" data-color="<%= this.textColor %>">
+    <div class="tile-content" data-color="<%= this.textColor ? (this.textColor) : ('#999') %>">
 
       <h2><%= this.titleHover.sub(this.title, "<span>#{this.title}</span>")%></h2>
       <h2 class="tile-title">
@@ -12,10 +12,10 @@
       </span>
     </div>
 
-    <div class="tile-bg" data-bgcolor=" <%= this.bgColor %> ">
+    <div class="tile-bg" data-bgcolor=" <%= this.bgColor ? (this.bgColor) : ('#000') %> ">
       <% if this.key? :thumbnail %>
         <div class="tile-image">
-          <%= partial(:'partials/image', :locals => { :imageurl => this.thumbnail['url'], :alt => this.thumbnail['title'], :ratio => "1x1" }) %>
+          <%= partial(:'partials/image', :locals => { :imageurl => this.thumbnail['url'], :alt => this.thumbnail['title'] }) %>
         </div>
       <% end %>
     </div>

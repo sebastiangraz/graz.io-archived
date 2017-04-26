@@ -1,13 +1,11 @@
 <%
   require 'fastimage'
-  if locals[:cssClass] == 'case-image'
-    imageSize = FastImage.size("http:#{imageurl}")
-    width = imageSize[0]
-    height = imageSize[1]
-    calc = height.fdiv(width) * 100# 1.33%
-    paddingBottom = calc.to_i
-    # aspectRatio = calc.to_r.rationalize(Rational('0.001'))
-  end
+  imageSize = FastImage.size("http:#{imageurl}")
+  width = imageSize[0]
+  height = imageSize[1]
+  calc = height.fdiv(width) * 100# 1.33%
+  paddingBottom = calc.to_i
+  # aspectRatio = calc.to_r.rationalize(Rational('0.001'))
 %>
 
 <div style="padding-bottom:<%= paddingBottom %>%;" class="<%= cssClass if locals[:cssClass] %> reveal image">

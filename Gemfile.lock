@@ -97,6 +97,8 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
+    middleman-disqus (1.2.0)
+      middleman-core (~> 4.0)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -138,6 +140,7 @@ DEPENDENCIES
   contentful_middleman!
   fastimage
   middleman (>= 4.2.0)
+  middleman-disqus
   middleman-livereload
   redcarpet
   tzinfo-data
@@ -147,4 +150,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.7
+   1.14.6

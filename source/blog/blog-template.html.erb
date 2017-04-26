@@ -16,9 +16,17 @@
             <%= partial(:'partials/file-share', :locals => { :this => this, :globalThis => globalThis }) %>
         <% end %>
         <% if this.key?("mediaContainer") && this["mediaContainer"] %>
-          <%= partial(:'partials/image', :locals => { :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'], :ratio => "3x4" }) %>
+          <%= partial(:'partials/image', :locals => { :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'] }) %>
         <% end %>
       <% end %>
+
+      <a href="#" class="disqus-toggle flex flex-center">
+        <%= partial(:'partials/comment-icon') %>
+        <p>Show comments <sup><%= disqus_count %></sup> </p>
+      </a>
+      <div class="disqus-wrapper">
+        <%= disqus %>
+      </div>
       </div>
     </div>
   </div>
