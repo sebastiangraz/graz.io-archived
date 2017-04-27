@@ -48,17 +48,6 @@
       :title: image-ratios
       :description: 
       :url: "//assets.contentful.com/y77stanzu634/4J1YAZFnlSyyygIEwEgOIa/398bc40f5c7810290f8c8ad77bfa1bc8/image-ratios.sketch"
-  - :id: 3EcQxL1bFKwc2c0OAaocI6
-    :title: Test
-    :filetype: testfiletype
-    :fileImage:
-      :title: '404'
-      :description: 
-      :url: "//images.contentful.com/y77stanzu634/38mByINXYAsISm4UAaWECM/4f87d94b39fb79c136e09d9689a8ff60/404.svg"
-    :fileMedia:
-      :title: '404'
-      :description: 
-      :url: "//images.contentful.com/y77stanzu634/38mByINXYAsISm4UAaWECM/4f87d94b39fb79c136e09d9689a8ff60/404.svg"
 :bgColor: "#e054d2"
 :textColor: "#280785"
 :leftSpacing: 0

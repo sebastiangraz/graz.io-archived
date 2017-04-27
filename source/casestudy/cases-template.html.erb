@@ -17,7 +17,7 @@
         <%= partial(:'partials/image', :locals => { :cssClass => 'case-image', :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'] }) %>
         <% end %>
         <% if this.key?("videoFile")%>
-          <video class="case-video reveal" preload>
+          <video class="case-video reveal" controls="true">
             <source src="<%= this.videoFile['url']%>" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.

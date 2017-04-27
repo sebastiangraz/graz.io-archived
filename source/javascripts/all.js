@@ -101,19 +101,6 @@ $doc.ready(function() {
   // });
 
   $(function() {
-    $(window).scroll(function() {
-      $('video').each( function(){
-        if ($( this ).is( ".reveal_visible" )) {
-          $(this)[0].play();
-          $(this).css({'background-image':'none'})
-        } else {
-          $(this)[0].pause();
-        }
-      });
-    });
-  });
-
-  $(function() {
     var header = $('.navigation');
     var caseHeader = $('.case-header').outerHeight();
     var calcHeader = caseHeader - ( header.outerHeight() + header.position().top ) ;
