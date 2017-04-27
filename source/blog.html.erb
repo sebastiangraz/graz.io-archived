@@ -10,7 +10,7 @@
   </div>
   <ul class="tiles section">
     <% data.site.blog.each do |id, this | %>
-    <%= partial "partials/tile", :locals => { :this => this, :dir => 'blog/', :secondary => this.postedDate.strftime("%e %a")} %>
+    <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%e %a")} %>
     <% end %>
   </ul>
 

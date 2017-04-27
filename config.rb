@@ -7,7 +7,7 @@ activate :directory_indexes
 set :relative_links, false  #should be true
 set :images_dir, 'images'
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :disable_indented_code_blocks => true, :smartypants => true, auto_ids: false
+set :markdown, :fenced_code_blocks => true, :smartypants => true, auto_ids: false
 
 # Per-page layout changes:
 #
@@ -86,7 +86,7 @@ end
 
 
 data.site.caseStudy.each do | id, this |
-  proxy "/cases/#{this.slug}/index.html", "/cases/cases-template.html", :locals => { this: this }, :ignore => true
+  proxy "/casestudy/#{this.slug}/index.html", "/casestudy/cases-template.html", :locals => { this: this }, :ignore => true
 end
 
 data.site.blog.each do | id, this |

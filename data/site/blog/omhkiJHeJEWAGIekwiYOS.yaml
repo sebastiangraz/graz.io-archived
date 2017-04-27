@@ -1,46 +1,51 @@
 ---
 :id: omhkiJHeJEWAGIekwiYOS
-:title: Figma
-:titleHover: Figma for teams
-:thumbnail:
-  :title: case-delhaize
-  :description: 
-  :url: "//images.contentful.com/y77stanzu634/3MhMt6bZAcU8aCEQGYQcs2/1709a4dd24f2e6ad492d1c63168ddb1a/case-delhaize.png"
+:title: New portfolio 2017
+:titleHover: New portfolio 2017 (Updated April)
 :blogContent:
-- :id: 6QIrOkCRVe4wcsYwSigIQm
-  :textBlock: |-
-    The HeyPlace app was a result of a 12-hour Hackathon. The app was planned weeks ahead the event so when the time came we had a pretty solid scaffold that we could work from. We had the servers set up and ready to send requests to and from our app, the HTML scaffold was build, even a basic design groundwork was put together. To put it short, we had a MVP version working before the event even started (but don't tell anyone). That said we still had to put the pieces together in mere 12 hours.
-
-    Below you'll find some designs for the proof-of-concept app. The actual app looks a bit different today
-  :subHeader: Overview
-  :align: left
-- :id: 4i0i1hCuRqaomIkgwCU4KC
-  :title: Download Sketch ratio files
-  :fileContainer:
-  - :id: 4UBmj3lNOU4EaAmWMiYQaA
-    :title: Sketch Ratio Template
-    :filetype: sketch
-    :fileImage:
-      :title: sketch-symbol
-      :description: 
-      :url: "//images.contentful.com/y77stanzu634/2k3MKOL1RCeQcG0KwISqgQ/e3647827092b71ef1b327b48da259f23/sketch-symbol.svg"
-    :fileMedia:
-      :title: image-ratios
-      :description: 
-      :url: "//assets.contentful.com/y77stanzu634/4J1YAZFnlSyyygIEwEgOIa/398bc40f5c7810290f8c8ad77bfa1bc8/image-ratios.sketch"
-  - :id: 3EcQxL1bFKwc2c0OAaocI6
-    :title: Test
-    :filetype: testfiletype
-    :fileImage:
-      :title: '404'
-      :description: 
-      :url: "//images.contentful.com/y77stanzu634/38mByINXYAsISm4UAaWECM/4f87d94b39fb79c136e09d9689a8ff60/404.svg"
-    :fileMedia:
-      :title: '404'
-      :description: 
-      :url: "//images.contentful.com/y77stanzu634/38mByINXYAsISm4UAaWECM/4f87d94b39fb79c136e09d9689a8ff60/404.svg"
+- :id: 5QT0CkcTjaMesKAgAkek48
+  :textBlock: "It’s been roughly 3 years since I launched my previous portfolio. While
+    my old site received a great deal of positive feedback and won various features
+    and awards, I still wanted a new portfolio to reflect the current me.\n\n# Tech
+    bits\n\nI knew from the inception of the project that this website had to be written
+    from scratch so that I could have 100% control over it.\n\nFor this portfolio
+    I used Middleman which is a static site generator written in Ruby which spits
+    out static pages that are ready to be deployed. Because the pages are static the
+    website becomes very lightweight and reliable. \n\nMiddleman out-of-the-box allows
+    for SCSS and HAML and other sexy technologies to be used. But I decided to keep
+    it lean to reduce as many dependencies as possible.\n\nI deploy my portfolio via
+    Netlify, which allows me to reap their CDN locations which gives blazing fast
+    load times.\n\nIgnoring CSS frameworks kept the stylesheets lean, not to mention
+    I would find it hard to apply them to this quite straightforward layout.\n\n#
+    Design bits\n\nI wanted to the design to be very sharp and ungimmicky. Displaying
+    only the elements you really need to see. I targeted design-interested people
+    with desktops \n> Analytics shows that 92% of my audience is browsing the website
+    from a Desktop device \n\n— Therefore I put extra care catering the desktop experience
+    of the site, making sure it looked as good as possible on the big screen. \n\n\n\nThe
+    staple of the website is what I call the Tile:\n\n<ul class=\"tiles mt-s mb-s\">\n
+    \ <li class=\"reveal tile\" style=\"list-style:none; min-width:208px; margin:0
+    auto;\">\n    <div class=\"tile-content\" data-color=\"#6F006A\">\n      <h2><span>I
+    am a tile</span> on :hover</h2>\n      <span>Yep, this a tile</span>\n    </div>\n\n
+    \   <div class=\"tile-bg\" data-bgcolor=\"#a9e98b\">\n      <div class=\"tile-image\">\n
+    \       <img src=\"/images/avo.png\" alt=\"\">\n      </div>\n    </div>\n  </li>\n</ul>\n\nOther
+    than being a sweet tile it can hold an image on mouseover as well as displaying
+    additional text.\n\nThe tile spatially aware so it will never expand towards the
+    edge of the screen. Try downsizing the window on the homepage to see the effect.\n\nThe
+    tiles change to a stacked design on mobile viewports.\n\n# Typography bits\n\nThe
+    font I'm using is called GT-Cinetype. It's absolutely gorge. Do zoom in to see
+    the jagged edges of the font.\n\n<span style=\"font-size:24rem; line-height:20rem;\">R<span>\n\nI
+    increased the body font size considerably since my last portfolio. This was to
+    force myself to write shorter sentences. I personally believe it's better to write
+    concise & powerful sentences rather than over-explaining things.\n\n# End bits\n\nHopeful
+    this new portfolio will serve me for longer than 6 weeks before I grow bored of
+    it again. As of writing this article I am happy how it turned out — if you are
+    curious about it's creation you can have a look at the source code here: [Link
+    to Github](https://github.com/umbriel/portfolio-prototype)"
+:bgColor: "#D690AC"
+:textColor: "#49006A"
 :leftSpacing: 1
+:promoted: true
 :postedDate: !ruby/object:DateTime 2017-04-26 00:00:00.000000000 Z
 :content_type_id: blog
-:updated_at: Apr 26th — 2017
-:slug: figma
+:updated_at: Apr 27th — 2017
+:slug: new-portfolio-2017

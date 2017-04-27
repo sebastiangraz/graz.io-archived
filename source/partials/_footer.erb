@@ -3,7 +3,7 @@
   <ul class="tiles">
     <% current = current_page.url.split('/').last %>
     <% content.sort_by{ |index| rand }.each do |id, this| %>
-    <%= partial "partials/tile", :locals => { :this => this, :dir => "/#{this.content_type_id}/", :secondary => 'View' } %>
+    <%= partial "partials/tile", :locals => { :this => this, :dir => "/#{this.content_type_id.downcase}/", :secondary => 'View' } %>
     <% end %>
   </ul>
 </footer>

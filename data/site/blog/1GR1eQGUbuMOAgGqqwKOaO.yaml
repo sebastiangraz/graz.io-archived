@@ -4,36 +4,36 @@
 :titleHover: 3 reasons to Design with image ratios
 :blogContent:
 - :id: 4W3sJgQ9zqKeayw6g8iQ8c
-  :textBlock: "# Why though\n\n![blog-ratio](//images.contentful.com/y77stanzu634/5rKtzmcTRKcOGy6CcqegMG/d8ca25d2ec9e2a141df417e786e114f1/blog-ratio.png)\n\nGone
-    are the days when we simply slap our images onto web pages like so:\n\n\n    <!--
-    Don't do this -->\n    <img src=\"images/avo.png\" alt=\"avocado\" />\n\n\nWhy
-    is this wrong?\n\nWhen deciding on what image size you should use for your intricate
-    product tiles you should instead think about what `ratio` your image should have.\n\n#
-    Seriously why though\n\nReason 1 —\nTo avoid re-inventing the wheel it's a good
-    idea to constrain the images you are working with to a ratio, which can be reused
-    to keep the design more consistent.\n\n\nReason 2 —\nCertain photographs are made
-    to be constrained within a certain ratio. So by using ratios we are ensuring the
-    image is being presented in the best way possible.\n\nReason 3 —\nFrom a developer
-    point of view a big reasons to keep image ratios in mind is the fact that you
-    can eliminate page jumps all together whilst the images are loading. This is because
-    the image is placed inside a fixed-height div.\nMany call this Lazy Loading, I
-    just call it correct usage of image ratios.\n\nWith that said, an implementation
-    of an image could look similar to this:\n\n\n    <!-- Do, do this -->\n    <div
-    class=\"image r:4x3\">\n      <img src=\"images/avo.png\" alt=\"avocado\" />\n
-    \   </div>\n\n\nNotice the CSS includes `object-fit:cover` to help us ensure the
-    image is always smugly positioned inside the div. The reason is because we're
-    working with a lot of decimals, and sometimes the pixel values get rounded so
-    we're just making sure the images always fit.\n\n\n    .r\\:1x3   { padding-top:
-    300%; }\n    .r\\:1x2   { padding-top: 200%; }\n    .r\\:2x3   { padding-top:
-    150%; }\n    .r\\:3x4   { padding-top: 133.333%; }\n    .r\\:1x1   { padding-top:
-    100%; }\n    .r\\:4x3   { padding-top: 75%; }\n    .r\\:2x1   { padding-top: 50%;
-    }\n    .r\\:3x1   { padding-top: 33.333%; }\n    \n    .image {\n      overflow:
-    hidden;\n      position: relative;\n      img {\n        position: absolute;\n
-    \       height: 100%;\n        width: 100%;\n        object-fit: cover;\n      }\n
-    \   }\n\n\n`padding-top` sets the height of the image container, which keeps the
-    aspect ratio intact. The `.r:` class represent the aspect ratio the image will
-    be when placed inside the div.\n\nThere isn't any magic involved so the images
-    that you use in your project will need to be exported in the correct aspect ratio.\n\n\n\n"
+  :textBlock: "# Why though\n\nGone are the days when we simply slap our images onto
+    web pages like so:\n\n\n    <!-- Don't do this -->\n    <img src=\"images/avo.png\"
+    alt=\"avocado\" />\n\n\nWhy is this wrong?\n\nWhen deciding on what image size
+    you should use for your intricate product tiles you should instead think about
+    what `ratio` your image should have.\n\n# Seriously why though\n\nReason 1 —\nTo
+    avoid re-inventing the wheel it's a good idea to constrain the images you are
+    working with to a ratio, which can be reused to keep the design more consistent.\n\n\nReason
+    2 —\nCertain photographs are made to be constrained within a certain ratio. So
+    by using ratios we are ensuring the image is being presented in the best way possible.\n\nReason
+    3 —\nFrom a developer point of view a big reasons to keep image ratios in mind
+    is the fact that you can eliminate page jumps all together whilst the images are
+    loading. This is because the image is placed inside a fixed-height div.\nMany
+    call this Lazy Loading, I just call it correct usage of image ratios.\n\nWith
+    that said, an implementation of an image could look similar to this:\n\n\n    <!--
+    Do, do this -->\n    <div class=\"image r:4x3\">\n      <img src=\"images/avo.png\"
+    alt=\"avocado\" />\n    </div>\n\n\nNotice the CSS includes `object-fit:cover`
+    to help us ensure the image is always smugly positioned inside the div. The reason
+    is because we're working with a lot of decimals, and sometimes the pixel values
+    get rounded so we're just making sure the images always fit.\n\n\n    .r\\:1x3
+    \  { padding-top: 300%; }\n    .r\\:1x2   { padding-top: 200%; }\n    .r\\:2x3
+    \  { padding-top: 150%; }\n    .r\\:3x4   { padding-top: 133.333%; }\n    .r\\:1x1
+    \  { padding-top: 100%; }\n    .r\\:4x3   { padding-top: 75%; }\n    .r\\:2x1
+    \  { padding-top: 50%; }\n    .r\\:3x1   { padding-top: 33.333%; }\n    \n    .image
+    {\n      overflow: hidden;\n      position: relative;\n      img {\n        position:
+    absolute;\n        height: 100%;\n        width: 100%;\n        object-fit: cover;\n
+    \     }\n    }\n\n\n`padding-top` sets the height of the image container, which
+    keeps the aspect ratio intact. The `.r:` class represent the aspect ratio the
+    image will be when placed inside the div.\n\nThere isn't any magic involved so
+    the images that you use in your project will need to be exported in the correct
+    aspect ratio.\n\n\n\n"
 - :id: 4i0i1hCuRqaomIkgwCU4KC
   :title: Download Sketch ratio files
   :fileContainer:

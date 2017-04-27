@@ -14,7 +14,7 @@
 
   <ul class="tiles section" id="work">
     <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.each do |id, this | %>
-      <%= partial "partials/tile", :locals => { :this => this, :dir => '/cases/', :secondary => this.year }%>
+      <%= partial "partials/tile", :locals => { :this => this, :dir => '/casestudy/', :secondary => this.year }%>
     <% end %>
   </ul>
 
