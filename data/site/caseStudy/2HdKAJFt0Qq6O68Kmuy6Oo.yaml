@@ -1,7 +1,7 @@
 ---
 :id: 2HdKAJFt0Qq6O68Kmuy6Oo
 :title: Delhaize
-:titleHover: Helped transform Delhaize's new website
+:titleHover: I helped Delhaize create a responsive website
 :thumbnail:
   :title: case-delhaize
   :description: 
@@ -19,12 +19,12 @@
     # Case coming soon
 
     Meanwhile contact me at [graz@live.se](mailto:graz@live.se) for more info
-:bgColor: "#09bd44"
+:bgColor: "#1D9E48"
 :textColor: "#044017"
 :leftSpacing: 1
 :promoted: false
 :year: 2015
 :order: 5
 :content_type_id: caseStudy
-:updated_at: Apr 27th — 2017
+:updated_at: Apr 29th — 2017
 :slug: delhaize
