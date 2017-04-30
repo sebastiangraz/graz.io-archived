@@ -10,7 +10,7 @@
         <% if this.key?("textBlock") %>
           <section class="<%= "case-text-#{this['align']}" if this.key?('align') %>">
             <div class="case-text"><%= markdown(this['textBlock']) %></div>
-            <span><%= this['subHeader']%></span>
+            <span class="small"><%= this['subHeader']%></span>
           </section>
         <% end %>
         <% if this.key?("mediaContainer")%>

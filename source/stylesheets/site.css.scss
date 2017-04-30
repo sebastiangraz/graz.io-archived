@@ -108,16 +108,6 @@
   h1, h2, h3, h4 {margin-top:5rem;}
   max-width: 640px;
   margin: 0 auto;
-  ul {
-    display:flex;
-    flex-flow: row wrap;
-    flex-direction: column;
-  }
-  li {
-    list-style: circle;
-    list-style-position: inside;
-    margin: .75rem 0;
-  }
 }
 
 
@@ -140,7 +130,9 @@
     }
   }
 }
-
+.ls-none {
+  list-style: none;
+}
 .hljs {
   padding: 6%;
   text-rendering: geometricPrecision;
