@@ -44,10 +44,10 @@
     :description: 
     :url: "//images.contentful.com/y77stanzu634/6q6qTefPBmewSUiWGiSUAK/1d26ce8090e83b7e58fb1d41466d7ed9/poem-page.jpg"
 - :id: 6qqZL0A5pu8IWEKSAsy2cy
-  :textBlock: 'The poem page was designed to achieve two things: reading poetry and
-    creating Memes. The user may create a Meme by either selecting the text, or be
-    guided into creating a meme by clicking the create Meme button, which will automatically
-    select the first verse.'
+  :textBlock: "The poem page was designed to achieve two things \n\n- Reading poetry\n-
+    Creating Memes\n\nThe user may create a Meme by either selecting the text, or
+    be guided into creating a meme by clicking the create Meme button, which will
+    automatically select the first verse."
   :subHeader: Poem page
   :align: left
 - :id: 2K7ucb7EWcqAUk4WayaUMi
@@ -57,11 +57,12 @@
     :description: 
     :url: "//images.contentful.com/y77stanzu634/5DY9QQghUI8QIIKSWmMW0Y/20da4d43f0b9e9d8667c6c17b28e89e7/meme-creator.jpg"
 - :id: 3uwHGUJuD68Q2Gc0YkUKio
-  :textBlock: The user can create their own Memes through the website with the ability
-    to customise the font, text colour, font size, and text position. The website
-    does some minor hand holding in terms of Meme image aesthetics to ensure the Memes
-    look pleasant. For instance the user may only choose colours that suit the average
-    colour of the image that the user has chosen.
+  :textBlock: "The user can create their own Memes through the website with the ability
+    to customise the font, text colour, font size, and text position. \n\n![meme creator
+    color svg](//images.contentful.com/y77stanzu634/27APmAyHqQQAkYOicSCaKe/f6553b60be6bcae8baa7292b9031045f/Frame.svg)\n\nThe
+    website does some minor hand holding in terms of Meme image aesthetics to ensure
+    the Memes look pleasant. For instance the user may only choose colours that suit
+    the average colour of the image that the user has chosen.\n\n"
   :subHeader: Meme creator
   :align: left
 - :id: 6mrwDS4wdU8MoIUCowS2YG
