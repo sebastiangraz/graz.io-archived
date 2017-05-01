@@ -1,17 +1,20 @@
 <div class="case-info">
-  <div class="case-tags"><span class="small">Tags — </span>
-    <ul>
-      <% this.tags.each do |tag| %>
-      <li class="ls-none"><p><%= tag %></p></li>
-      <% end %>
-    </ul>
-
-  </div>
-  <div class="case-roles"><span class="small">Roles — </span>
-    <ul>
-      <% this.roles.each do |tag| %>
-      <li class="ls-none"><p><%= tag %></p></li>
-      <% end %>
-    </ul>
-  </div>
+  <% if this.key?('tags') %>
+    <div class="case-tags"><span class="small">Tags — </span>
+      <ul>
+        <% this.tags.each do |tag| %>
+          <li class="ls-none"><p><%= tag %></p></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% if this.key?('roles') %>
+    <div class="case-roles"><span class="small">Roles — </span>
+      <ul>
+        <% this.roles.each do |tag| %>
+          <li class="ls-none"><p><%= tag %></p></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 </div>

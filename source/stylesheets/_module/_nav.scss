@@ -1,6 +1,6 @@
 nav {
   .navigation {
-    height: 2rem;
+    pointer-events: none;
     width: 100%;
     margin: 0 auto;
     top:1rem;
@@ -60,6 +60,7 @@ nav {
 }
 
 .logo, .menu-items {
+  pointer-events: auto;
   transition: .5s $bezier all;
 }
 

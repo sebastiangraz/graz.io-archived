@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run autoprefixer && npm run minifycss",
-    "prestart" : "npm run clean",
+    "prestart": "npm run clean",
     "autoprefixer": "postcss -u autoprefixer -r build/stylesheets/*",
     "minifycss": "cleancss -o build/stylesheets/site-min.css build/stylesheets/*",
     "clean": "rimraf build/stylesheets/*",
-    "build" : "bundle exec middleman build --clean"
+    "build": "bundle exec middleman build --clean"
   },
   "repository": {
     "type": "git",
