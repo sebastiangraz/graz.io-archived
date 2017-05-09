@@ -40,6 +40,30 @@
   margin-bottom: $margin * 2;
 }
 
+.pl2 {
+  padding-left: $margin * 2;
+}
+.pr2 {
+  padding-right: $margin * 2;
+}
+.pl4 {
+  padding-left: $margin * 4;
+}
+.pr4 {
+  padding-right: $margin * 2;
+}
+
+@include mq(md) {
+  .pr4-md {
+    padding-right: $margin * 4;
+  }
+}
+
+
+.he1 {height: 1rem;}
+.he2 {height: 2rem;}
+.he3 {height: 3rem;}
+
 .abs {
   position: absolute;
 }

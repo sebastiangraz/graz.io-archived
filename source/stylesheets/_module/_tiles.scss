@@ -37,7 +37,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  transform: scale(0.01);
+  transform: scale(0);
   height: 100%;
   position : absolute;
 }
@@ -226,5 +226,19 @@
 
   .arrow {
     max-height: 24px;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transition: opacity 0.6s, transform .6s $bezier;
+  .tile-bg {
+    transition: .8s $bezier transform;
+  }
+  &_visible {
+    opacity: 1;
+    .tile-bg {
+      transform: scale(1);
+    }
   }
 }

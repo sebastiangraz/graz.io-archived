@@ -7,6 +7,7 @@
 @import "_layout/elements";
 @import "_layout/typography";
 @import "_layout/architecture";
+@import "_layout/widths";
 @import "_layout/grid";
 @import "_layout/animation";
 
@@ -112,25 +113,7 @@
 }
 
 
-.reveal {
-  opacity: 0;
-  transition: opacity 0.6s, transform .6s $bezier;
-  .tile-bg {
-    transition: .8s $bezier all;
-  }
-  &.image {
-    transform: translateY(80px);
-  }
-  &_visible {
-    opacity: 1;
-    .tile-bg {
-      transform: scale(1);
-    }
-    &.image {
-      transform: translateY(0);
-    }
-  }
-}
+
 .ls-none {
   list-style: none;
 }
