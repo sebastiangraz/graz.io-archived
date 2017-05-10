@@ -1,15 +1,17 @@
 @charset "utf-8";
 
 @import "var";
-
 @import "_layout/mq";
 @import "_layout/normalize";
 @import "_layout/elements";
 @import "_layout/typography";
-@import "_layout/architecture";
+@import "_layout/utilities";
+@import "_layout/flex";
 @import "_layout/widths";
 @import "_layout/grid";
 @import "_layout/animation";
+@import "_layout/spacing";
+@import "_layout/print";
 
 @import "_module/nav";
 @import "_module/tiles";
@@ -18,14 +20,6 @@
 @import "_module/image";
 @import "_module/file-share";
 
-
-
-.row {
-  max-width: $max-width;
-  margin: 0 auto;
-  width: 84%;
-  position: relative;
-}
 .case-image {
   margin-top: 12rem;
 }
@@ -112,11 +106,6 @@
   margin: 0 auto;
 }
 
-
-
-.ls-none {
-  list-style: none;
-}
 .hljs {
   padding: 6%;
   text-rendering: geometricPrecision;

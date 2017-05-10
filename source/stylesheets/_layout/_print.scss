@@ -1,0 +1,17 @@
+@media print {
+  nav {
+    display: none;
+  }
+  .mt-l {
+    margin-top:0
+  }
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+  .row {
+    width: 100%;
+    margin: 0;
+    max-width: initial;
+  }
+}
