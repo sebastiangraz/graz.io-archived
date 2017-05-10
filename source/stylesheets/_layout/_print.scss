@@ -1,17 +1,36 @@
 @media print {
+
   nav {
+    .navigation {
+      position: relative;
+      top: 0;
+    }
+  }
+  .pbi-avoid {
+    page-break-inside: avoid;
+  }
+  .menu-items {
     display: none;
   }
+
   .mt-l {
-    margin-top:0
+    margin-top:0rem;
   }
   @page {
     size: A4;
     margin: 1.5cm;
   }
+  @page:left{
+    @bottom-left {
+      content: "Page " counter(page) " of " counter(pages);
+    }
+  }
   .row {
     width: 100%;
     margin: 0;
     max-width: initial;
+  }
+  body, html {
+    font-size: 12px;
   }
 }
