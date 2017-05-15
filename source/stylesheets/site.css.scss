@@ -23,6 +23,10 @@
 
 .case-image {
   margin-top: 12rem;
+  transform: translateY(80px);
+  &.reveal_visible {
+    transform: translateY(0);
+  }
 }
 .case-video {
   margin-top: 12rem;
