@@ -13,8 +13,8 @@
       <% if this.key?("textBlock") %>
       <div class="row">
         <section class="reveal mt0 mb6 <%= 'mh0 mh3-m mh5-ns' if this.key?('align') %> <%= "case-text-#{this['align']}" if this.key?('align') %>">
-          <div class="case-text w-70 ma0 <%= 'ml0 ml4-ns' if this['align'] == 'right'%> <%= 'mr0 mr4-ns' if this['align'] == 'left'%>"><%= markdown(this['textBlock']) %></div>
-          <span class="small mt4"><%= this['subHeader']%></span>
+          <div class="case-text w-100 w-70-ns ma0 <%= 'ml0 ml4-ns order-1' if this['align'] == 'right'%> <%= 'mr0 mr4-ns order-1 order-0-ns' if this['align'] == 'left'%>"><%= markdown(this['textBlock']) %></div>
+          <span class="small mt4 <%= 'order-0' if this['align'] == 'left'%> <%= 'order-0' if this['align'] == 'right'%>"><%= this['subHeader']%></span>
         </section>
       </div>
 

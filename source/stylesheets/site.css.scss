@@ -42,8 +42,6 @@
       flex-direction: row
     };
   }
-  &-right { span {order: 0} .case-text {order: 1; }}
-  &-left { span {order: 1} .case-text {order: 0; }}
 }
 
 
