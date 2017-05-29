@@ -11,13 +11,18 @@
         <span class="readmore" href="<%= this.title.parameterize %>"><%= partial(:'partials/arrow', :locals => { :strokecolor => this.textColor }) %></span>
       </span>
     </div>
-
-    <div class="tile-bg" data-bgcolor=" <%= this.bgColor ? (this.bgColor) : ('#000') %> ">
+    <div class="tile-bg" >
       <% if this.key? :thumbnail %>
         <div class="tile-image">
           <%= partial(:'partials/image', :locals => { :imageurl => this.thumbnail['url'], :alt => this.thumbnail['title'] }) %>
         </div>
       <% end %>
+      <div class="tile-cover" style="background: <%= this.bgColor ? (this.bgColor) : ('#000') %> ">
+      </div>
+      <% color = darken_color(this.bgColor, amount=0.6) %>
+      <div class="tile-shadow" style="box-shadow: 0px 36px 48px -32px <%= hex_to_rgb(color)  %>;">
+
+      </div>
     </div>
   </a>
 </li>

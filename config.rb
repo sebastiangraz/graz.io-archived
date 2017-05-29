@@ -48,16 +48,24 @@ end
 # end
 
 helpers do
-  # def nav_active(path)
-  #   current_page.path == path ? "active" : ''
-  # end
-end
-
-helpers do
   def markdown(text)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     return markdown.render(text).html_safe
   end
+  def hex_to_rgb(input)
+    a = ( input.match /#(..?)(..?)(..?)/ )[1..3]
+    a.map!{ |x| x + x } if input.size == 4
+    return "rgb(#{a[0].hex},#{a[1].hex},#{a[2].hex})"
+  end
+  def darken_color(hex_color, amount=0.4)
+    hex_color = hex_color.gsub('#','')
+    rgb = hex_color.scan(/../).map {|color| color.hex}
+    rgb[0] = (rgb[0].to_i * amount).round
+    rgb[1] = (rgb[1].to_i * amount).round
+    rgb[2] = (rgb[2].to_i * amount).round
+    "#%02x%02x%02x" % rgb
+  end
+
 end
 
 class CustomMapper < ContentfulMiddleman::Mapper::Base
