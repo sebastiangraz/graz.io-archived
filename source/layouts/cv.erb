@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"></link>
+  <link href="/images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"></link>
+
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title><%= yield_content(:title) %></title>
+  <%= stylesheet_link_tag :tachyons %>
+  <%= stylesheet_link_tag :site %>
+</head>
+
+<body class="<%= page_classes %>">
+  <%= yield %>
+</body>
+</html>
