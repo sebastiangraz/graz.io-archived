@@ -22,51 +22,28 @@
 @import "_layout/print";
 
 .case-image {
-  margin-top: 12rem;
   transform: translateY(80px);
   &.reveal_visible {
     transform: translateY(0);
   }
 }
-.case-video {
-  margin-top: 12rem;
-}
 .case-text {
-  margin: 1rem auto;
   &-right, &-left {
     flex-direction: column;
     display: flex;
     justify-content: space-between;
-    width: percentage(12/12);
-    margin: 2rem auto 4rem;
-    @include mq(sm) {
-      width: percentage(10/12);
-    };
-    .case-text {
-      margin: 2rem 0 0 0;
-      width: percentage(12/12);
-      @include mq(sm){
-        width: percentage(8/12);
-        margin: 0;
-      };
-    }
     span {
       &:before {
         content: '—';
         display: block;
       }
     }
-    p:first-child {
-      margin-top:0;
-    }
     @include mq(sm) {
       flex-direction: row
     };
   }
-
-  &-right { span {order: 0} .case-text {order: 1}}
-  &-left { span {order: 1} .case-text {order: 0}}
-
+  &-right { span {order: 0} .case-text {order: 1; }}
+  &-left { span {order: 1} .case-text {order: 0; }}
 }
 
 

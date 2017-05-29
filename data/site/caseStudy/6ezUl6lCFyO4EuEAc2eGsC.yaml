@@ -112,6 +112,17 @@
     lower-resolution screens
   :subHeader: Iconography
   :align: left
+- :id: 35CiKkJ4vukWqAgyUUU66i
+  :title: Full bleed image and text
+  :content: 'Now, you need to specify which pages use this alternative layout. You
+    can do this in two ways. If you want to apply this layout to a large group of
+    pages, you can use the "page" command in your config.rb. Let''s assume you have
+    a folder called "admin" in your source folder and all the templates in admin should
+    use the admin layout. The config.rb would look like:'
+  :media:
+    :title: test
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/19T8ghB53osOSCM6Qgewa6/e9f2b510a593f209ebc94f9b78d484e4/test.png"
 :bgColor: "#ffffff"
 :textColor: "#014EFE"
 :leftSpacing: 2
@@ -119,5 +130,5 @@
 :year: 2015
 :order: 2
 :content_type_id: caseStudy
-:updated_at: Apr 28th — 2017
+:updated_at: May 29th — 2017
 :slug: the-poetry-hour

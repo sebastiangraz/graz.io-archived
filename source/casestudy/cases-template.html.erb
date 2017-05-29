@@ -2,30 +2,54 @@
 <%= partial "partials/nav", :locals => {:textColor => this.textColor } %>
 <%= partial "partials/case-header" %>
 
-<div class="row">
-  <div class="mt-s">
-    <div class="case-container">
-      <%= partial "partials/case-info" %>
-      <% this.caseStudyContainer.each do | this | %>
-        <% if this.key?("textBlock") %>
-          <section class="reveal <%= "case-text-#{this['align']}" if this.key?('align') %>">
-            <div class="case-text"><%= markdown(this['textBlock']) %></div>
-            <span class="small"><%= this['subHeader']%></span>
-          </section>
-        <% end %>
-        <% if this.key?("mediaContainer")%>
-        <%= partial(:'partials/image', :locals => { :cssClass => 'case-image', :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'] }) %>
-        <% end %>
-        <% if this.key?("videoFile")%>
-          <video class="case-video reveal" controls="true">
-            <source src="<%= this.videoFile['url']%>" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-          </video>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-  <%= partial(:'partials/footer', :locals => {:content => data.site.caseStudy, :title => 'See more projects', :name => data.site.caseStudy.title}) %>
 
+<div class="mt-s">
+  <div class="case-container">
+    <div class="row">
+      <%= partial "partials/case-info" %>
+    </div>
+
+    <% this.caseStudyContainer.each do | this | %>
+      <% if this.key?("textBlock") %>
+      <div class="row">
+        <section class="reveal mt0 mb6 <%= 'mh0 mh3-m mh5-ns' if this.key?('align') %> <%= "case-text-#{this['align']}" if this.key?('align') %>">
+          <div class="case-text w-70 ma0 <%= 'ml0 ml4-ns' if this['align'] == 'right'%> <%= 'mr0 mr4-ns' if this['align'] == 'left'%>"><%= markdown(this['textBlock']) %></div>
+          <span class="small mt4"><%= this['subHeader']%></span>
+        </section>
+      </div>
+
+      <% end %>
+      <% if this.key?("content") %>
+        <div class="cf flex flex-wrap flex-center">
+          <div class="row">
+            <div class="w-50 fl">
+                <p class="ma0"><%= this['content']%></p>
+            </div>
+          <div class="w-50 fl">
+            <%= partial(:'partials/image', :locals => { :imageurl => this.media['url'],  :alt => this.media['title'] }) %>
+          </div>
+          </div>
+        </div>
+      <% end %>
+      <% if this.key?("mediaContainer")%>
+        <div class="row">
+          <%= partial(:'partials/image', :locals => { :cssClass => 'case-image mt6', :imageurl => this.mediaContainer['url'],  :alt => this.mediaContainer['title'] }) %>
+        </div>
+      <% end %>
+
+        <% if this.key?("videoFile")%>
+          <div class="row">
+            <video class="case-video reveal mt6" controls="true">
+              <source src="<%= this.videoFile['url']%>" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        <% end %>
+
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <%= partial(:'partials/footer', :locals => {:content => data.site.caseStudy, :title => 'See more projects', :name => data.site.caseStudy.title}) %>
 </div>
