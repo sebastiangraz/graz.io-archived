@@ -45,7 +45,7 @@ $doc.ready(function() {
     var lspacer = $(this).data('lspacer'),
     rspacer = $(this).data('rspacer');
 
-    var spacer = $('<li />', { "class": 'spacer'});
+    var spacer = $('<li />', { "class": 'spacer fl'});
 
     switch ($(this).data('lspacer')) {
       case 1:

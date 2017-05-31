@@ -1,17 +1,10 @@
 .tiles {
-  width: 100%;
-  display: flex;
-  position: relative;
-  flex-flow: row wrap;
-
   @include mq(md) {
     max-width: $tileWidth * 4;
   }
 }
 
-
 .tile-content {
-
   height: $tileHeight - 72px;
   padding:1.5rem;
   z-index: 1;

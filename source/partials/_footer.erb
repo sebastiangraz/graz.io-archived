@@ -1,7 +1,6 @@
-<footer class="footer mb-l">
-  <h2 class="footer-h2"><%= title %></h2>
-  <ul class="tiles">
-    <% current = current_page.url.split('/').last %>
+<footer class="mb5">
+  <h3 class="mb4 f3"><%= title %></h3>
+  <ul class="tiles cf">
     <% content.sort_by{ |index| rand }.each do |id, this| %>
     <%= partial "partials/tile", :locals => { :this => this, :dir => "/#{this.content_type_id.downcase}/", :secondary => 'View' } %>
     <% end %>

@@ -15,7 +15,6 @@
 @import "_module/nav";
 @import "_module/tiles";
 @import "_module/case-header";
-@import "_module/footer";
 @import "_module/image";
 @import "_module/file-share";
 
@@ -92,7 +91,8 @@
 }
 
 #about, #home {
-  display: table;
+  display: flex;
+  flex-direction: column;
 }
 
 .icon-set {

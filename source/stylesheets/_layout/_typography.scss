@@ -38,6 +38,10 @@
   padding-bottom: .375rem;
 }
 
+.cinetype-bold {
+  font-family: 'Cinetype-bold';
+}
+
 body {
   font-family: 'Cinetype-Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,39 +58,15 @@ h4 {
   }
 }
 
-h1 {
-  font-size: 1.5rem;
-  margin: 0.67rem 0;
-  @include mq(sm) {
-    font-size: 2rem;
-  };
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-family: 'Cinetype-Bold';
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-body {
-  font-size: calc(100% + 8 * ((100vw - 320px) / (#{$mq-lg} - 320)));
-  @include mq(lg) {
-    font-size: 1.5rem;
-  };
-}
-
-
-pre {
+pre, p {
   font-size: calc(75% + 8 * ((100vw - 320px) / (#{$mq-lg} - 320)));
   @include mq(lg) {
     font-size: 1.25rem;
   };
 }
+
 p {  margin: 2rem 0;}
+
 p a {
   @include a;
 }

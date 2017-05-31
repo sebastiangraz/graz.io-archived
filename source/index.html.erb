@@ -6,13 +6,13 @@
 <div id="home" class="row">
 
   <div class="mt-l mb-xs abs">
-    <h1>Sebastian Grąz</h1>
+    <h1 class="f3">Sebastian Grąz</h1>
     <p class="hide-md"> Interaction designer and a front-end developer based in London </p>
   </div>
 
 
 
-  <ul class="tiles section" id="work">
+  <ul class="tiles cf" id="work">
     <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.each do |id, this | %>
       <%= partial "partials/tile", :locals => { :this => this, :dir => '/casestudy/', :secondary => this.year }%>
     <% end %>
@@ -20,20 +20,20 @@
 
   <div class="mt-l mb-xs">
     <div class="flex-between">
-      <h1>Thoughts & experiments <sup><%= data.site.blog.count %></sup></h1>
+      <h1 class="f3">Thoughts & experiments <sup><%= data.site.blog.count %></sup></h1>
       <% if data.site.blog.count > 5%>
         <a href="/blog">Read all articles</a>
       <% end %>
     </div>
   </div>
 
-  <ul class="tiles section" id="blog">
+  <ul class="tiles cf" id="blog">
     <% data.site.blog.take(5).each do |id, this | %>
       <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%a #{this.postedDate.day.ordinalize}")} %>
     <% end %>
   </ul>
 
-  <div class="section" id="about">
+  <div id="about">
     <%= partial "partials/about" %>
   </div>
 

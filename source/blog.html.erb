@@ -5,10 +5,10 @@
 <div class="row">
   <div class="mt-l mb-xs">
     <div class="flex-between">
-      <h1>All articles</h1>
+      <h1 class="f3">All articles</h1>
     </div>
   </div>
-  <ul class="tiles section">
+  <ul class="tiles mv5">
     <% data.site.blog.each do |id, this | %>
     <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%e %a")} %>
     <% end %>
