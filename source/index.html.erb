@@ -4,12 +4,11 @@
 
 <div id="home" class="row flex flex-column">
 
-  <div class="mt6 mb2 absolute">
-    <h1 class="f3">Sebastian Grąz</h1>
-    <p class="hide-md"> Interaction designer and a front-end developer based in London </p>
+  <div class="mt6 mb2 relative relative-m absolute-ns">
+    <h1 class="f3 mb3">Sebastian Grąz</h1>
   </div>
 
-  <ul class="tiles cf" id="work">
+  <ul class="tiles list cf" id="work">
     <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.each do |id, this | %>
       <%= partial "partials/tile", :locals => { :this => this, :dir => '/casestudy/', :secondary => this.year }%>
     <% end %>
@@ -24,7 +23,7 @@
     </div>
   </div>
 
-  <ul class="tiles cf" id="blog">
+  <ul class="tiles list cf" id="blog">
     <% data.site.blog.take(5).each do |id, this | %>
       <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%a #{this.postedDate.day.ordinalize}")} %>
     <% end %>

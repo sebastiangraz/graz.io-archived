@@ -8,7 +8,7 @@
       <h1 class="f3">All articles</h1>
     </div>
   </div>
-  <ul class="tiles mv5">
+  <ul class="tiles list mv5">
     <% data.site.blog.each do |id, this | %>
     <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%e %a")} %>
     <% end %>

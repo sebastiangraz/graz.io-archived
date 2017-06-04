@@ -2,13 +2,9 @@
 <%= partial "partials/nav", :locals => {:textColor => this.textColor } %>
 <%= partial "partials/case-header", :locals => {:subheader => this.postedDate.strftime("%b #{this.postedDate.day.ordinalize} — %Y")} %>
 <div class="row">
-
-
-  <div class="mt5">
-    <div class="case-container">
-      <%= partial "partials/case-info" %>
+  <div class="mt6">
+    <div class="measure-wide center">
       <% globalThis = this %>
-      <div class="blog-wrapper">
       <% this.blogContent.each do | this | %>
         <% if this.key?("textBlock") && this["textBlock"] %>
           <%= markdown(this['textBlock'])%>
@@ -27,7 +23,6 @@
       </a>
       <div class="disqus-wrapper">
         <%= disqus %>
-      </div>
       </div>
     </div>
   </div>
