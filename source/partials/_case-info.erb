@@ -1,18 +1,20 @@
-<div class="case-info">
+<div class="measure ml-auto mv5 flex flex-column flex-row-ns justify-between">
   <% if this.key?('tags') %>
-    <div class="case-tags"><span class="small">Tags — </span>
-      <ul>
+    <div class="ml-auto-ns">
+      <span class="f6 mb3 dib">Tags — </span>
+      <ul class="list">
         <% this.tags.each do |tag| %>
-          <li class="ls-none"><p><%= tag %></p></li>
+          <li class="f4 f3-ns"><%= tag %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
   <% if this.key?('roles') %>
-    <div class="case-roles"><span class="small">Roles — </span>
-      <ul>
+    <div class="mt3 mt0-ns ml-auto-ns pl4-ns">
+      <span class="f6 mb3 dib">Roles — </span>
+      <ul class="list">
         <% this.roles.each do |tag| %>
-          <li class="ls-none"><p><%= tag %></p></li>
+          <li class="f4 f3-ns"><%= tag %></li>
         <% end %>
       </ul>
     </div>

@@ -90,33 +90,7 @@
   text-rendering: geometricPrecision;
 }
 
-#about, #home {
-  display: flex;
-  flex-direction: column;
-}
 
-.icon-set {
-  display: flex;
-  align-items:center;
-  justify-content: flex-start;
-  & > * {
-    margin-right: 2rem;
-  }
-}
-
-.icon {
-  height: 1rem;
-  width: 1rem;
-  opacity: 0.6;
-  &:hover {
-    opacity: 1;
-  }
-  img {
-    height: 1rem;
-    width: 1rem;
-  }
-
-}
 .disqus-wrapper {
   height: 0;
   visibility: hidden;

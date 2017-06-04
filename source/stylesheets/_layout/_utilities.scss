@@ -2,6 +2,14 @@
   text-indent: $margin * 3;
 }
 
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
+
+@media screen and (min-width: 30em) {
+  .ml-auto-ns { margin-left: auto; }
+  .mr-auto-ns { margin-right: auto; }
+}
+
 .row {
   max-width: $max-width;
   margin: 0 auto;
