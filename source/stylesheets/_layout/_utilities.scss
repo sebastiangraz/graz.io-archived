@@ -1,3 +1,7 @@
+.ti3 {
+  text-indent: $margin * 3;
+}
+
 .ml-auto { margin-left: auto; }
 .mr-auto { margin-right: auto; }
 
@@ -11,4 +15,36 @@
   margin: 0 auto;
   width: 84%;
   position: relative;
+}
+.ws-pre {
+  white-space: pre;
+}
+.he1 {height: 1rem;}
+.he2 {height: 2rem;}
+.he3 {height: 3rem;}
+
+.ls-none {
+  list-style: none;
+}
+
+.abs {
+  position: absolute;
+}
+
+.rel {
+  position: relative;
+}
+
+.hide-md {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.fl {
+  float: left;
+}
+.center {
+  text-align: center;
 }
