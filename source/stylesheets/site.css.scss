@@ -2,7 +2,7 @@
 
 @import "var";
 @import "_layout/mq";
-@import "_layout/normalize";
+//@import "_layout/normalize";
 @import "_layout/elements";
 @import "_layout/typography";
 @import "_layout/utilities";
@@ -35,6 +35,8 @@
       &:before {
         content: '—';
         display: block;
+        line-height: 1;
+        margin-bottom: .25rem
       }
     }
     @include mq(sm) {
@@ -42,10 +44,11 @@
     };
   }
 }
-
-
+.abs-rel {
+  position: absolute;
+}
 #home {
-  .abs {
+  .abs-rel {
     position: relative;
     @include mq(md) {
       position: absolute;

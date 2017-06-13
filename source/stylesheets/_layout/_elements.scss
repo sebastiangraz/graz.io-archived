@@ -1,19 +1,21 @@
 body {
-  margin: 0;
-  overflow-y:scroll;
+  overflow-y:scroll; //force scrollbar to prevent page jumping
   background: hsl(12, 16%, 95%);
 }
 
 * {
   box-sizing: border-box;
 }
+
 video {
   width: 100%;
   background-size:cover;
   background: #eee;
 }
+
 img {
   width: 100%;
+  display: block;
 }
 
 ul {
@@ -27,10 +29,6 @@ ul {
       margin-top: 0;
     }
   }
-}
-
-img {
-  display: block;
 }
 
 kbd {
