@@ -10,6 +10,10 @@
   .mr-auto-ns { margin-right: auto; }
 }
 
+.measure-24 {
+  max-width: 24rem;
+}
+
 .row {
   max-width: $max-width;
   margin: 0 auto;

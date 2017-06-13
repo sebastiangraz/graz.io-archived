@@ -3,14 +3,14 @@
 <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
 
 <div class="row">
-  <div class="mt6 mb2">
+  <div class="mt6">
     <div class="flex-between">
       <h1 class="f3">All articles</h1>
     </div>
   </div>
   <ul class="tiles cf">
     <% data.site.blog.each do |id, this | %>
-    <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%e %a")} %>
+    <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%a #{this.postedDate.day.ordinalize}")} %>
     <% end %>
   </ul>
 

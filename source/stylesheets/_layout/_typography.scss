@@ -59,9 +59,9 @@ h4 {
 }
 
 pre, p {
-  font-size: calc(75% + 8 * ((100vw - 320px) / (#{$mq-lg} - 320)));
+  font-size: calc(100% + 8 * ((100vw - 320px) / (#{$mq-lg} - 320)));
   @include mq(lg) {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   };
 }
 
