@@ -39,6 +39,14 @@ $doc.ready(function() {
     });
   }
 
+  $(function() {
+    $('.tile a').focusin(function(){
+      $(this).parent().addClass('expanded')
+    });
+    $('.tile a').focusout(function(){
+      $(this).parent().removeClass('expanded')
+    });
+  });
 
 
   $('.tile').each( function(){

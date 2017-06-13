@@ -1,6 +1,6 @@
-<div class="measure ml-auto mv5 flex flex-column flex-row-ns justify-between">
+<div class="w-100 w-100-m w-60-l ml-auto mv5 flex justify-end flex-column flex-row-ns justify-between">
   <% if this.key?('tags') %>
-    <div class="ml-auto-ns">
+    <div>
       <span class="f6 mb3 dib">Tags — </span>
       <ul class="list">
         <% this.tags.each do |tag| %>
@@ -10,7 +10,7 @@
     </div>
   <% end %>
   <% if this.key?('roles') %>
-    <div class="mt3 mt0-ns ml-auto-ns pl4-ns">
+    <div class="mt3 mt0-ns pl4-ns">
       <span class="f6 mb3 dib">Roles — </span>
       <ul class="list">
         <% this.roles.each do |tag| %>
