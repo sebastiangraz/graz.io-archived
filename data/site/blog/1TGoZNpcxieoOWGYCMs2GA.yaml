@@ -2,20 +2,18 @@
 :id: 1TGoZNpcxieoOWGYCMs2GA
 :title: Spatial Aware UI Elements
 :titleHover: Quick demo of Spatial Aware UI Elements
-:tags:
-- front-end
 :blogContent:
 - :id: pNIBidyE4COC6I4AYoUS2
-  :textBlock: "- The building blocks of this website expand to show more information
-    on hover. \n- In a responsive world expanding-anything can be a troublesome journey
-    as a developer. \n- I needed to make sure that even if the user is browsing from
-    a small tablet the tiles wouldn't leak outside it's parents bounds so that I could
-    avoid problems with horizontal scrolling. \n\nI extracted the code from my portfolio
-    into a small demo below. Have a play around, fork it, steal it, claim it or give
-    a comment.\n\n<p data-height=\"1000\" data-theme-id=\"light\" data-slug-hash=\"dWWppX\"
-    data-default-tab=\"result\" data-user=\"umbriel\" data-embed-version=\"2\" data-pen-title=\"dWWppX\"
-    class=\"codepen\">See the Pen <a href=\"https://codepen.io/umbriel/pen/dWWppX/\">dWWppX</a>
-    by Sebastian Graz (<a href=\"http://codepen.io/umbriel\">@umbriel</a>) on <a href=\"http://codepen.io\">CodePen</a>.</p>\n<script
+  :textBlock: "In a responsive world expanding elements can be a troublesome to manage
+    as a developer. Not much else needs to be said.\n\nFor this portfolio I needed
+    to make sure that even if the user is browsing from a small tablet the expanding
+    tiles wouldn't leak outside it's parents bounds so that I could avoid problems
+    with horizontal scrolling. \n\nI extracted the code from my portfolio into a small
+    demo below. Have a play around, fork it, steal it, claim it or give a comment.\n\n<p
+    data-height=\"1000\" data-theme-id=\"light\" data-slug-hash=\"dWWppX\" data-default-tab=\"result\"
+    data-user=\"umbriel\" data-embed-version=\"2\" data-pen-title=\"dWWppX\" class=\"codepen\">See
+    the Pen <a href=\"https://codepen.io/umbriel/pen/dWWppX/\">dWWppX</a> by Sebastian
+    Graz (<a href=\"http://codepen.io/umbriel\">@umbriel</a>) on <a href=\"http://codepen.io\">CodePen</a>.</p>\n<script
     async src=\"https://production-assets.codepen.io/assets/embed/ei.js\"></script>"
   :align: left
 :bgColor: "#cec4ff"

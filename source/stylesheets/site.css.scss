@@ -47,6 +47,16 @@
 .abs-rel {
   position: absolute;
 }
+
+.typography {
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
 #home {
   .abs-rel {
     position: relative;

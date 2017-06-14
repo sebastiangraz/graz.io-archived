@@ -22,7 +22,7 @@
     with desktops \n> Analytics shows that 92% of my audience is browsing the website
     from a Desktop device \n\n— Therefore I put extra care catering the desktop experience
     of the site, making sure it looked as good as possible on the big screen. \n\n\n\nThe
-    staple of the website is what I call the Tile:\n\n<ul class=\"tiles mt5 mb-s\">\n
+    staple of the website is what I call the Tile:\n\n<ul class=\"tiles mt-s mb-s\">\n
     \ <li class=\"reveal tile\" style=\"list-style:none; min-width:208px; margin:0
     auto;\">\n    <div class=\"tile-content\" data-color=\"#6F006A\">\n      <h2><span>I
     am a tile</span> on :hover</h2>\n      <span>Yep, this a tile</span>\n    </div>\n\n

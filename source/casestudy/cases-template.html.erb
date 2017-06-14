@@ -11,13 +11,12 @@
 
   <% this.caseStudyContainer.each do | this | %>
     <% if this.key?("textBlock") %>
-    <div class="row">
-      <section class="reveal mt0 mb6 <%= 'mh0 mh3-m mh5-ns' if this.key?('align') %> <%= "case-text-#{this['align']}" if this.key?('align') %>">
-        <div class="case-text w-100 w-70-ns ma0 <%= 'ml0 ml4-ns order-1' if this['align'] == 'right'%> <%= 'mr0 mr4-ns order-1 order-0-ns' if this['align'] == 'left'%>"><%= markdown(this['textBlock']) %></div>
-        <span class="f5 mt4 <%= 'order-0' if this['align'] == 'left'%> <%= 'order-0' if this['align'] == 'right'%>"><%= this['subHeader']%></span>
-      </section>
-    </div>
-
+      <div class="row">
+        <section class="reveal mt0 mb6 <%= 'mh0 mh3-m mh5-ns' if this.key?('align') %> <%= "case-text-#{this['align']}" if this.key?('align') %>">
+          <div class="case-text w-100 w-70-ns ma0 <%= 'ml0 ml4-ns order-1' if this['align'] == 'right'%> <%= 'mr0 mr4-ns order-1 order-0-ns' if this['align'] == 'left'%>"><%= markdown(this['textBlock']) %></div>
+          <span class="f5 mt4 <%= 'order-0' if this['align'] == 'left'%> <%= 'order-0' if this['align'] == 'right'%>"><%= this['subHeader']%></span>
+        </section>
+      </div>
     <% end %>
     <% if this.key?("content") %>
       <div class="cf flex flex-wrap flex-center">
@@ -37,16 +36,15 @@
       </div>
     <% end %>
 
-      <% if this.key?("videoFile")%>
-        <div class="row">
-          <video class="case-video reveal mt6" controls="true">
-            <source src="<%= this.videoFile['url']%>" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      <% end %>
-
+    <% if this.key?("videoFile")%>
+      <div class="row">
+        <video class="case-video reveal mt6" controls="true">
+          <source src="<%= this.videoFile['url']%>" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    <% end %>
   <% end %>
 </div>
 

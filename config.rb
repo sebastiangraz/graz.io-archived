@@ -65,7 +65,6 @@ helpers do
     rgb[2] = (rgb[2].to_i * amount).round
     "#%02x%02x%02x" % rgb
   end
-
 end
 
 class CustomMapper < ContentfulMiddleman::Mapper::Base
@@ -83,15 +82,14 @@ activate :contentful do |f|
   f.rebuild_on_webhook = true
   f.content_types = {
     blog: {mapper: CustomMapper, id: 'blog'},
-    caseStudy: {mapper: CustomMapper, id: 'caseStudy'}
+    caseStudy: {mapper: CustomMapper, id: 'caseStudy'},
+    textTemplate: {mapper: CustomMapper, id: 'textTemplate'}
   }
 end
-
 
 activate :disqus do |d|
   d.shortname = 'sebastiangraz' # Replace with your Disqus shortname.
 end
-
 
 data.site.caseStudy.each do | id, this |
   proxy "/casestudy/#{this.slug}/index.html", "/casestudy/cases-template.html", :locals => { this: this }, :ignore => true
