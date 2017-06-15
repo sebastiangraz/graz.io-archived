@@ -83,7 +83,8 @@ activate :contentful do |f|
   f.content_types = {
     blog: {mapper: CustomMapper, id: 'blog'},
     caseStudy: {mapper: CustomMapper, id: 'caseStudy'},
-    textTemplate: {mapper: CustomMapper, id: 'textTemplate'}
+    textTemplate: {mapper: CustomMapper, id: 'textTemplate'},
+    cvTemplate: {mapper: CustomMapper, id: 'cvTemplate'}
   }
 end
 

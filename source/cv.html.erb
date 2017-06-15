@@ -1,23 +1,66 @@
 <% content_for(:title, 'CV Sebastian Graz') %>
 
 <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
+
+<div class="row">
+  <div class="flex typography flex-row-ns flex-column justify-between">
+    <% data.site.cvTemplate.each do | id, this | %>
+
+
+      <main class="measure-wide fl mt5 mt6-ns pr0 pr4-ns ">
+        <%= markdown(this.cvIntro) %>
+        <ul>
+          <%  this.cvExperiences.each do | this | %>
+            <li class="mv5">
+            <p><%= this.title %></p>
+            <% this.multicontentContainer.each do | this | %>
+              <%= markdown(this.textBlock) %>
+            <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </main>
+
+
+      <aside class="w-100 w-30-ns fl ">
+        <ul class="mv5 mv6-ns">
+        <%  this.cvDetails.each do | this | %>
+          <li class="dib">
+          <p><%= this.title %></p>
+          <% this.multicontentContainer.each do | this | %>
+            <div class="di">
+               <%= markdown(this.textBlock) %>
+            </div>
+          <% end %>
+          </li>
+        <% end %>
+        </ul>
+      </aside>
+
+
+    <% end %>
+  </div>
+</div>
+
+
+<!--
 <div class="row">
   <div class="flex flex-row-ns flex-column justify-between mt6">
     <main class="w-100 w-60-ns fl mb-l">
 
 
       <div class="pbi-avoid">
-        <h2 class="ma0 mv3">Sebastian Graz</h2>
-        <h2 class="ma0 mt5">Product designer with 6 years of experience. My main jam is rapid prototyping, iterative design methodology and branding. </h2>
-        <h2 class="ma0 ti3">I have experience in designing extensive e-commerce projects as well as aesthetic campaign websites. I also dabble in animated videos, 3D imagery and audio production.</h2>
+        <p>Sebastian Grąz</p>
+        <p class="mt3">Product designer with 6 years of experience. My main jam is rapid prototyping, iterative design methodology and branding. </h2>
+        <p class="ti3">I have experience in designing extensive e-commerce projects as well as aesthetic campaign websites. I also dabble in animated videos, 3D imagery and audio production.</h2>
       </div>
 
 
       <div class="">
-        <h2 class="mt5">Experience</h2>
+        <p class="mt5">Experience</p>
 
         <div class="pbi-avoid">
-          <h3 class="f5 ttu cinetype-bold mt5">Feb 2017 - Present <br> Spindrift London, Senior UX Designer </h3>
+          <h3 class="f5 ttu cinetype-bold mt3">Feb 2017 - Present <br> Spindrift London, Senior UX Designer </h3>
           <ul class="list">
             <li>Design and UX consultant for Canon Europe, gathering requirements, wireframing user stories, designing UI/UX solutions</li>
             <li>Responsible for redesigning Canons printer configurator (B2B)</li>
@@ -50,7 +93,7 @@
 
     <aside class="w-100 w-40-ns fl mb-l pl0 pl5-ns">
       <div class="pbi-avoid">
-        <h2>Contact</h2>
+        <p>Contact</p>
         <ul class="list">
           <li><a href="mailto:graz@live.se">graz@live.se</a></li>
           <li>www.graz.io</li>
@@ -60,14 +103,14 @@
       </div>
 
       <div class="pbi-avoid">
-        <h2 class="mt5">Education</h2>
+        <p class="mt5">Education</p>
         <ul class="list">
           <li>University West, Sweden, 2009-2011 — Bachelor of Science w/ major in Informatics.</li>
         </ul>
       </div>
 
       <div class="pbi-avoid">
-        <h2 class="mt5">Awards & Recognitions</h2>
+        <p class="mt5">Awards & Recognitions</p>
         <ul class="list">
           <li>SiteInspire - Featured Portfolio - 2017</li>
           <li>SiteSee - Featured Site - 2017</li>
@@ -80,7 +123,7 @@
       </div>
 
       <div class="pbi-avoid">
-        <h2 class="mt5">Skills</h2>
+        <p class="mt5">Skills</p>
         <ul class="list">
           <li>Front-end development</li>
           <li>UI/UX Design</li>
@@ -93,7 +136,7 @@
       </div>
 
       <div class="pbi-avoid">
-        <h2 class="mt5">Languages</h2>
+        <p class="mt5">Languages</p>
         <ul class="list">
           <li>English — Professional proficiency</li>
           <li>Swedish — Native proficiency</li>
@@ -103,4 +146,4 @@
 
     </aside>
   </div>
-</div>
+</div> -->
