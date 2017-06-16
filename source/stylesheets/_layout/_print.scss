@@ -1,10 +1,21 @@
 @media print {
+  .hide-print{ display:none;}
   .cv {
     .flex {
       display: block;
     }
     .measure-wide {
       max-width: 100%;
+    }
+    .print-main {
+      margin-right: 10%;
+      width: 60%;
+    }
+    .print-aside {
+      width: 30%;
+    }
+    .mt5 {
+      margin-top: 0rem;
     }
   }
   nav {
@@ -30,6 +41,6 @@
     max-width: initial;
   }
   body, html {
-    font-size: 11px;
+    font-size: 9px;
   }
 }

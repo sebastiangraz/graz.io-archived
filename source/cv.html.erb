@@ -3,11 +3,11 @@
 <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
 
 <div class="cv row">
-  <div class=" typography db flex-ns flex-row-ns flex-column justify-between">
+  <div class="typography db flex-ns flex-row-ns flex-column justify-between">
     <% data.site.cvTemplate.each do | id, this | %>
 
 
-      <main class="measure-wide fl mt5 mt6-ns pr0 pr4-ns ">
+      <main class="print-main measure-wide fl mt5 mt6-ns pr0 pr4-ns ">
         <%= markdown(this.cvIntro) %>
         <ul>
           <%  this.cvExperiences.each do | this | %>
@@ -22,8 +22,8 @@
       </main>
 
 
-      <aside class="w-100 w-30-ns fl ">
-        <ul class="mv5 mv6-ns">
+      <aside class="print-aside w-100 w-30-ns fl ">
+        <ul class="mt5 mt6-ns">
         <%  this.cvDetails.each do | this | %>
           <li class="dib w-100">
           <p><%= this.title %></p>
