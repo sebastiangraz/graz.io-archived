@@ -1,5 +1,9 @@
 @media print {
-
+  .cv {
+    .flex {
+      display: block;
+    }
+  }
   nav {
     .navigation {
       position: relative;
@@ -12,19 +16,11 @@
   .menu-items {
     display: none;
   }
-
-  .mt-l {
-    margin-top:0rem;
-  }
   @page {
     size: A4;
     margin: 1.5cm;
   }
-  @page:left{
-    @bottom-left {
-      content: "Page " counter(page) " of " counter(pages);
-    }
-  }
+
   .row {
     width: 100%;
     margin: 0;
