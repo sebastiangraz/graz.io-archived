@@ -1,6 +1,6 @@
 <li class="reveal tile fl <%= 'promoted' if this.promoted == true %>" data-lspacer="<%= this.leftSpacing %>">
   <a class="tile-link" href="<%= dir %><%= this.title.parameterize %>">
-    <div class="tile-content" data-color="<%= this.textColor ? (this.textColor) : ('#999') %>">
+    <div class="tile-content" style="color: <%= this.textColor ? (this.textColor) : ('#999');%>">
 
       <h2><%= this.titleHover.sub(this.title, "<span>#{this.title}</span>")%></h2>
       <h2 class="tile-title">

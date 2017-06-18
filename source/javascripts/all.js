@@ -2,22 +2,54 @@
 
 var $doc = $(document);
 
-$doc.ready(function() {
 
 
-  $('.tile-content').each (function() {
-    var color = $(this).data('color');
-    $(this).css({
-      'color' : color
-    });
+function generateSpacers() {
+  $('.tile').each( function(){
+    var lspacer = $(this).data('lspacer'),
+    rspacer = $(this).data('rspacer');
+
+    var spacer = $('<li />', { "class": 'spacer fl'});
+
+    switch ($(this).data('lspacer')) {
+      case 1:
+      spacer.insertBefore( $( this ) );
+      break;
+      case 2:
+      spacer.insertBefore( $( this ) ).clone().insertBefore( $( this ));
+      break;
+    }
   });
+}
 
-  $('.tile-bg').each( function(){
-    var bgcolor = $(this).data('bgcolor');
-    $(this).css({
-      'background': bgcolor,
-    });
+function generateSpatialCSS() {
+
+  function get_position(e) {
+    var res = new Object();
+    var pos = e.position();
+    res.left = pos.left;
+    res.top = pos.top;
+    res.right =  res.left + e.width() - e.parent().width();
+    res.bottom = res.top + e.height() - e.parent().height();
+    return res;
+  };
+
+  $('.tile').each( function(){
+
+    var leftpos = Math.round(get_position($(this)).left );
+    var rightpos = Math.round(get_position($(this)).right );
+    if(leftpos == 0 ) {
+      $(this).addClass('leftmost');
+    }
+    if(rightpos == 0 ) {
+      $(this).addClass('rightmost');
+    }
+    $(this).addClass('centermost');
   });
+}
+
+
+function fixTouchLinks() {
 
   function isTouchDevice() {
     return 'ontouchstart' in document.documentElement;
@@ -38,98 +70,77 @@ $doc.ready(function() {
       $(this).removeClass('expanded');
     });
   }
+};
 
-  $(function() {
-    $('.tile a').focusin(function(){
-      $(this).parent().addClass('expanded')
-    });
-    $('.tile a').focusout(function(){
-      $(this).parent().removeClass('expanded')
-    });
+function accessibility() {
+  $('.tile a').focusin(function(){
+    $(this).parent().addClass('expanded')
   });
-
-
-  $('.tile').each( function(){
-    var lspacer = $(this).data('lspacer'),
-    rspacer = $(this).data('rspacer');
-
-    var spacer = $('<li />', { "class": 'spacer fl'});
-
-    switch ($(this).data('lspacer')) {
-      case 1:
-      spacer.insertBefore( $( this ) );
-      break;
-      case 2:
-      spacer.insertBefore( $( this ) ).clone().insertBefore( $( this ));
-      break;
-    }
+  $('.tile a').focusout(function(){
+    $(this).parent().removeClass('expanded')
   });
+};
 
-  function get_position(e) {
-    var res = new Object();
-    var pos = e.position();
-    res.left = pos.left;
-    res.top = pos.top;
-    res.right =  res.left + e.width() - e.parent().width();
-    res.bottom = res.top + e.height() - e.parent().height();
-    return res;
-  };
-
-  $('.tile').each( function(){
-
-    var leftpos = Math.round(get_position($(this)).left );
-    var rightpos = Math.round(get_position($(this)).right );
-
-    if(leftpos == 0 ) {
-      $(this).addClass('leftmost');
-    }
-
-    if(rightpos == 0 ) {
-      $(this).addClass('rightmost');
-    }
-
-    $(this).addClass('centermost');
-
+function disqus() {
+  $('.disqus-toggle').on('click', function(e){
+    e.preventDefault();
+    $('.disqus-wrapper').toggleClass('visible');
   });
+};
 
+var BarbaWidget = {
+    init: function() {
+        var scope = this;
+        Barba.Pjax.Dom.wrapperId = 'wrapper'// default as 'barba-wrapper'
+        Barba.Pjax.Dom.containerClass = 'container'// default as 'barba-container'
 
+        Barba.Pjax.start();
+        Barba.Prefetch.init();
 
-  // $(function(){
-  //   $('.tile').viewportChecker({
-  //     classToAdd: 'tiles-visible',
-  //     classToRemove: 'tiles-visible',
-  //     repeat: false
-  //   });
-  //
-  //   $('.case-container .image img').viewportChecker({
-  //     classToAdd: 'image-visible',
-  //     classToRemove: 'image-visible',
-  //     repeat: false
-  //   });
-  // });
+        Barba.Pjax.getTransition = function() {
+            return scope.MovePage;
+        };
+        Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
+          scrollReveal()
+          generateSpacers()
+          generateSpatialCSS()
+        });
+    },
+    MovePage: Barba.BaseTransition.extend({
+        start: function() {
+            Promise.all([this.newContainerLoading]).then(this.movePages.bind(this));
 
-  $(function() {
-    var header = $('.navigation');
-    var caseHeader = $('.case-header').outerHeight();
-    var calcHeader = caseHeader - ( header.outerHeight() + header.position().top ) ;
+        },
+        movePages: function() {
+            document.body.scrollTop = 0;
+            var scope = this;
 
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
+            TweenLite.set(this.newContainer, {
+                visibility: 'visible',
+                xPercent: 100,
+                position: 'absolute',
+                left: 0,
+                top: 0,
+                right: 0
+            });
 
-      if (scroll >= calcHeader) {
-        header.addClass('hidden');
-      } else {
-        header.removeClass('hidden');
-      }
-    });
-  });
+            TweenLite.to(this.oldContainer, 1, { ease: Expo.easeOut, xPercent: -100 });
+            TweenLite.to(this.newContainer, 1, { ease: Expo.easeOut, xPercent: 0, onComplete: function() {
+            TweenLite.set(scope.newContainer, { clearProps: 'all' });
+                scope.done();
+            }});
+        }
+    })
+};
 
-    $(function(){
-      $('.disqus-toggle').on('click', function(e){
-        e.preventDefault();
-        $('.disqus-wrapper').toggleClass('visible');
-      });
-    });
+$doc.ready(function() {
 
+  BarbaWidget.init();
+  generateSpacers()
+  generateSpatialCSS()
+  scrollReveal()
+  fixTouchLinks()
+  disqus()
+  accessibility()
 
 });
