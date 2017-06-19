@@ -90,47 +90,36 @@ function disqus() {
 
 var BarbaWidget = {
     init: function() {
-        var scope = this;
+
         Barba.Pjax.Dom.wrapperId = 'wrapper'// default as 'barba-wrapper'
         Barba.Pjax.Dom.containerClass = 'container'// default as 'barba-container'
-
         Barba.Pjax.start();
         Barba.Prefetch.init();
 
-        Barba.Pjax.getTransition = function() {
-            return scope.MovePage;
-        };
-        Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
-          scrollReveal()
-          generateSpacers()
-          generateSpatialCSS()
+        var Homepage = Barba.BaseView.extend({
+          namespace: 'homepage',
+          onEnter: function() {
+              // The new Container is ready and attached to the DOM.
+          },
+          onEnterCompleted: function() {
+            generateSpacers()
+            generateSpatialCSS()
+            scrollReveal()
+            console.log('onEnterCompleted')
+              // The Transition has just finished.
+          },
+          onLeave: function() {
+              // A new Transition toward a new page has just started.
+          },
+          onLeaveCompleted: function() {
+              // The Container has just been removed from the DOM.
+          }
         });
-    },
-    MovePage: Barba.BaseTransition.extend({
-        start: function() {
-            Promise.all([this.newContainerLoading]).then(this.movePages.bind(this));
 
-        },
-        movePages: function() {
-            document.body.scrollTop = 0;
-            var scope = this;
+        // Don't forget to init the view!
+        Homepage.init();
 
-            TweenLite.set(this.newContainer, {
-                visibility: 'visible',
-                xPercent: 100,
-                position: 'absolute',
-                left: 0,
-                top: 0,
-                right: 0
-            });
-
-            TweenLite.to(this.oldContainer, 1, { ease: Expo.easeOut, xPercent: -100 });
-            TweenLite.to(this.newContainer, 1, { ease: Expo.easeOut, xPercent: 0, onComplete: function() {
-            TweenLite.set(scope.newContainer, { clearProps: 'all' });
-                scope.done();
-            }});
-        }
-    })
+    }
 };
 
 $doc.ready(function() {
@@ -138,9 +127,9 @@ $doc.ready(function() {
   BarbaWidget.init();
   generateSpacers()
   generateSpatialCSS()
-  scrollReveal()
   fixTouchLinks()
   disqus()
   accessibility()
+  scrollReveal()
 
 });

@@ -13,7 +13,6 @@
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.11.0/styles/monokai-sublime.min.css">
 <script src="//cdn.jsdelivr.net/highlight.js/9.11.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
 
   <%= stylesheet_link_tag :tachyons %>
   <%= stylesheet_link_tag :site %>
@@ -26,7 +25,7 @@
 </head>
 
 <body id="wrapper" class="<%= page_classes %>">
-  <div class="container">
+  <div class="container" data-namespace="homepage">
       <%= yield %>
   </div>
 </body>

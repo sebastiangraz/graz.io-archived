@@ -37,4 +37,4 @@ function scrollReveal() {
 
   $(scroll);
   $(window).scroll(scroll);
-} 
+}

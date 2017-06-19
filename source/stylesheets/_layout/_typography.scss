@@ -33,9 +33,13 @@
   src: url('/fonts/GT-Cinetype-Bold.woff') format('woff');
 }
 
-@mixin a {
-  border-bottom: 1px solid;
-  padding-bottom: .375rem;
+@mixin underline {
+  text-decoration-skip: ink;
+  text-decoration: underline;
+}
+
+.underline {
+  @include underline;
 }
 
 .cinetype-bold {
@@ -54,7 +58,7 @@ h3,
 h4 {
   font-weight: 400;
   a {
-    @include a;
+    @include underline;
   }
 }
 
@@ -68,7 +72,7 @@ pre, p {
 p {  margin: 2rem 0;}
 
 p a {
-  @include a;
+  @include underline;
 }
 
 a {
