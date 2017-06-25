@@ -1,10 +1,8 @@
 <% content_for(:title, this.title) %>
-<%= partial "partials/nav", :locals => {:textColor => this.textColor } %>
-<%= partial "partials/case-header" %>
+<div class="container" data-namespace="case">
+  <%= partial "partials/nav", :locals => {:textColor => this.textColor } %>
+  <%= partial "partials/case-header" %>
 
-
-
-<div class="case-container">
   <div class="row">
     <%= partial "partials/case-info" %>
   </div>
@@ -46,8 +44,8 @@
       </div>
     <% end %>
   <% end %>
-</div>
 
-<div class="row">
-  <%= partial(:'partials/footer', :locals => {:content => data.site.caseStudy, :title => 'See more projects', :name => data.site.caseStudy.title}) %>
+  <div class="row">
+    <%= partial(:'partials/footer', :locals => {:content => data.site.caseStudy, :title => 'See more projects', :name => data.site.caseStudy.title}) %>
+  </div>
 </div>

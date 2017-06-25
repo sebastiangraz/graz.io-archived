@@ -1,38 +1,41 @@
 <% content_for(:title, 'Sebastian Graz') %>
 
-<%= partial "partials/nav", :locals => {:textColor => '#000' } %>
+<div class="container" data-namespace="homepage">
 
-<div id="home" class="row flex flex-column">
+  <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
 
-  <div class="mt5 mt6-ns abs-rel">
-    <p>Sebastian Grąz</h1>
-    <p class="db dn-ns ma0 mb4"> Interaction designer and a front-end developer based in London </p>
-  </div>
+  <div id="home" class="row flex flex-column">
 
-  <ul class="tiles cf" id="work">
-    <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.each do |id, this | %>
-      <%= partial "partials/tile", :locals => { :this => this, :dir => '/casestudy/', :secondary => this.year }%>
-    <% end %>
-  </ul>
-
-  <div class="mt6">
-    <div class="flex justify-between items-center-ns flex-column flex-row-ns">
-      <h1 class="f3">Thoughts & experiments <sup><%= data.site.blog.count %></sup></h1>
-      <% if data.site.blog.count > 5%>
-        <a href="/blog" class="mb4 mb0-ns">Read all</a>
-      <% end %>
+    <div class="mt5 mt6-ns abs-rel">
+      <p>Sebastian Grąz</h1>
+      <p class="db dn-ns ma0 mb4"> Interaction designer and a front-end developer based in London </p>
     </div>
+
+    <ul class="tiles cf" id="work">
+      <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.each do |id, this | %>
+        <%= partial "partials/tile", :locals => { :this => this, :dir => '/casestudy/', :secondary => this.year }%>
+      <% end %>
+    </ul>
+
+    <div class="mt6">
+      <div class="flex justify-between items-center-ns flex-column flex-row-ns">
+        <h1 class="f3">Thoughts & experiments <sup><%= data.site.blog.count %></sup></h1>
+        <% if data.site.blog.count > 5%>
+          <a href="/blog" class="mb4 mb0-ns">Read all</a>
+        <% end %>
+      </div>
+    </div>
+
+    <ul class="tiles cf" id="blog">
+      <% data.site.blog.take(5).each do |id, this | %>
+        <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%a #{this.postedDate.day.ordinalize}")} %>
+      <% end %>
+    </ul>
+
+    <div id="about" class="typography flex flex-column">
+      <%= partial "partials/about" %>
+    </div>
+    <%= partial "partials/link-footer" %>
+
   </div>
-
-  <ul class="tiles cf" id="blog">
-    <% data.site.blog.take(5).each do |id, this | %>
-      <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%a #{this.postedDate.day.ordinalize}")} %>
-    <% end %>
-  </ul>
-
-  <div id="about" class="typography flex flex-column">
-    <%= partial "partials/about" %>
-  </div>
-  <%= partial "partials/link-footer" %>
-
 </div>

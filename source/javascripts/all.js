@@ -72,7 +72,7 @@ function fixTouchLinks() {
   }
 };
 
-function accessibility() {
+function tileHover() {
   $('.tile a').focusin(function(){
     $(this).parent().addClass('expanded')
   });
@@ -96,6 +96,37 @@ var BarbaWidget = {
         Barba.Pjax.start();
         Barba.Prefetch.init();
 
+
+        Barba.Dispatcher.on('initStateChange', function(currentStatus) {
+          //your listener
+          console.log(currentStatus)
+        });
+
+        var Case = Barba.BaseView.extend({
+          namespace: 'case',
+          onEnter: function() {
+              // The new Container is ready and attached to the DOM.
+          },
+          onEnterCompleted: function() {
+            generateSpacers()
+            generateSpatialCSS()
+            scrollReveal()
+            tileHover()
+            disqus()
+            fixTouchLinks()
+            hljs.initHighlighting.called = false;
+            //hljs.initHighlighting();
+            console.log('onEnterCompleted case')
+              // The Transition has just finished.
+          },
+          onLeave: function() {
+              // A new Transition toward a new page has just started.
+          },
+          onLeaveCompleted: function() {
+              // The Container has just been removed from the DOM.
+          }
+        });
+
         var Homepage = Barba.BaseView.extend({
           namespace: 'homepage',
           onEnter: function() {
@@ -105,7 +136,9 @@ var BarbaWidget = {
             generateSpacers()
             generateSpatialCSS()
             scrollReveal()
-            console.log('onEnterCompleted')
+            tileHover()
+            fixTouchLinks()
+            console.log('onEnterCompleted homepage')
               // The Transition has just finished.
           },
           onLeave: function() {
@@ -118,6 +151,7 @@ var BarbaWidget = {
 
         // Don't forget to init the view!
         Homepage.init();
+        Case.init();
 
     }
 };
@@ -125,11 +159,12 @@ var BarbaWidget = {
 $doc.ready(function() {
 
   BarbaWidget.init();
+  hljs.initHighlightingOnLoad();
   generateSpacers()
   generateSpatialCSS()
   fixTouchLinks()
   disqus()
-  accessibility()
+  tileHover()
   scrollReveal()
 
 });

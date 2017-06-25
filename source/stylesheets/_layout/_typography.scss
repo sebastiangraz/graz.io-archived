@@ -62,14 +62,14 @@ h4 {
   }
 }
 
-pre, p {
+p {
   font-size: calc(100% + 8 * ((100vw - 320px) / (#{$mq-lg} - 320)));
   @include mq(lg) {
     font-size: 1.5rem;
   };
+  margin: 2rem 0;
 }
 
-p {  margin: 2rem 0;}
 
 p a {
   @include underline;
@@ -87,6 +87,10 @@ a {
 i, blockquote, em {
   font-family: 'Cinetype-Italic', sans-serif;
   font-style: normal;
+}
+
+code {
+  overflow: auto;
 }
 
 code, pre {
