@@ -2,7 +2,17 @@
 
 var $doc = $(document);
 
-
+function videoInView() {
+  inView('.case-video')
+      .on('enter', el => {
+        el.play()
+        console.log('play video')
+      })
+      .on('exit', el => {
+        el.pause()
+        console.log('pause video')
+      });
+}
 
 function generateSpacers() {
   $('.tile').each( function(){
@@ -109,6 +119,7 @@ var BarbaWidget = {
           },
           onEnterCompleted: function() {
             generateSpacers()
+            videoInView()
             generateSpatialCSS()
             scrollReveal()
             tileHover()
@@ -156,8 +167,11 @@ var BarbaWidget = {
     }
 };
 
+
 $doc.ready(function() {
 
+
+  videoInView()
   BarbaWidget.init();
   hljs.initHighlightingOnLoad();
   generateSpacers()

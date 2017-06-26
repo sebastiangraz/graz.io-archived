@@ -4,7 +4,7 @@
 :titleHover: 'Me and my friends created an app called Heyplace. '
 :thumbnail:
   :title: case-heyplace
-  :description:
+  :description: 
   :url: "//images.contentful.com/y77stanzu634/3XLdghGZaEgQIMuACYmqK0/1fa77f2920d249b307e04bec10aa2e32/case-heyplace.png"
 :tags:
 - Side projects
@@ -22,7 +22,7 @@
   :imageName: heyplace-grid
   :mediaContainer:
     :title: overview
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/6GwKWNWYyQeIYswcIQEeEK/bc7b7873b5db2a18f86db7b6dd331906/overview.jpg"
 - :id: 6QIrOkCRVe4wcsYwSigIQm
   :textBlock: |-
@@ -35,25 +35,25 @@
   :imageName: log in
   :mediaContainer:
     :title: log-in
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/5nG4Sb7eh2gyMYI8We6ws6/b7ac85f441a2c5e58b32a234431bccb0/log-in.jpg"
 - :id: 35CooYgc6cu68UQi8iYKom
   :imageName: map view
   :mediaContainer:
     :title: map-view
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/61MxNmf7P28UaIOIMgKcUU/3133408415a0250682ca7c5cda76760c/map-view.jpg"
 - :id: 47luotqis8MYci060yo4CA
   :imageName: misc view
   :mediaContainer:
     :title: misc-view
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/2ki5piKCPKu4Gi0ia2akQ6/a55a99d374fc5f5fe8ff5d4d06402296/misc-view.jpg"
 - :id: 1XGiUmTN7Os2OYYKmQkgue
   :imageName: camera
   :mediaContainer:
     :title: camera
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/13mKWvQ986iIaYUkq4musA/99d18adffb56a1a0255919ee04797793/camera.jpg"
 - :id: 1LfvVd0r6Q8meGuCOiWaIw
   :textBlock: The user may swipe through from a selection of filters to enchance the
@@ -64,7 +64,7 @@
   :imageName: icons
   :mediaContainer:
     :title: iconography
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/5bnExr5yqQuwGk46Eokk0i/f5399040cc98e5f091eb626acd44cb17/iconography.jpg"
 - :id: KbGbu3FogmKEayKycwogs
   :textBlock: The iconography was designed to be elegant and simple. In addition we
