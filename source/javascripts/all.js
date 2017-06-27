@@ -4,12 +4,12 @@ var $doc = $(document);
 
 function videoInView() {
   inView('.case-video')
-      .on('enter', el => {
-        el.play()
+      .on('enter', function(el) {
+        return el.play();
         console.log('play video')
       })
-      .on('exit', el => {
-        el.pause()
+      .on('exit', function(el) {
+        return el.pause();
         console.log('pause video')
       });
 }
