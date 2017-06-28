@@ -36,7 +36,7 @@
 
     <% if this.key?("videoFile")%>
       <div class="row">
-        <video class="case-video reveal mt6" preload="none" paused loop>
+        <video class="case-video reveal mt6" poster="<%= this.videoThumbnail['url']%>" preload="none" paused loop>
           <source src="<%= this.videoFile['url']%>" type="video/mp4">
           <source src="movie.ogg" type="video/ogg">
           Your browser does not support the video tag.

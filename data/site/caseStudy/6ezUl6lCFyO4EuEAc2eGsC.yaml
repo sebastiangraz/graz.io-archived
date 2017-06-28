@@ -4,7 +4,7 @@
 :titleHover: I helped design and code The Poetry Hour
 :thumbnail:
   :title: case-poetry
-  :description:
+  :description: 
   :url: "//images.contentful.com/y77stanzu634/2woND5IZyIqque4S4COI4i/2829edd1a57a31e5dd7ae0f3c904ddb5/case-poetry.png"
 :tags:
 - Rebranding
@@ -23,13 +23,13 @@
   :imageName: overview
   :mediaContainer:
     :title: overview
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/3UsVninNZuCukKACysMs82/83246541409d9e22f130419c6d5c170c/overview.jpg"
 - :id: 5QL45I9V9m8iYksq68sC2I
   :imageName: homepage
   :mediaContainer:
     :title: homepage
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/1f2jVmALb4kya8CMKSgyeo/3f92b432d099377f6bda98f0a37536ad/homepage.jpg"
 - :id: TNj4nNnnK8Woac8CukC04
   :textBlock: The home page is adorned with a content slider, featuring a random poetry
@@ -41,8 +41,12 @@
   :title: poem select line video
   :videoFile:
     :title: poem select line video
-    :description:
+    :description: 
     :url: "//videos.contentful.com/y77stanzu634/1pU6LQ5aCkiogq2Eis8ssM/5809bc9d822699dcf1d280d44da6c46a/poem-select-line3.mp4"
+  :videoThumbnail:
+    :title: poem page poster
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/5W8Sy29RtYKkmMkeuQAWOc/ceb24d2c5ead8cc2f665262b15854f21/poster.jpg"
 - :id: 5gcQMdRcVq4E6AuMyeyw8A
 - :id: 6qqZL0A5pu8IWEKSAsy2cy
   :textBlock: "The poem page was designed to achieve two things \n\n- Reading poetry\n-
@@ -55,7 +59,7 @@
   :imageName: meme-creator
   :mediaContainer:
     :title: meme-creator
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/5DY9QQghUI8QIIKSWmMW0Y/20da4d43f0b9e9d8667c6c17b28e89e7/meme-creator.jpg"
 - :id: 3uwHGUJuD68Q2Gc0YkUKio
   :textBlock: "The user can create their own Memes through the website with the ability
@@ -70,13 +74,13 @@
   :imageName: mobile-meme
   :mediaContainer:
     :title: mobile-meme
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/4neomqJNNKkyWCUkwmsCMG/c79b8564b0bcec540400cf541523903a/mobile-meme.jpg"
 - :id: 356CGD5nXi4u2e228mqqsC
   :imageName: narrators
   :mediaContainer:
     :title: narrators
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/5t0b0rJf320EWGKMkIIGck/52a29fdac830fc68905bb7fa3b6ab5a2/narrators.jpg"
 - :id: unhzVHPGLY2Q0GKgQQuig
   :textBlock: Another big part of the website is the famed narrators. Celebrities
@@ -87,7 +91,7 @@
   :imageName: search
   :mediaContainer:
     :title: search
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/4PmKtrPvjaM0gsCQAaUCCw/55fcb730a73bbf84ae7caa555d3131bc/search.jpg"
 - :id: IbP1vSqHIYMeCaIOIqwa4
   :textBlock: Every corner of the website is searchable. The search results are divided
@@ -98,13 +102,13 @@
   :imageName: styleguide
   :mediaContainer:
     :title: styleguide
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/2xZAcyaZ1u2U4iua24sa8y/47c5167de772d827d389ffa63d412abc/styleguide.jpg"
 - :id: 4OzkxV1U3mEIuUc0EocyUO
   :imageName: icons
   :mediaContainer:
     :title: iconography
-    :description:
+    :description: 
     :url: "//images.contentful.com/y77stanzu634/3HbCD2tVSom24KYgWo4qGU/be865b03c93fe40bf5aab1e1abf46179/iconography.jpg"
 - :id: LgYPaoOlgq6qu0UgsIcoG
   :textBlock: The iconography set for poetry was created to be as legible as possible
