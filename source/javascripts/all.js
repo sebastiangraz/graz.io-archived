@@ -2,6 +2,13 @@
 
 var $doc = $(document);
 
+function detectMobile() {
+  var isMobile = false;
+  if (/Mobi/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent)) {
+    isMobile = true
+    $('html').addClass('is-mobile');
+  }
+}
 function videoInView() {
   inView('.case-video')
       .on('enter', function(el) {
@@ -118,6 +125,7 @@ var BarbaWidget = {
               // The new Container is ready and attached to the DOM.
           },
           onEnterCompleted: function() {
+            detectMobile()
             generateSpacers()
             videoInView()
             generateSpatialCSS()
@@ -144,6 +152,7 @@ var BarbaWidget = {
               // The new Container is ready and attached to the DOM.
           },
           onEnterCompleted: function() {
+            detectMobile()
             generateSpacers()
             generateSpatialCSS()
             scrollReveal()
@@ -170,7 +179,7 @@ var BarbaWidget = {
 
 $doc.ready(function() {
 
-
+  detectMobile()
   videoInView()
   BarbaWidget.init();
   hljs.initHighlightingOnLoad();
