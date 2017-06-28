@@ -55,12 +55,17 @@
     automatically select the first verse."
   :subHeader: Poem page
   :align: left
-- :id: 2K7ucb7EWcqAUk4WayaUMi
-  :imageName: meme-creator
-  :mediaContainer:
-    :title: meme-creator
+- :id: 2NRM3AJj5SqkiOoS4mgcmm
+  :title: meme creator video
+  :videoFile:
+    :title: meme-creator-video
     :description: 
-    :url: "//images.contentful.com/y77stanzu634/5DY9QQghUI8QIIKSWmMW0Y/20da4d43f0b9e9d8667c6c17b28e89e7/meme-creator.jpg"
+    :url: "//videos.contentful.com/y77stanzu634/5taMUTGR3icwYIossaqOQ0/a6416257fded21780b6f9d1f327ea9ca/meme-creator.mp4"
+  :videoThumbnail:
+    :title: meme-creator-poster
+    :description: 
+    :url: "//images.contentful.com/y77stanzu634/1jXMUN2TfeoiQSqiQW4Oy0/acc6657954110b32a9224a6849596c04/meme-creator-poster.jpg"
+- :id: 2K7ucb7EWcqAUk4WayaUMi
 - :id: 3uwHGUJuD68Q2Gc0YkUKio
   :textBlock: "The user can create their own Memes through the website with the ability
     to customise the font, text colour, font size, and text position. \n\n![meme creator
@@ -124,5 +129,5 @@
 :year: 2016
 :order: 2
 :content_type_id: caseStudy
-:updated_at: Jun 25th — 2017
+:updated_at: Jun 28th — 2017
 :slug: the-poetry-hour
