@@ -81,7 +81,22 @@
   .tile-link {
     position: static;
   }
+  .tile-video {
+    transition: .4s $bezier all;
+    width: 70%;
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+    right: 0;
+    z-index: 3;
 
+    @include mq(md) {
+      opacity: 0;
+    }
+    video::-webkit-media-controls-start-playback-button {
+      display: none;
+    }
+  }
   .tile-image {
     transition: .4s $bezier all;
     width: 50%;
@@ -131,6 +146,12 @@
     position: relative;
     z-index: 2;
     .tile-image {
+      @include mq(md) {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+    .tile-video {
       @include mq(md) {
         opacity: 1;
         transform: translate(0, 0);

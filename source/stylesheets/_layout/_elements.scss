@@ -10,7 +10,8 @@ body {
 video {
   width: 100%;
   background-size:cover;
-  background: #eee;
+  background: transparent;
+  display: block;
 }
 
 img {

@@ -83,8 +83,10 @@ function fixTouchLinks() {
   else {
     $('.tile').on('mouseover', function(){
       $(this).addClass('expanded');
+      $(this).find('video').trigger('play');
     }).on('mouseleave', function(){
       $(this).removeClass('expanded');
+      $(this).find('video').trigger('pause');
     });
   }
 };
@@ -152,6 +154,7 @@ var BarbaWidget = {
               // The new Container is ready and attached to the DOM.
           },
           onEnterCompleted: function() {
+            videoInView()
             detectMobile()
             generateSpacers()
             generateSpatialCSS()

@@ -3,9 +3,13 @@
 :title: The Poetry Hour
 :titleHover: I helped design and code The Poetry Hour
 :thumbnail:
-  :title: case-poetry
+  :title: poetry-poster
   :description: 
-  :url: "//images.contentful.com/y77stanzu634/2woND5IZyIqque4S4COI4i/2829edd1a57a31e5dd7ae0f3c904ddb5/case-poetry.png"
+  :url: "//images.contentful.com/y77stanzu634/oA6aj45oGWGEWGUa8QOi2/0ed21df6c24803000ca08cfedd250978/Comp_1_2.png"
+:videoThumbnail:
+  :title: video thumbnail of the poetry hour
+  :description: 
+  :url: "//videos.contentful.com/y77stanzu634/3xeSFKdCEMAWeiyywEek8i/f057b1dc8738cb78f820fea26b3a125c/Comp_1_2.mp4"
 :tags:
 - Rebranding
 - Responsive
@@ -49,10 +53,10 @@
     :url: "//images.contentful.com/y77stanzu634/5W8Sy29RtYKkmMkeuQAWOc/ceb24d2c5ead8cc2f665262b15854f21/poster.jpg"
 - :id: 5gcQMdRcVq4E6AuMyeyw8A
 - :id: 6qqZL0A5pu8IWEKSAsy2cy
-  :textBlock: "The poem page was designed to achieve two things \n\n- Reading poetry\n-
-    Creating Memes\n\nThe user may create a Meme by either selecting the text, or
-    be guided into creating a meme by clicking the create Meme button, which will
-    automatically select the first verse."
+  :textBlock: "The poem page was designed to achieve two things \n\nReading poetry\nCreating
+    Memes\n\nThe user may create a Meme by either selecting the text, or be guided
+    into creating a meme by clicking the create Meme button, which will automatically
+    select the first verse."
   :subHeader: Poem page
   :align: left
 - :id: 2NRM3AJj5SqkiOoS4mgcmm
@@ -60,7 +64,7 @@
   :videoFile:
     :title: meme-creator-video
     :description: 
-    :url: "//videos.contentful.com/y77stanzu634/5taMUTGR3icwYIossaqOQ0/a6416257fded21780b6f9d1f327ea9ca/meme-creator.mp4"
+    :url: "//videos.contentful.com/y77stanzu634/5taMUTGR3icwYIossaqOQ0/50d9ddf3f4de910f3088fbcf6a8d963b/meme-creator_2.mp4"
   :videoThumbnail:
     :title: meme-creator-poster
     :description: 
@@ -129,5 +133,5 @@
 :year: 2016
 :order: 2
 :content_type_id: caseStudy
-:updated_at: Jun 28th — 2017
+:updated_at: Jul 1st — 2017
 :slug: the-poetry-hour

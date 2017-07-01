@@ -8,10 +8,19 @@
       </span>
     </div>
     <div class="tile-bg" >
-      <% if this.key? :thumbnail %>
-        <div class="tile-image">
-          <%= partial(:'partials/image', :locals => { :imageurl => this.thumbnail['url'], :alt => this.thumbnail['title'] }) %>
+      <% if this.key? :videoThumbnail %>
+        <div class="tile-video">
+          <video loop poster="<%= this.thumbnail['url'] %>">
+            <source src="<%= this.videoThumbnail['url'] %>" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
+      <% else %>
+        <% if this.key? :thumbnail %>
+          <div class="tile-image">
+            <%= partial(:'partials/image', :locals => { :imageurl => this.thumbnail['url'], :alt => this.thumbnail['title'] }) %>
+          </div>
+        <% end %>
       <% end %>
       <div class="tile-cover" style="background: <%= this.bgColor ? (this.bgColor) : ('#000') %> ">
       </div>
