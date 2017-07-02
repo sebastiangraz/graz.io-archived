@@ -10,7 +10,7 @@
     <div class="tile-bg" >
       <% if this.key? :videoThumbnail %>
         <div class="tile-video">
-          <video loop poster="<%= this.thumbnail['url'] %>">
+          <video playsinline loop poster="<%= this.thumbnail['url'] %>">
             <source src="<%= this.videoThumbnail['url'] %>" type="video/mp4">
             Your browser does not support the video tag.
           </video>

@@ -10,7 +10,7 @@ function detectMobile() {
   }
 }
 function videoInView() {
-  inView('.case-video')
+  inView('.in-view-video')
       .on('enter', function(el) {
         return el.play();
         console.log('play video')
@@ -75,8 +75,10 @@ function fixTouchLinks() {
   if (isTouchDevice()) {
     $('.tile').on('touchstart', function(){
       $(this).addClass('expanded');
+      $(this).find('video').trigger('play');
     }).on('touchend', function(){
       $(this).removeClass('expanded');
+      $(this).find('video').trigger('pause');
     });
   }
 
