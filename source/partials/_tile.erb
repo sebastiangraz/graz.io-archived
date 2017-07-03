@@ -25,7 +25,7 @@
       <div class="tile-cover" style="background: <%= this.bgColor ? (this.bgColor) : ('#000') %> ">
       </div>
       <% color = darken_color(this.bgColor, amount=0.6) %>
-      <div class="tile-shadow" style="box-shadow: 0px 36px 48px -32px <%= hex_to_rgb(color)  %>;">
+      <div class="tile-shadow" style="background-color: <%= hex_to_rgb(color)%>; box-shadow:<%= hex_to_rgb(color)%> 0px 2px 2px, <%= hex_to_rgb(color)%> 0px 4px 4px, <%= hex_to_rgb(color)%> 0px 8px 8px, <%= hex_to_rgb(color)%> 0px 16px 16px, <%= hex_to_rgb(color)%> 0px 32px 32px, <%= hex_to_rgb(color)%> 0px 64px 64px;">
 
       </div>
     </div>

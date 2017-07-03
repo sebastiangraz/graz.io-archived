@@ -1,5 +1,7 @@
 <% content_for(:title, 'CV Sebastian Graz') %>
 
+<div class="container" data-namespace="homepage">
+
 <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
 
 <div class="cv row">
@@ -8,11 +10,11 @@
 
 
       <main class="print-main measure-wide fl mt5 mt6-ns pr0 pr4-ns ">
-        <%= markdown(this.cvIntro) %>
+        <p><%= markdown(this.cvIntro) %></p>
         <ul>
           <%  this.cvExperiences.each do | this | %>
-            <li class="mv5">
-            <p><%= this.title %></p>
+            <li>
+            <span class="f4 f3-ns mv4 dib"><%= this.title %></span>
             <% this.multicontentContainer.each do | this | %>
               <%= markdown(this.textBlock) %>
             <% end %>
@@ -26,9 +28,9 @@
         <ul class="mt5 mt6-ns">
         <%  this.cvDetails.each do | this | %>
           <li class="dib w-100">
-          <p><%= this.title %></p>
+          <span class="f4 f3-ns mv4 dib"><%= this.title %></span>
           <% this.multicontentContainer.each do | this | %>
-            <div class="di">
+            <div>
                <%= markdown(this.textBlock) %>
             </div>
           <% end %>
@@ -40,4 +42,6 @@
 
     <% end %>
   </div>
+</div>
+
 </div>

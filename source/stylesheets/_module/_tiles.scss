@@ -83,7 +83,7 @@
   }
   .tile-video {
     transition: .4s $bezier all;
-    width: 70%;
+    width: 50%;
     bottom: 0;
     position: absolute;
     opacity: 1;
@@ -92,6 +92,7 @@
 
     @include mq(md) {
       opacity: 0;
+      width: 70%;
     }
     video::-webkit-media-controls-start-playback-button {
       display: none;
@@ -180,7 +181,7 @@
       transform: scale(1.25);
     }
     .tile-shadow {
-      opacity: .6;
+      opacity: .4;
     }
   }
 }

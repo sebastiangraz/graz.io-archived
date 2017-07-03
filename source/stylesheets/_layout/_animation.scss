@@ -1,12 +1,12 @@
-@keyframes fadeInDown {
-  from {transform: translateY(-1rem); opacity: 0}
+@keyframes fadeInUp {
+  from {transform: translateY(1rem); opacity: 0}
   to {transform: translateY(0); opacity: 1}
 }
 
-.fadeInDown {
-  animation-name: fadeInDown;
+.fadeInUp {
+  animation-name: fadeInUp;
   animation-duration: .8s;
   animation-timing-function: $bezier;
-  animation-delay: .2s;
+  animation-delay: .4s;
   animation-fill-mode: backwards;
 }

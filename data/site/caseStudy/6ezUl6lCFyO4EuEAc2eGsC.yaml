@@ -5,11 +5,11 @@
 :thumbnail:
   :title: poetry-poster
   :description: 
-  :url: "//images.contentful.com/y77stanzu634/oA6aj45oGWGEWGUa8QOi2/0ed21df6c24803000ca08cfedd250978/Comp_1_2.png"
+  :url: "//images.contentful.com/y77stanzu634/oA6aj45oGWGEWGUa8QOi2/1d6175dc3be98e8d4a33b9df6fa7bde5/poster.jpg"
 :videoThumbnail:
   :title: video thumbnail of the poetry hour
   :description: 
-  :url: "//videos.contentful.com/y77stanzu634/3xeSFKdCEMAWeiyywEek8i/f057b1dc8738cb78f820fea26b3a125c/Comp_1_2.mp4"
+  :url: "//videos.contentful.com/y77stanzu634/3xeSFKdCEMAWeiyywEek8i/89a9da98f9a4c83dfa78a8bb1f539ced/Comp_1_3.mp4"
 :tags:
 - Rebranding
 - Responsive
@@ -133,5 +133,5 @@
 :year: 2016
 :order: 2
 :content_type_id: caseStudy
-:updated_at: Jul 1st — 2017
+:updated_at: Jul 3rd — 2017
 :slug: the-poetry-hour

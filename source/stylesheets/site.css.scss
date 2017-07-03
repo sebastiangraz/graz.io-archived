@@ -64,7 +64,31 @@
     };
   }
 }
-
+.object-fit-contain {
+  object-fit: contain;
+}
+.case-char-wrapper {
+  i {
+    display: flex;
+  }
+}
+.char-image {
+  width: percentage(10/12);
+  position: relative;
+  margin-left: auto;
+}
+.case-char-padding {
+  padding: .175em;
+}
+.case-char {
+  display: flex;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  transform: translateY(80px);
+  &.reveal_visible {
+    transform: translateY(0);
+  }
+}
 .case-info {
   margin-bottom: 3rem;
   @include mq(md) {

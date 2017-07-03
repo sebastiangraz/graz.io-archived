@@ -55,7 +55,7 @@ helpers do
   def hex_to_rgb(input)
     a = ( input.match /#(..?)(..?)(..?)/ )[1..3]
     a.map!{ |x| x + x } if input.size == 4
-    return "rgb(#{a[0].hex},#{a[1].hex},#{a[2].hex})"
+    return "rgba(#{a[0].hex},#{a[1].hex},#{a[2].hex}, .25)"
   end
   def darken_color(hex_color, amount=0.4)
     hex_color = hex_color.gsub('#','')
