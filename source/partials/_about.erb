@@ -8,7 +8,7 @@
     <% if this.value?("3 column about") %>
       <section class="g3">
         <% this.multicontentContainer.each do | this | %>
-          <section class="mt5 mt6-ns"><%= markdown(this['textBlock']) %></section>
+          <section class="mt5 mt6-ns nested-list-reset nested-copy-line-height"><%= markdown(this['textBlock']) %></section>
         <% end %>
       </section>
     <% end %>

@@ -62,7 +62,7 @@ h4 {
   }
 }
 
-p {
+p, .auto-size li {
   font-size: calc(100% + 8 * ((100vw - 320px) / (#{$mq-lg * 16} - 320)));
   @include mq(lg) {
     font-size: 1.5rem;

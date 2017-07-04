@@ -15,10 +15,26 @@
 - Visual Designer
 :caseStudyContainer:
 - :id: 3jomjduZ3OYk2mIQ0Wa46E
-  :textBlock: |-
-    # Case coming soon
-
-    Meanwhile contact me at [graz@live.se](mailto:graz@live.se) for more info
+  :textBlock: "When someone is unfamiliar with Delhaize I usually compare it to Waitrose,
+    but in Belgium. It draws a pretty good picture of what Delhaize is — A modern
+    grocery store on the pricey-side of the scale.  \n\nDuring my time at This Place,
+    I had the opportunity to work on a number projects with Delhaize. Most notably,
+    the complete redesign of the whole website to be more responsive & usable. Yet
+    my favourite project was guerrilla-testing the checkout process with real users.
+    \n\n\nThe Challenge.\n\n- Handling multiple browser sizes, which are nearing infinity
+    in different combinations \n- The UI had to consider many different languages,
+    even non-latin ones like Greek \n- The design had to conform to the different
+    markets which in turn had their own design language \n- The site itself had to
+    load reliably on spotty connections, given the surge of mobile users \n- And it
+    had to be easy to use and not frustrate the users\n\nA keen designer can learn
+    much from a vast project like this when there are that many aspects to consider.
+    \n\nWhen we started this monster of a project, the first natural step for us was
+    to analyse the competitors. At the time we realised that most big-brand grocery
+    stores in the UK didn't have a responsive website.  \n\nSure some of them had
+    a separate mobile version. But never a responsive website with viewports ranging
+    all the way from desktop to mobile. We we're on our own. \n\nParallel to this
+    project, Delhaize launched an initiative to innovate their checkout process. Namely,
+    they wanted it to be more snappy and faster on mobile devices."
 :bgColor: "#1D9E48"
 :textColor: "#044017"
 :leftSpacing: 1

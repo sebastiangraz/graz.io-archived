@@ -5,11 +5,11 @@
 <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
 
 <div class="cv row">
-  <div class="typography db flex-ns flex-row-ns flex-column justify-between">
+  <div class="mb5 nested-list-reset nested-copy-line-height db flex-ns flex-row-ns flex-column justify-between">
     <% data.site.cvTemplate.each do | id, this | %>
 
 
-      <main class="print-main measure-wide fl mt5 mt6-ns pr0 pr4-ns ">
+      <main class="print-main measure-wide fl mt5 mt6-ns pr0 pr4-ns">
         <p><%= markdown(this.cvIntro) %></p>
         <ul>
           <%  this.cvExperiences.each do | this | %>

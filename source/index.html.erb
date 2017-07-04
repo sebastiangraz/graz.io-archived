@@ -11,7 +11,7 @@
       <p class="db dn-ns ma0 mb4"> Interaction designer and a front-end developer based in London </p>
     </div>
 
-    <ul class="tiles cf" id="work">
+    <ul class="tiles pa0 ma0 cf" id="work">
       <% data.site.caseStudy.sort_by{ |id, e| e['order'] }.each do |id, this | %>
         <%= partial "partials/tile", :locals => { :this => this, :dir => '/casestudy/', :secondary => this.year }%>
       <% end %>
@@ -19,20 +19,20 @@
 
     <div class="mt6">
       <div class="flex justify-between items-center-ns flex-column flex-row-ns">
-        <h1 class="f3">Thoughts & experiments <sup><%= data.site.blog.count %></sup></h1>
+        <p>Thoughts & experiments <sup><%= data.site.blog.count %></sup></p>
         <% if data.site.blog.count > 5%>
           <a href="/blog" class="mb4 mb0-ns">Read all</a>
         <% end %>
       </div>
     </div>
 
-    <ul class="tiles cf" id="blog">
+    <ul class="tiles pa0 ma0 cf" id="blog">
       <% data.site.blog.take(5).each do |id, this | %>
         <%= partial "partials/tile", :locals => { :this => this, :dir => '/blog/', :secondary => this.postedDate.strftime("%a #{this.postedDate.day.ordinalize}")} %>
       <% end %>
     </ul>
 
-    <div id="about" class="typography flex flex-column">
+    <div id="about" class="flex flex-column">
       <%= partial "partials/about" %>
     </div>
     <%= partial "partials/link-footer" %>

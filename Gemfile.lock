@@ -91,6 +91,7 @@ GEM
       i18n (~> 0.7.0)
       listen (~> 3.0.0)
       memoist (~> 0.14)
+      middleman-core (~> 4.0)
       padrino-helpers (~> 0.13.0)
       parallel
       rack (>= 1.4.5, < 3)
@@ -98,7 +99,6 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
-      middleman-core (~> 4.0)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)

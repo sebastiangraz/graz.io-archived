@@ -72,11 +72,10 @@
 - :id: 2K7ucb7EWcqAUk4WayaUMi
 - :id: 3uwHGUJuD68Q2Gc0YkUKio
   :textBlock: "The user can create their own Memes through the website with the ability
-    to customise the font, text colour, font size, and text position. \n\n![meme creator
-    color svg](//images.contentful.com/y77stanzu634/27APmAyHqQQAkYOicSCaKe/f6553b60be6bcae8baa7292b9031045f/Frame.svg)\n\nThe
-    website does some minor hand holding in terms of Meme image aesthetics to ensure
-    the Memes look pleasant. For instance the user may only choose colours that suit
-    the average colour of the image that the user has chosen.\n\n"
+    to customise the font, text colour, font size, and text position. \n\nThe website
+    does some minor hand holding in terms of Meme image aesthetics to ensure the Memes
+    look pleasant. For instance the user may only choose colours that suit the average
+    colour of the image that the user has chosen.\n\n"
   :subHeader: Meme creator
   :align: left
 - :id: 6mrwDS4wdU8MoIUCowS2YG
@@ -84,7 +83,16 @@
   :mediaContainer:
     :title: mobile-meme
     :description: 
-    :url: "//images.contentful.com/y77stanzu634/4neomqJNNKkyWCUkwmsCMG/c79b8564b0bcec540400cf541523903a/mobile-meme.jpg"
+    :url: "//images.contentful.com/y77stanzu634/4neomqJNNKkyWCUkwmsCMG/d034eb3fc7be5e83ddf0be7fd4bb9740/poem-responsive.jpg"
+- :id: 1zrjRsrW7mOCkk4UqMee8a
+  :textBlock: "A great challenge for us was to develop a Meme creator that works on
+    any screen. The solution was eventually brought forward through extensive prototyping
+    and testing every edge-case. Our device-agnostic approach also forced us to pick
+    technologies that would work on any device slimming down our tech options significantly.
+    \n\nIn the end we ended up using `canvas` and `webGL` stacks to help generating
+    the Memes. \n"
+  :subHeader: Mobile Meme Creator
+  :align: left
 - :id: 356CGD5nXi4u2e228mqqsC
   :imageName: narrators
   :mediaContainer:
@@ -133,5 +141,5 @@
 :year: 2016
 :order: 2
 :content_type_id: caseStudy
-:updated_at: Jul 3rd — 2017
+:updated_at: Jul 4th — 2017
 :slug: the-poetry-hour

@@ -47,15 +47,6 @@
   position: absolute;
 }
 
-.typography {
-  ul {
-    list-style: none;
-    li {
-      margin-bottom: 1rem;
-    }
-  }
-}
-
 #home {
   .abs-rel {
     position: relative;
@@ -78,7 +69,7 @@
   margin-left: auto;
 }
 .case-char-padding {
-  padding: .05em .175em;
+  padding: .1em .2em;
 }
 .case-char {
   display: flex;
