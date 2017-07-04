@@ -7,7 +7,6 @@ ruby "2.3.1"
 gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'redcarpet'
 gem 'fastimage'
-gem "middleman-disqus"
 
 # Windows does not come with time zone data
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]

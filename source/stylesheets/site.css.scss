@@ -126,28 +126,3 @@
   padding: 6%;
   text-rendering: geometricPrecision;
 }
-
-
-.disqus-wrapper {
-  height: 0;
-  visibility: hidden;
-  &.visible {
-    height: auto;
-    visibility: visible;
-  }
-}
-.disqus-toggle {
-  &:hover {
-    svg {
-      fill: #000;
-    }
-  }
-  svg {
-    fill: $link-color;
-  }
-  margin:3rem 0;
-  width: 100%;
-  p {
-    margin: 0 0 0 1rem;
-  }
-}

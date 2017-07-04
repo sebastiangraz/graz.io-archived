@@ -102,13 +102,6 @@ function tileHover() {
   });
 };
 
-function disqus() {
-  $('.disqus-toggle').on('click', function(e){
-    e.preventDefault();
-    $('.disqus-wrapper').toggleClass('visible');
-  });
-};
-
 var BarbaWidget = {
     init: function() {
 
@@ -135,11 +128,9 @@ var BarbaWidget = {
             generateSpatialCSS()
             scrollReveal()
             tileHover()
-            disqus()
             fixTouchLinks()
             hljs.initHighlighting.called = false;
-            //hljs.initHighlighting();
-            console.log('onEnterCompleted case')
+            hljs.initHighlighting();
               // The Transition has just finished.
           },
           onLeave: function() {
@@ -191,7 +182,6 @@ $doc.ready(function() {
   generateSpacers()
   generateSpatialCSS()
   fixTouchLinks()
-  disqus()
   tileHover()
   scrollReveal()
 
