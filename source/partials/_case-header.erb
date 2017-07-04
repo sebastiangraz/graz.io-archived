@@ -1,5 +1,15 @@
 <% color = darken_color(this.bgColor, amount=0.6) %>
 
+<%
+sentence = this.titleHover
+words  = this.title.split
+
+sentence = sentence.split(/\W+/)
+sentence.map! do |word|
+  words.include?(word) ? "<span style=background:#{this.bgColor} class='f2 f1-m f-subheadline-ns case-char case-char-padding'>#{word}</span>" : "<span style=background:#{this.bgColor} class='f2 f1-m f-subheadline-ns case-char case-char-padding reveal'>#{word}</span>"
+end
+
+%>
 <div class="case-header">
   <div class="row">
       <div class="measure f4 f3-ns relative pt6 pt6-m pt6-l lh-title relative" style="color:<%= this.textColor ? (this.textColor) : ('#999') %>">
@@ -7,10 +17,9 @@
           <span class="f4 fadeInUp mb4 dib"><%= subheader %></span>
         <% end %>
         <h1 class="case-char-wrapper ma0 ma0-m flex flex-wrap">
-          <% wrapped = word_wrap(this.titleHover.sub(this.title, "<i>#{this.title}</i>"), line_width: 1)%>
-          <% splitted = wrapped.each_line.each do | lines |%>
-            <span style="background:<%= this.bgColor ? (this.bgColor) : ('#000') %>;" class="f2 f1-m f-subheadline-ns case-char case-char-padding reveal"><%= lines %></span>
-          <% end %>
+
+        <%= sentence.join(' ') %>
+
 
           <% if this.key? :thumbnail %>
             <span style="background-color:<%= this.bgColor ? (this.bgColor) : ('#000') %>;" class="w3 w4-ns case-char reveal">

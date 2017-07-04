@@ -78,13 +78,15 @@
   margin-left: auto;
 }
 .case-char-padding {
-  padding: .175em;
+  padding: .05em .175em;
 }
 .case-char {
   display: flex;
   margin-right: 1px;
   margin-bottom: 1px;
-  transform: translateY(80px);
+  &.reveal {
+    transform: translateY(80px);
+  }
   &.reveal_visible {
     transform: translateY(0);
   }
