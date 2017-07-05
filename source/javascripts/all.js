@@ -114,7 +114,9 @@ var BarbaWidget = {
         Barba.Dispatcher.on('initStateChange', function(currentStatus) {
           //your listener
           console.log(currentStatus)
+          ga('send', 'pageview', location.pathname);
         });
+
 
         var Case = Barba.BaseView.extend({
           namespace: 'case',
