@@ -98,6 +98,15 @@ data.site.blog.each do | id, this |
 end
 
 
+
+  activate :gibberish do |gibberish|
+  # set the default password
+
+    gibberish.password = 'gibberish'
+    gibberish.encrypt 'casestudy/canon/index.html'
+
+  end
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
