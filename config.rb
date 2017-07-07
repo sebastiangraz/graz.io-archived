@@ -5,7 +5,11 @@
 activate :directory_indexes
 
 set :relative_links, false  #should be true
+
 set :images_dir, 'images'
+set :js_dir, 'assets/javascript'
+set :css_dir, 'assets/stylesheets'
+
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, auto_ids: false
 
@@ -97,11 +101,18 @@ data.site.blog.each do | id, this |
   proxy "/blog/#{this.slug}/index.html", "/blog/blog-template.html", :locals => { this: this }, :ignore => true
 end
 
+activate :external_pipeline,
+           name: :webpack,
+           command: build? ? "yarn run build" : "yarn run start",
+           source: ".tmp/dist",
+           latency: 1
+
+
 
 # Build-specific configuration
-configure :build do
-  # Minify CSS on build
-  activate :minify_css
-  # Minify Javascript on build
-  activate :minify_javascript
-end
+# configure :build do
+#   # Minify CSS on build
+#   activate :minify_css
+#   # Minify Javascript on build
+#   activate :minify_javascript
+# end

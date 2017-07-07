@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+@import "var";
+@import "_layout/mq";
+//@import "_layout/normalize";
+@import "_layout/elements";
+@import "_layout/typography";
+@import "_layout/utilities";
+@import "_layout/flex";
+@import "_layout/widths";
+@import "_layout/grid";
+@import "_layout/animation";
+
+@import "_module/nav";
+@import "_module/tiles";
+@import "_module/case-header";
+@import "_module/image";
+@import "_module/file-share";
+
+@import "_layout/print";
+
+@import "~tachyons/css/tachyons.css";
+
+.case-image {
+  transform: translateY(80px);
+  &.reveal_visible {
+    transform: translateY(0);
+  }
+}
+.case-text {
+  &-right, &-left {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    span {
+      &:before {
+        content: '—';
+        display: block;
+        line-height: 1;
+        margin-bottom: .25rem
+      }
+    }
+    @include mq(sm) {
+      flex-direction: row
+    };
+  }
+}
+.abs-rel {
+  position: absolute;
+}
+
+#home {
+  .abs-rel {
+    position: relative;
+    @include mq(md) {
+      position: absolute;
+    };
+  }
+}
+.object-fit-contain {
+  object-fit: contain;
+}
+.case-char-wrapper {
+  i {
+    display: flex;
+  }
+}
+.char-image {
+  width: percentage(10/12);
+  position: relative;
+  margin-left: auto;
+}
+.case-char-padding {
+  padding: .1em .2em;
+}
+.case-char {
+  display: flex;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  &.reveal {
+    transform: translateY(80px);
+  }
+  &.reveal_visible {
+    transform: translateY(0);
+  }
+}
+.case-info {
+  margin-bottom: 3rem;
+  @include mq(md) {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include mq(lg) {
+    margin-top: 0rem;
+    margin-bottom: 6rem;
+    margin-left: auto;
+    width: percentage(6/12);
+  }
+
+  li p {
+    margin: 0.5rem 0;
+  }
+  & > * {
+    max-width: 17rem;
+    &:first-child {
+      margin-bottom: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.blog-wrapper {
+  h1, h2, h3, h4 {margin-top:5rem;}
+  max-width: 640px;
+}
+
+.hljs {
+  padding: 6%;
+  text-rendering: geometricPrecision;
+}

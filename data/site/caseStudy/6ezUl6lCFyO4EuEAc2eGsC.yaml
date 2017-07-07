@@ -9,7 +9,7 @@
 :videoThumbnail:
   :title: video thumbnail of the poetry hour
   :description: 
-  :url: "//videos.contentful.com/y77stanzu634/3xeSFKdCEMAWeiyywEek8i/89a9da98f9a4c83dfa78a8bb1f539ced/Comp_1_3.mp4"
+  :url: "//videos.contentful.com/y77stanzu634/3xeSFKdCEMAWeiyywEek8i/3c76ca70cae052c37742434943d52808/Comp_1_3.mp4"
 :tags:
 - Rebranding
 - Responsive
@@ -135,11 +135,11 @@
   :subHeader: Iconography
   :align: left
 :bgColor: "#ffffff"
-:textColor: "#014EFE"
+:textColor: "#005BFF"
 :leftSpacing: 2
 :promoted: true
 :year: 2016
 :order: 2
 :content_type_id: caseStudy
-:updated_at: Jul 4th — 2017
+:updated_at: Jul 5th — 2017
 :slug: the-poetry-hour

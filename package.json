@@ -1,31 +1,38 @@
 {
   "name": "portfolio-prototype",
   "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "in-view": "^0.6.1",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.6",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "tachyons": "^4.7.4",
+    "webpack": "^3.1.0"
+  },
   "scripts": {
-    "start": "npm run autoprefixer && npm run minifycss",
-    "prestart": "npm run clean",
-    "autoprefixer": "postcss -u autoprefixer -r build/stylesheets/*",
-    "minifycss": "cleancss -o build/stylesheets/site-min.css build/stylesheets/*",
-    "clean": "rimraf build/stylesheets/*",
-    "build": "bundle exec middleman build --clean"
+    "start": "NODE_ENV=development ./node_modules/webpack/bin/webpack.js --watch -d --color",
+    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/umbriel/portfolio-prototype.git"
   },
-  "author": "Sebastian Graz",
-  "license": "UNLICENSED",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/umbriel/portfolio-prototype/issues"
   },
-  "homepage": "https://github.com/umbriel/portfolio-prototype#readme",
-  "devDependencies": {
-    "autoprefixer": "^6.6.0",
-    "clean-css": "^3.4.23",
-    "postcss-cli": "^2.6.0",
-    "rimraf": "^2.5.4"
-  },
-  "main": "index.js",
-  "dependencies": {},
-  "description": ""
+  "homepage": "https://github.com/umbriel/portfolio-prototype#readme"
 }
