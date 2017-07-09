@@ -92,13 +92,17 @@ activate :contentful do |f|
   }
 end
 
-
-data.site.caseStudy.each do | id, this |
-  proxy "/casestudy/#{this.slug}/index.html", "/casestudy/cases-template.html", :locals => { this: this }, :ignore => true
+# Dir.exist?(config.data_dir) checks if the data exists, needed for freshly closed repos
+if Dir.exist?(config.data_dir)
+  data.site.caseStudy.each do | id, this |
+    proxy "/casestudy/#{this.slug}/index.html", "/casestudy/cases-template.html", :locals => { this: this }, :ignore => true
+  end
 end
 
-data.site.blog.each do | id, this |
-  proxy "/blog/#{this.slug}/index.html", "/blog/blog-template.html", :locals => { this: this }, :ignore => true
+if Dir.exist?(config.data_dir)
+  data.site.blog.each do | id, this |
+    proxy "/blog/#{this.slug}/index.html", "/blog/blog-template.html", :locals => { this: this }, :ignore => true
+  end
 end
 
 activate :external_pipeline,
