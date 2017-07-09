@@ -4,7 +4,7 @@ Sebastian Graz's personal portfolio
 Commands:
 
 Get started
-`yarn install && middleman contentful && bundle install`
+`yarn install && bundle install && middleman contentful`
 
 Spin a server
 `middleman server`
