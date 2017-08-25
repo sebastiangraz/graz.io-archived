@@ -13,6 +13,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "in-view": "^0.6.1",
     "jquery": "^3.2.1",
+    "markdown-code-highlight-loader": "^1.0.1",
     "node-sass": "^4.5.3",
     "postcss": "^6.0.6",
     "postcss-loader": "^2.0.6",

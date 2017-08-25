@@ -29,6 +29,7 @@
   left: 0;
   width: 100%;
   transform: scale(0);
+  will-change: transform;
   height: 100%;
   position : absolute;
 }

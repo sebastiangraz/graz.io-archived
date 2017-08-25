@@ -69,6 +69,14 @@ helpers do
     rgb[2] = (rgb[2].to_i * amount).round
     "#%02x%02x%02x" % rgb
   end
+  def imageRatioCalc(image)
+    imageSize = FastImage.size("http:#{image}")
+    width = imageSize[0]
+    height = imageSize[1]
+    calc = height.fdiv(width) * 100 # 1.33%
+    return paddingBottom = calc.to_i
+    # aspectRatio = calc.to_r.rationalize(Rational('0.001'))
+  end
 end
 
 class CustomMapper < ContentfulMiddleman::Mapper::Base

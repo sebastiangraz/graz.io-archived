@@ -1,20 +1,20 @@
-<div class="w-100 w-100-m w-50-l ml-auto mv5 mv6-ns flex justify-end flex-column flex-row-ns justify-between">
+<div class="w-100 w-100-m w-60-l ml-auto mv5 mv6-ns flex justify-end flex-column flex-row-ns justify-between">
   <% if this.key?('tags') %>
-    <div>
+    <div class="w-50 mr5">
       <span class="f6 mb3 dib">Tags — </span>
       <ul class="list pa0 ma0">
         <% this.tags.each do |tag| %>
-          <li class="f4 f3-ns"><%= tag %></li>
+          <li class="f4 f3-ns bb pb3"><%= tag %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
   <% if this.key?('roles') %>
-    <div class="mt3 mt0-ns pl4-ns">
+    <div class="w-50">
       <span class="f6 mb3 dib">Roles — </span>
       <ul class="list pa0 ma0">
         <% this.roles.each do |tag| %>
-          <li class="f4 f3-ns"><%= tag %></li>
+          <li class="f4 f3-ns bb pb3"><%= tag %></li>
         <% end %>
       </ul>
     </div>

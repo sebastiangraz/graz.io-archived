@@ -12,6 +12,16 @@ function detectMobile() {
     $('html').addClass('is-mobile');
   }
 }
+function fadeFixed() {
+  var fadeFixed = document.querySelector(".fade-fixed");
+  window.onscroll = function (e) {
+    if (window.scrollY > 100) {
+      fadeFixed.classList.add("o-0");
+    } else {
+      fadeFixed.classList.remove("o-0");
+    }
+  };
+}
 function videoInView() {
   inView('.in-view-video')
       .on('enter', function(el) {
@@ -127,15 +137,13 @@ var BarbaWidget = {
               // The new Container is ready and attached to the DOM.
           },
           onEnterCompleted: function() {
-            detectMobile()
-            generateSpacers()
-            videoInView()
-            generateSpatialCSS()
-            scrollReveal()
-            tileHover()
-            fixTouchLinks()
-            hljs.initHighlighting.called = false;
-            hljs.initHighlighting();
+            detectMobile();
+            generateSpacers();
+            videoInView();
+            generateSpatialCSS();
+            scrollReveal();
+            tileHover();
+            fixTouchLinks();
               // The Transition has just finished.
           },
           onLeave: function() {
@@ -152,14 +160,15 @@ var BarbaWidget = {
               // The new Container is ready and attached to the DOM.
           },
           onEnterCompleted: function() {
-            videoInView()
-            detectMobile()
-            generateSpacers()
-            generateSpatialCSS()
-            scrollReveal()
-            tileHover()
-            fixTouchLinks()
-            console.log('onEnterCompleted homepage')
+            fadeFixed();
+            videoInView();
+            detectMobile();
+            generateSpacers();
+            generateSpatialCSS();
+            scrollReveal();
+            tileHover();
+            fixTouchLinks();
+            console.log('onEnterCompleted homepage');
               // The Transition has just finished.
           },
           onLeave: function() {
@@ -179,15 +188,14 @@ var BarbaWidget = {
 
 
 $doc.ready(function() {
-
-  detectMobile()
-  videoInView()
+  fadeFixed();
+  detectMobile();
+  videoInView();
   BarbaWidget.init();
-  hljs.initHighlightingOnLoad();
-  generateSpacers()
-  generateSpatialCSS()
-  fixTouchLinks()
-  tileHover()
-  scrollReveal()
+  generateSpacers();
+  generateSpatialCSS();
+  fixTouchLinks();
+  tileHover();
+  scrollReveal();
 
 });
