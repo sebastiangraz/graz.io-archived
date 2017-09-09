@@ -12,10 +12,22 @@
 
 
 @font-face {
-  font-family: 'Norse-Regular';
+  font-family: 'Norse-Light';
   font-weight: 100;
-  src: url('/fonts/Norse-Regular.woff') format('woff');
+  src: url('/fonts/Norse-Light.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Norse-Medium';
+  font-weight: 100;
+  src: url('/fonts/Norse-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Norse-Bold';
+  font-weight: 100;
+  src: url('/fonts/Norse-Bold.woff') format('woff');
+}
+
 
 @font-face {
   font-family: 'Cinetype-Mono';
@@ -33,7 +45,8 @@
 }
 
 body {
-  font-family: 'Cinetype-Regular', sans-serif;
+  font-family: 'Norse-medium', sans-serif;
+  font-feature-settings: "ss01";
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
 }
@@ -43,7 +56,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 400;
+  font-family: 'Norse-Bold', sans-serif;
   a {
     @include underline;
   }

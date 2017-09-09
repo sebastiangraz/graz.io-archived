@@ -6,7 +6,7 @@ words  = this.title.split
 
 sentence = sentence.split(/\W+/)
 sentence.map! do |word|
-  words.include?(word) ? "<span style=background:#{this.bgColor} class='f2 f1-m f-subheadline-ns case-char case-char-padding'>#{word}</span>" : "<span style=background:#{this.bgColor} class='f2 f1-m f-subheadline-ns case-char case-char-padding reveal'>#{word}</span>"
+  words.include?(word) ? "<span style='background:#{this.bgColor};' class='f2 f1-m f-subheadline-ns case-char case-char-padding'>#{word}</span>" : "<span style='background:#{this.bgColor};' class='f2 f1-m f-subheadline-ns case-char case-char-padding reveal'>#{word}</span>"
 end
 
 %>
