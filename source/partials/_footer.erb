@@ -1,5 +1,5 @@
 <footer class="mv5">
-  <h3 class="mb4 f3"><%= title %></h3>
+  <div class="mb4 f3"><%= title %></div>
   <ul class="tiles cf pa0">
     <% content.sort_by{ |index| rand }.reject{ | id, item| item == this }.each do |id, this| %>
     <%= partial "partials/tile", :locals => { :this => this, :dir => "/#{this.content_type_id.downcase}/", :secondary => 'View' } %>

@@ -1,38 +1,12 @@
 @font-face {
-  font-family: 'Cinetype-Regular';
-  font-weight: 100;
-  src: url('/fonts/GT-Cinetype-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cinetype-Italic';
-  font-weight: 100;
-  src: url('/fonts/GT-Cinetype-Regular-Italic.woff') format('woff');
-}
-
-
-@font-face {
-  font-family: 'Norse-Light';
-  font-weight: 100;
-  src: url('/fonts/Norse-Light.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Norse-Medium';
-  font-weight: 100;
+  font-family: 'Norse';
+  font-weight: normal;
   src: url('/fonts/Norse-Medium.woff') format('woff');
 }
 @font-face {
-  font-family: 'Norse-Bold';
-  font-weight: 100;
+  font-family: 'Norse';
+  font-weight: bold;
   src: url('/fonts/Norse-Bold.woff') format('woff');
-}
-
-
-@font-face {
-  font-family: 'Cinetype-Mono';
-  font-weight: 100;
-  src: url('/fonts/GT-Cinetype-Mono.woff') format('woff');
 }
 
 @mixin underline {
@@ -45,10 +19,15 @@
 }
 
 body {
-  font-family: 'Norse-medium', sans-serif;
-  font-feature-settings: "ss01";
+  font-family: 'Norse', sans-serif;
+  font-feature-settings: "ss01", "dlig";
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant-numeric: oldstyle-nums;
 }
 
 
@@ -56,7 +35,6 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Norse-Bold', sans-serif;
   a {
     @include underline;
   }
@@ -85,7 +63,6 @@ a {
 }
 
 i, blockquote, em {
-  font-family: 'Cinetype-Italic', sans-serif;
   font-style: normal;
 }
 
@@ -94,7 +71,5 @@ code {
 }
 
 code, pre {
-  font-family: 'Cinetype-Mono', sans-serif;
   font-style: normal;
-  letter-spacing: -1px;
 }

@@ -116,12 +116,12 @@
     }
   }
 
-  h2>span {
+  .tile-title > span {
     visibility: visible;
     display: inline-block;
   }
 
-  h2 {
+  .tile-title {
     font-size: 1.25rem;
     margin: 0;
     visibility: hidden;
@@ -159,7 +159,7 @@
         transform: translate(0, 0);
       }
     }
-    h2 {
+    .tile-title {
       visibility: visible;
     }
   }
