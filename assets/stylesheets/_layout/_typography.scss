@@ -9,6 +9,11 @@
   src: url('/fonts/GT-Cinetype-Bold.woff') format('woff');
 }
 @font-face {
+  font-family: 'Cinetype';
+  font-style: italic;
+  src: url('/fonts/GT-Cinetype-Regular-Italic.woff') format('woff');
+}
+@font-face {
   font-family: 'Cinetype-Mono';
   src: url('/fonts/GT-Cinetype-Mono.woff') format('woff');
 }
@@ -68,7 +73,7 @@ a {
 }
 
 i, blockquote, em {
-  font-style: normal;
+  font-style: italic;
 }
 
 code {
@@ -79,7 +84,7 @@ pre > code {
   font-family: 'Cinetype-Mono', sans-serif;
   font-feature-settings: "ss01", "zero";
   font-style: normal;
-  padding: 2rem 1rem;
+  padding: 1.5rem;
   background: #222;
   display: block;
   color: #fff;
