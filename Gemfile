@@ -15,3 +15,5 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', '>= 4.2.0'
 gem 'middleman-livereload'
 gem 'contentful_middleman', :git => 'https://github.com/contentful/contentful_middleman.git', :branch => 'v4-1.x-stable'
+
+# gem 'contentful_middleman', :git => 'https://github.com/contentful/contentful_middleman.git', :branch => 'v4-1.x-stable'

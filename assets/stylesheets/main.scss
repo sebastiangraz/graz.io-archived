@@ -36,25 +36,21 @@ $mq-sm : 30;
   }
 }
 .case-text {
+  transform: translateY(80px);
+  &.reveal_visible {
+    transform: translateY(0);
+  }
   &-right, &-left {
     flex-direction: column;
     display: flex;
     justify-content: space-between;
-    span {
-      &:before {
-        content: '—';
-        display: block;
-        line-height: 1;
-        margin-bottom: .25rem
-      }
-    }
     @include mq(sm) {
       flex-direction: row
     };
   }
 }
 .abs-rel {
-  position: fixed;
+  position: absolute;
 }
 .transition {
   transition: .3s $bezier all;
@@ -63,7 +59,7 @@ $mq-sm : 30;
   .abs-rel {
     position: relative;
     @include mq(md) {
-      position: fixed;
+      position: absolute;
     };
   }
 }
@@ -71,7 +67,12 @@ $mq-sm : 30;
   object-fit: contain;
 }
 
-
+.video-description {
+  p {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
 
 .case-char-wrapper {
   i {

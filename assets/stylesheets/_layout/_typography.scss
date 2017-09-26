@@ -1,12 +1,16 @@
 @font-face {
-  font-family: 'Norse';
+  font-family: 'Cinetype';
   font-weight: normal;
-  src: url('/fonts/Norse-Medium.woff') format('woff');
+  src: url('/fonts/GT-Cinetype-Regular.woff') format('woff');
 }
 @font-face {
-  font-family: 'Norse';
+  font-family: 'Cinetype';
   font-weight: bold;
-  src: url('/fonts/Norse-Bold.woff') format('woff');
+  src: url('/fonts/GT-Cinetype-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Cinetype-Mono';
+  src: url('/fonts/GT-Cinetype-Mono.woff') format('woff');
 }
 
 @mixin underline {
@@ -19,15 +23,15 @@
 }
 
 body {
-  font-family: 'Norse', sans-serif;
-  font-feature-settings: "ss01", "dlig";
+  font-family: 'Cinetype', sans-serif;
+  font-feature-settings: "ss01", "zero", "onum";
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-variant-numeric: oldstyle-nums;
+  // font-variant-numeric: oldstyle-nums;
 }
 
 
@@ -35,6 +39,7 @@ h1,
 h2,
 h3,
 h4 {
+  font-weight: normal;
   a {
     @include underline;
   }
@@ -70,6 +75,12 @@ code {
   overflow: auto;
 }
 
-code, pre {
+pre > code {
+  font-family: 'Cinetype-Mono', sans-serif;
+  font-feature-settings: "ss01", "zero";
   font-style: normal;
+  padding: 2rem 1rem;
+  background: #222;
+  display: block;
+  color: #fff;
 }
