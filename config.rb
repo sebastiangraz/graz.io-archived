@@ -92,6 +92,7 @@ activate :contentful do |f|
   f.access_token = 'e300c3de976fa349df685a08973ded272eb0cbb2dd3423ba2ee48753e1bc4ac5'
   f.space = { site: 'y77stanzu634'}
   f.rebuild_on_webhook = true
+  f.cda_query = { limit: 1000 }
   f.content_types = {
     blog: {mapper: CustomMapper, id: 'blog'},
     caseStudy: {mapper: CustomMapper, id: 'caseStudy'},
