@@ -63,6 +63,9 @@ nav {
 }
 
 .logo {
+  background: #4267b2;
+  padding: 0.5rem;
+  border-radius: 2px;
   &:focus {
     box-shadow: none;
     opacity: 0.4;
