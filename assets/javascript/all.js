@@ -114,6 +114,10 @@ var BarbaWidget = {
         Barba.Pjax.start();
         Barba.Prefetch.init();
 
+        Barba.Dispatcher.on('newPageReady', function(current, prev, container) {
+            history.scrollRestoration = 'manual';
+            window.scrollTo(0, 0);
+        });
 
         Barba.Dispatcher.on('initStateChange', function(currentStatus) {
           //your listener
@@ -121,32 +125,8 @@ var BarbaWidget = {
           ga('send', 'pageview', location.pathname);
         });
 
-
-        var Case = Barba.BaseView.extend({
-          namespace: 'case',
-          onEnter: function() {
-              // The new Container is ready and attached to the DOM.
-          },
-          onEnterCompleted: function() {
-            detectMobile();
-            generateSpacers();
-            videoInView();
-            generateSpatialCSS();
-            scrollReveal();
-            tileHover();
-            fixTouchLinks();
-              // The Transition has just finished.
-          },
-          onLeave: function() {
-              // A new Transition toward a new page has just started.
-          },
-          onLeaveCompleted: function() {
-              // The Container has just been removed from the DOM.
-          }
-        });
-
-        var Homepage = Barba.BaseView.extend({
-          namespace: 'homepage',
+        var Global = Barba.BaseView.extend({
+          namespace: 'global',
           onEnter: function() {
               // The new Container is ready and attached to the DOM.
           },
@@ -158,7 +138,7 @@ var BarbaWidget = {
             scrollReveal();
             tileHover();
             fixTouchLinks();
-            console.log('onEnterCompleted homepage');
+    
               // The Transition has just finished.
           },
           onLeave: function() {
@@ -170,8 +150,7 @@ var BarbaWidget = {
         });
 
         // Don't forget to init the view!
-        Homepage.init();
-        Case.init();
+        Global.init();
 
     }
 };

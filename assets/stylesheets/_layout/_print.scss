@@ -1,4 +1,7 @@
 @media print {
+  .logo {
+    width: .6cm;
+  }
   .hide-print{ display:none;}
   .cv {
     .flex {
@@ -8,8 +11,8 @@
       max-width: 100%;
     }
     .print-main {
-      margin-right: 10%;
-      width: 60%;
+      margin-right: 15%;
+      width: 55%;
     }
     .print-aside {
       width: 30%;
@@ -32,7 +35,7 @@
   }
   @page {
     size: A4;
-    margin: 1.5cm;
+    margin: 1.8cm;
   }
 
   .row {

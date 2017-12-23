@@ -5,7 +5,7 @@
 activate :directory_indexes
 
 set :relative_links, false  #should be true
-
+set(:port, 5678)
 set :images_dir, 'images'
 set :js_dir, 'assets/javascript'
 set :css_dir, 'assets/stylesheets'

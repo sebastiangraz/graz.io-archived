@@ -28,8 +28,9 @@
 }
 
 body {
+  color: $text-color;
   font-family: 'Cinetype', sans-serif;
-  font-feature-settings: "ss01", "zero", "onum";
+  font-feature-settings: "zero", "onum", "calt";
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   font-kerning: normal;
@@ -68,7 +69,7 @@ a {
   color: $link-color;
   position: relative;
   &:hover {
-    color : #000;
+    color : darken($link-color, 60%);
   }
 }
 
