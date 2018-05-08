@@ -1,44 +1,43 @@
 <% content_for(:title, 'CV Sebastian Graz') %>
 
 <div class="container" data-namespace="global">
-
 <%= partial "partials/nav", :locals => {:textColor => '#000' } %>
 
 <div class="cv row">
-  <div class="mb5 nested-list-reset nested-copy-line-height db flex-ns flex-row-ns flex-column justify-between">
+  <div class="mt6 mb5 nested-list-reset nested-copy-line-height flex-m flex-l justify-between">
     <% data.site.cvTemplate.each do | id, this | %>
 
-
-      <main class="print-main measure-wide fl mt5 mt6-ns pr0 pr4-ns">
-        <p><%= markdown(this.cvIntro) %></p>
+      <main class="print-main w-60-l fl">
+        <p class="o-50 mb0 da">Sebastian Grąz</p>
+        <div class="w-100 dib mb5">
+          <%= markdown(this.cvIntro) %>
+        </div>
         <ul>
-          <%  this.cvExperiences.each do | this | %>
-            <li>
-            <span class="f4 f3-ns mt4 mb3 dib"><%= this.title %></span>
-            <% this.multicontentContainer.each do | this | %>
-              <%= markdown(this.textBlock) %>
-            <% end %>
+          <% this.cvExperiences.each do | this | %>
+            <li class="flex flex-wrap mb4">
+            <span class="w-100 w-30-l mt0 o-50 mb3 dib"><%= this.title %></span>
+            <div class="w-100 w-70-l pl0 pl4-l">
+              <% this.multicontentContainer.each do | this | %>
+                <%= markdown(this.textBlock) %>
+              <% end %>
+            </div>
             </li>
           <% end %>
         </ul>
       </main>
 
-
-      <aside class="print-aside w-100 w-30-ns fl ">
-        <ul class="mt5 mt6-ns">
+      <aside class="print-aside pl0 pl5-m w-25-l fl">
+        <ul class="ma0">
         <%  this.cvDetails.each do | this | %>
           <li class="dib w-100">
-          <span class="f4 f3-ns mt4 mb3 dib"><%= this.title %></span>
+          <span class="o-50 mt4 mb3 dib"><%= this.title %></span>
           <% this.multicontentContainer.each do | this | %>
-            <div>
-               <%= markdown(this.textBlock) %>
-            </div>
+             <%= markdown(this.textBlock) %>
           <% end %>
           </li>
         <% end %>
         </ul>
       </aside>
-
 
     <% end %>
   </div>
