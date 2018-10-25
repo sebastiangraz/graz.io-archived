@@ -1,0 +1,17 @@
+@media (prefers-color-scheme: dark) {
+    body {
+      background: #111;
+      color: #999;
+    }
+    a {
+        color: #fff;
+        &:hover {
+            color: darken(#fff, 20%);
+        }
+    }
+    nav {
+        #logo {
+            stroke: #999;
+        }
+    }
+  }

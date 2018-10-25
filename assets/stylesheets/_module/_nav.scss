@@ -1,4 +1,7 @@
 nav {
+  #logo {
+    stroke: $text-color;
+  }
   .navigation {
     pointer-events: none;
     width: 100%;
