@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: dark) {
     body {
-      background: #111;
-      color: #999;
+      background: rgb(25, 25, 26);
+      color: rgb(200, 208, 220);
     }
     a {
         color: #fff;
@@ -11,7 +11,10 @@
     }
     nav {
         #logo {
-            stroke: #999;
+            stroke: rgb(200, 208, 220);;
         }
+    }
+    .link-footer img {
+        filter: invert(1);
     }
   }
