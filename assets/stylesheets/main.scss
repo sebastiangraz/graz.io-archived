@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-$text-color : #362f3e;
+$text-color : #000; //362f3e
 $max-width : 960px;
 $link-color : rgba($text-color, 0.6);
 $bezier: cubic-bezier(.03, .82, .34, .99);
@@ -88,10 +88,12 @@ $mq-sm : 30;
   margin-left: auto;
 }
 .case-char-padding {
-  padding: .1em .2em;
+  padding: 0 .15em;
 }
 .case-char {
+  letter-spacing: -0.04em;
   display: flex;
+  font-weight: 100;
   margin-right: 1px;
   margin-bottom: 1px;
   &.reveal {
