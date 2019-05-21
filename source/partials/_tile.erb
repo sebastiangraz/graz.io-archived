@@ -1,4 +1,4 @@
-<li class="reveal tile fl <%= 'promoted' if this.promoted == true %>" data-lspacer="<%= this.leftSpacing %>">
+<li class="reveal tile fl <%= 'promoted' if this.promoted %>" data-lspacer="<%= this.leftSpacing %>">
   <a class="tile-link" href="<%= dir %><%= this.title.parameterize %>">
     <div class="tile-content" style="color: <%= this.textColor ? (this.textColor) : ('#999');%>">
       <div class="tile-title"><%= this.titleHover.sub(this.title, "<span>#{this.title}</span>")%></div>
@@ -12,8 +12,8 @@
     </div>
     <div class="tile-bg" >
       <% if this.key? :videoThumbnail %>
-        <div class="tile-video">
-          <video playsinline loop poster="<%= this.thumbnail['url'] %>">
+        <div class="tile-video <%= "full-width-video" if this.fullwidthVideo %>">
+          <video playsinline muted loop poster="<%= this.thumbnail['url'] %>">
             <source src="<%= this.videoThumbnail['url'] %>" type="video/mp4">
             Your browser does not support the video tag.
           </video>

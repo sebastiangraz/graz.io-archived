@@ -13,12 +13,13 @@ end
 <div class="case-header">
   <div class="row">
       <div class="f4 f3-ns relative pt6 pt6-m pt6-l lh-title relative mw6-m measure center">
-        <% if locals.key?(:subheader) %>
-          <span class="f4 fadeInUp mb4 dib"><%= subheader %></span>
-        <% end %>
+
         <h1 class="case-char-wrapper pt5 flex flex-wrap justify-center">
           <%= sentence.join(' ') %>
         </h1>
+        <% if locals.key?(:subheader) %>
+          <div class="f4 fadeInUp mb4 dib tc w-100"><%= subheader %></div>
+        <% end %>
       </div>
   </div>
 </div>

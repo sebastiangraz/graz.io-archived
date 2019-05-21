@@ -40,8 +40,8 @@
     <% end %>
 
     <% if this.key?("videoFile")%>
-      <div class="row">
-        <video class="in-view-video center reveal mt6" poster="<%= this.videoThumbnail['url']%>" preload="none" paused loop playsinline>
+      <div class="row">    
+        <video muted class="in-view-video center reveal mt6" poster=" <%= this.videoThumbnail['url'] if locals.key?(:videoThumbnail) %>" preload="none" paused loop playsinline>
           <source src="<%= this.videoFile['url']%>" type="video/mp4">
           Your browser does not support the video tag.
         </video>

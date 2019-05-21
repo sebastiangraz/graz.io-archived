@@ -106,6 +106,19 @@ function tileHover() {
   });
 };
 
+function hideNavOnScroll() {
+  var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".navigation").classList.remove('hidden-nav');
+  } else {
+    document.querySelector(".navigation").classList.add('hidden-nav');
+  }
+  prevScrollpos = currentScrollPos;
+}
+}
+
 var BarbaWidget = {
     init: function() {
 
@@ -138,7 +151,7 @@ var BarbaWidget = {
             scrollReveal();
             tileHover();
             fixTouchLinks();
-    
+            hideNavOnScroll();
               // The Transition has just finished.
           },
           onLeave: function() {
@@ -157,7 +170,7 @@ var BarbaWidget = {
 
 
 $doc.ready(function() {
-
+  hideNavOnScroll();
   detectMobile();
   videoInView();
   BarbaWidget.init();

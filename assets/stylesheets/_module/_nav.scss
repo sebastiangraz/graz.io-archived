@@ -3,11 +3,12 @@ nav {
     stroke: $text-color;
   }
   .navigation {
-    pointer-events: none;
     width: 100%;
+    pointer-events: none;
+    transform: translateY(0);
     margin: 0 auto;
     top:1rem;
-    transition: .4s $bezier top;
+    transition: .4s $bezier top, .9s $bezier opacity, .7s $bezier transform;
     position: fixed;
     z-index: 3;
     @include mq(sm) {
@@ -27,6 +28,11 @@ nav {
       }
     }
   }
+  .navigation.hidden-nav {
+    opacity: 0;
+    transform: translateY(-25px);
+    pointer-events: none;
+  } 
   ul {
     display: flex;
     align-items: center;
