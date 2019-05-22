@@ -5,7 +5,6 @@ nav {
   .navigation {
     width: 100%;
     pointer-events: none;
-    transform: translateY(0);
     margin: 0 auto;
     top:1rem;
     transition: .4s $bezier top, .9s $bezier opacity, .7s $bezier transform;
@@ -29,8 +28,7 @@ nav {
     }
   }
   .navigation.hidden-nav {
-    opacity: 0;
-    transform: translateY(-25px);
+    opacity: 0.3;
     pointer-events: none;
   } 
   ul {
