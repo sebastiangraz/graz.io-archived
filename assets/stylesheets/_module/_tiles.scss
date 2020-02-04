@@ -29,7 +29,6 @@
   left: 0;
   width: 100%;
   transform: scale(0);
-  will-change: transform;
   height: 100%;
   position : absolute;
 }
@@ -80,7 +79,9 @@
   }
 
   .tile-link {
-    position: static;
+    display:block;
+    width: 100%;
+    height: 100%;
   }
   
   .tile-video {
