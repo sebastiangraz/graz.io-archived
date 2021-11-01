@@ -140,10 +140,11 @@ DEPENDENCIES
   contentful_middleman!
   fastimage
   middleman (>= 4.2.0)
+  middleman-cli (>= 4.2.1)
   middleman-livereload
   redcarpet
   tzinfo-data
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.14.6
+   1.16.6

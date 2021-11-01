@@ -1,6 +1,9 @@
 # graz.io
 Sebastian Graz's personal portfolio
 
+`rvm use 2.3.3`
+`n node/8.11.2`
+
 Commands:
 
 Get started

@@ -6,30 +6,20 @@ words  = this.title.split
 
 sentence = sentence.split(/\W+/)
 sentence.map! do |word|
-  words.include?(word) ? "<span style='background:#{this.bgColor};' class='f2 f1-m f-subheadline-ns case-char case-char-padding'>#{word}</span>" : "<span style='background:#{this.bgColor};' class='f2 f1-m f-subheadline-ns case-char case-char-padding reveal'>#{word}</span>"
+  words.include?(word) ? "<span style='color: #{this.textColor ? (this.textColor) : ('#999')}' class='f2 f1-m f-subheadline-ns case-char case-char-padding'>#{word}</span>" : "<span class='f2 f1-m f-subheadline-ns case-char case-char-padding reveal'>#{word}</span>"
 end
 
 %>
 <div class="case-header">
   <div class="row">
-      <div class="measure f4 f3-ns relative pt6 pt6-m pt6-l lh-title relative" style="color:<%= this.textColor ? (this.textColor) : ('#999') %>">
-        <% if locals.key?(:subheader) %>
-          <span class="f4 fadeInUp mb4 dib"><%= subheader %></span>
-        <% end %>
-        <h1 class="case-char-wrapper mt4 flex flex-wrap">
+      <div class="f4 f3-ns relative pt6 pt6-m pt6-l lh-title relative mw6-m measure center">
 
-        <%= sentence.join(' ') %>
-
-
-          <% if this.key? :thumbnail %>
-            <span style="background-color:<%= this.bgColor ? (this.bgColor) : ('#000') %>;" class="w3 w4-ns case-char reveal">
-              <div class="flex char-image">
-                <%= partial(:'partials/image', :locals => { :cssClass => 'self-end w-100', :imageurl => this.thumbnail['url'], :alt => this.thumbnail['title'] }) %>
-              </div>
-            </span>
-          <% end %>
-
+        <h1 class="case-char-wrapper pt5 flex flex-wrap justify-center">
+          <%= sentence.join(' ') %>
         </h1>
+        <% if locals.key?(:subheader) %>
+          <div class="f4 fadeInUp mb4 dib tc w-100"><%= subheader %></div>
+        <% end %>
       </div>
   </div>
 </div>

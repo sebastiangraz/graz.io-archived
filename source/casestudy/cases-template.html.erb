@@ -10,7 +10,7 @@
   <% this.caseStudyContainer.each do | this | %>
     <% if this.key?("textBlock") %>
       <div class="row auto-size">
-        <section class="mt0 <%= 'mh0 mh3-m mh5-ns' if this.key?('align') %> <%= "case-text-#{this['align']}" if this.key?('align') %>">
+        <section class="mt4 <%= 'mh0 mh3-m mh5-ns' if this.key?('align') %> <%= "case-text-#{this['align']}" if this.key?('align') %>">
           <div class="case-text reveal w-100 w-70-ns ma0 <%= 'ml0 ml4-ns order-1' if this['align'] == 'right'%> <%= 'mr0 mr4-ns order-1 order-0-ns' if this['align'] == 'left'%>">
             <%= markdown(this['textBlock']) %>
           </div>
@@ -40,8 +40,8 @@
     <% end %>
 
     <% if this.key?("videoFile")%>
-      <div class="row">
-        <video class="in-view-video center reveal mt6" poster="<%= this.videoThumbnail['url']%>" preload="none" paused loop playsinline>
+      <div class="row">    
+        <video muted class="in-view-video center reveal mt6" poster=" <%= this.videoThumbnail['url'] if locals.key?(:videoThumbnail) %>" preload="none" paused loop playsinline>
           <source src="<%= this.videoFile['url']%>" type="video/mp4">
           Your browser does not support the video tag.
         </video>
